@@ -7,9 +7,12 @@ const prisma = new PrismaClient();
 
 export async function POST(req, res) {
   //пароль 123
+
+  console.log('----------POST Login' )
 	try {
 		const body = await req.json()
     const { email, password } = body;
+    console.log("🚀 🚀 🚀  _ POST _ body:", body)
 
     const user = await prisma.user.findUnique({
       where: { email },

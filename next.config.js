@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-	  domains: ['автокар.бел'],
+	  domains: ['xn--80aaf6atok.xn--90ais'],
 	},
  };
  

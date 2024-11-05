@@ -1,37 +1,19 @@
-"use client"
-import LoginForm from "@/components/Form/FormLogin"
-import RegistrationForm from "@/components/Form/RegistrationForm"
-import { useState } from "react"
-import { useSearchParams } from 'next/navigation'
+"use client";
 
-const page = () => {
-	const [isActive, setIsActive] = useState(true)
-	const searchParams = useSearchParams()
-	const search = searchParams.get('from')
-	
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+// Импортируем компонент динамически и отключаем SSR
+const LoginRegistration = dynamic(() => import('../../components/Comp/LoginRegistration'), { ssr: false });
+
+const Page = () => {
 	return (
 		<section className="min-h-screen py-32 relative">
-			<div className='container mx-auto'>
-				{
-					isActive ?
-						<div className=''>
-							<h1 className='text-2xl'>
-								Войти
-							</h1>
-							<LoginForm setIsActive={setIsActive} search={search} />
-						</div>
-						:
-						<div className=''>
-							<h1 className='text-2xl'>
-								Зарегистрироваться
-							</h1>
-							<RegistrationForm setIsActive={setIsActive} search={search} />
-						</div>
-				}
-
-
-			</div>
+			<Suspense fallback={<div>Загрузка...</div>}>
+				<LoginRegistration />
+			</Suspense>
 		</section>
-	)
-}
-export default page;
+	);
+};
+
+export default Page;

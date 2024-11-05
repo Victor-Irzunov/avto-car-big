@@ -22,7 +22,6 @@ async function getCarData(id) {
 }
 
 export async function generateMetadata({ params: id }) {
-	console.log("🚀 🚀 🚀  _ generateMetadata _ id:", id)
 	const data = await getCarData(id.id);
 	const id1 =  id.id
 

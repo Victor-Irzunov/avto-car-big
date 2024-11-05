@@ -164,7 +164,6 @@ export async function GET() {
 export async function PUT(req) {
 	try {
 		const formData = await req.formData();
-		console.log("🚀 🚀 🚀  _ PUT _ formData:", formData);
 		const carId = parseInt(formData.get('carId'), 10);
 
 		// Проверка существования машины

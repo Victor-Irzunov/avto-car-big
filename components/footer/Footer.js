@@ -8,7 +8,6 @@ import { useContext } from "react";
 
 const Footer = observer(() => {
 	const { user } = useContext(MyContext)
-	console.log("🚀 🚀 🚀  _ Footer _ user:", user)
 
 	return (
 		<footer className={`pt-10 pb-2 relative bg-[#2D3192] text-[#12142B]`} id='contacts'>

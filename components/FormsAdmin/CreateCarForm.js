@@ -144,7 +144,6 @@ const CreateCarForm = () => {
 
 
   const onFinish = async (values) => {
-    console.log("🚀 🚀 🚀  _ onFinish _ values:", values)
     const preparedValues = { ...values };
     ['climate', 'safety', 'airbags', 'assistance', 'exterior', 'interior', 'lights', 'heating', 'multimedia', 'comfort'].forEach((field) => {
       preparedValues[field] = preparedValues[field] || []; // Если undefined, замените на пустой массив

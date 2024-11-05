@@ -1,40 +1,16 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { useParams, useSearchParams } from 'next/navigation';
+import dynamic from 'next/dynamic';
+import { useParams } from 'next/navigation';
 import FormPodborAvto from "@/components/Form/FormPodborAvto";
-import { getAllFilterCars } from '@/http/adminAPI';
-import { Catalog } from '@/components/catalog/Catalog';
+
+// Импортируем динамически компонент, который использует `useSearchParams`
+const FilteredCarsComponent = dynamic(() => import('../../components/Comp/FilteredCarsComponent'), {
+  ssr: false, // Отключаем серверный рендеринг
+});
 
 function Page() {
   const params = useParams();
-  const searchParams = useSearchParams();
-
   const { brand, model } = params;
-  const [filteredCars, setFilteredCars] = useState([]);
-
-  useEffect(() => {
-    const fetchFilteredCars = async () => {
-      const queryParams = {
-        brand: brand || null,
-        model: model || null,
-        generation: searchParams.get('generation') || null,
-        yearFrom: searchParams.get('yearFrom') || null,
-        yearTo: searchParams.get('yearTo') || null,
-        priceFrom: searchParams.get('priceFrom') || null,
-        priceTo: searchParams.get('priceTo') || null,
-        currency: searchParams.get('currency') || null,
-      };
-
-      try {
-        const cars = await getAllFilterCars(queryParams);
-        setFilteredCars(cars);
-      } catch (error) {
-        console.error("Ошибка загрузки отфильтрованных автомобилей:", error);
-      }
-    };
-
-    fetchFilteredCars();
-  }, [searchParams, brand, model]);
 
   return (
     <main className='sd:py-16 xz:py-8 min-h-svh'>
@@ -64,13 +40,12 @@ function Page() {
               </div>
             </div>
 
-            <div>
-              <Catalog data={filteredCars} />
-            </div>
+            {/* Динамически загружаемый компонент */}
+            <FilteredCarsComponent brand={brand} model={model} />
           </div>
         </div>
-    </section>
-    </main >
+      </section>
+    </main>
   );
 }
 

@@ -138,7 +138,6 @@ const FormCredit = ({ carData }) => {
 		messageForm += `<b>Платежи по действующему кредиту:</b> ${currentCreditPayment || 'Не указано'} BYN\n`;
 
 
-		console.log("🚀 🚀 🚀  _ handleSubmit _ dataToSend:", dataToSend);
 
 		sendOrderTelegram(messageForm)
 			.then(data => {

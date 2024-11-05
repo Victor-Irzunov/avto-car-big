@@ -29,7 +29,6 @@ export const Catalog = ({ data, isAdmin }) => {
 											src={`${process.env.NEXT_PUBLIC_BASE_URL}/uploads/${image.original}`}
 											alt={car.title}
 											className="w-full h-full object-cover"
-											// objectFit="cover"
 											width={250}
 											height={250}
 										/>

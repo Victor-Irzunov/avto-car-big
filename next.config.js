@@ -1,22 +1,17 @@
-// next.config.js
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
 	images: {
+	  domains: ['автокар.бел', 'localhost'],
 	  remotePatterns: [
 		 {
 			protocol: 'http',
 			hostname: 'localhost',
-			port: '3000', 
-			pathname: '/uploads/**',
-		 },
-		 {
-			protocol: 'https',
-			hostname: process.env.NEXT_PUBLIC_BASE_URL || 'автокар.бел',
+			port: '3000',
 			pathname: '/uploads/**',
 		 },
 	  ],
 	},
-	env: {
-	  NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL || 'https://автокар.бел',
-	},
  };
+ 
+ module.exports = nextConfig;
  

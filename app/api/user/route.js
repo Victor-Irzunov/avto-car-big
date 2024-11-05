@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 const prisma = new PrismaClient();
 
 export async function GET(req, res) {
+  console.log('-------сервер GET', )
 	try {
 		const {searchParams} = new URL(req.url)
 		const id = searchParams.get("id");

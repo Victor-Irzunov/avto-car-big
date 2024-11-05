@@ -49,8 +49,8 @@ export async function generateMetadata({ params: brand }) {
 		};
 	}
 	const dataCars = data[0];
-	const title1 = `${dataCars.brand.name} купить в Минске: доставка по Беларуси`;
-	const description1 = `${dataCars.brand.name} по доступной цене в интернет-магазине. ${dataCars.brand.name} купить в Минске с фото и описанием — доставка по Беларуси.`;
+	const title1 = `${dataCars.brand.name} купить в Минске: автосалон автомобилей с пробегом`;
+	const description1 = `${dataCars.brand.name} купить в Минске: автосалон автомобилей с пробегом. ${dataCars.brand.name} купить в Лизинг или Кредит на выгодных услговиях. `;
 	const ogImage = dataCars.images?.[0]?.original ? `/uploads/${dataCars.images[0].original}` : '';
 	return {
 		title: title1,

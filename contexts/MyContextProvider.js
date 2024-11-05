@@ -17,6 +17,7 @@ const MyContextProvider = ({ children }) => {
   useEffect(() => {
     dataUser()
       .then(data => {
+        console.log("🚀 🚀 🚀  _ useEffect _ data:", data)
         user.setUserData(data)
         if (data) {
           user.setIsAuth(true)
@@ -27,6 +28,7 @@ const MyContextProvider = ({ children }) => {
         console.log('🚀 🚀 🚀dataUser err:', data)
       })
   }, [user])
+      
    
      
 

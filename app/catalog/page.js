@@ -1,7 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import PageComponent from "@/components/Comp/PageComponent";
 
-
 const prisma = new PrismaClient();
 
 async function getData() {

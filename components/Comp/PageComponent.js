@@ -15,6 +15,8 @@ const titleLink = (brandName) => {
 };
 
 const PageComponent = observer(({ data }) => {
+	console.log("🚀 🚀 🚀  _ Каталог _ data:", data)
+	console.log("🚀 🚀 🚀  _ Кол-во авто: ", data.length)
 	const { user } = useContext(MyContext)
 
 	return (

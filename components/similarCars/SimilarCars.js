@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 import CauruselSimilar from './CauruselSimilar';
 
-
 const prisma = new PrismaClient();
 
 async function getData(price, id) {
@@ -12,10 +11,10 @@ async function getData(price, id) {
 
     const cars = await prisma.car.findMany({
       where: {
-        priceUSD: {
-          gte: minPrice,
-          lte: maxPrice,
-        },
+        AND: [
+          { priceUSD: { gte: minPrice, lte: maxPrice } },
+          { id: { not: id } }, // Исключаем авто с текущим id
+        ],
       },
     });
 
@@ -32,8 +31,6 @@ async function getData(price, id) {
 
 const SimilarCars = async ({ price, id }) => {
   const data = await getData(price, id);
-
-
 
   if (!data) {
     return (

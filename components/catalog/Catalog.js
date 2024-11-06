@@ -7,7 +7,7 @@ export const Catalog = ({ data, isAdmin }) => {
 
 	const [visibleCars, setVisibleCars] = useState(6);
 
-	const loadMoreCars = () => setVisibleCars((prevVisible) => prevVisible + 3);
+	const loadMoreCars = () => setVisibleCars((prevVisible) => prevVisible + 6);
 
 
 	return (

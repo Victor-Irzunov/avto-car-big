@@ -1,10 +1,10 @@
+// /app/catalog/page.js
 import { PrismaClient } from '@prisma/client';
 import PageComponent from "@/components/Comp/PageComponent";
 
 const prisma = new PrismaClient();
 
 async function getData() {
-	console.log('Запрос в каталоге')
 	try {
 		const data = await prisma.car.findMany({
 			include: {
@@ -13,15 +13,10 @@ async function getData() {
 				generation: true,
 			},
 		});
-		if (!data || data.length === 0) {
-			return [];
-		} else if (!Array.isArray(data)) {
-			return [data];
-		}
-		return data;
+		return data || []; // Возвращаем пустой массив, если данных нет
 	} catch (error) {
 		console.error("Ошибки при запросе:", error);
-		throw error;
+		return []; // Возвращаем пустой массив в случае ошибки
 	}
 }
 
@@ -42,10 +37,18 @@ export const metadata = {
 	twitterCard: 'public/fon/fon6.webp'
 };
 
+// ISR с перегенерацией страницы через 60 секунд
+export async function generateStaticParams() {
+	return []; // Оставьте пустым, чтобы генерация страницы происходила на каждый запрос
+}
 
 export default async function Page() {
-	const data = await getData();
+	const data = await getData(); // Получаем данные
 
-	return <PageComponent data={data} />;
-
+	return (
+		<PageComponent data={data} />
+	);
 }
+
+// При использовании ISR, установите revalidate
+export const revalidate = 60; // Перегенерация каждые 60 секунд

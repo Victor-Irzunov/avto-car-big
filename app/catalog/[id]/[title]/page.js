@@ -285,11 +285,8 @@ export default async function page({ params: { id } }) {
 
 
 					<div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary mt-14'>
-						<h3 className='sd:text-3xl xz:text-xl font-semibold text-center'>
-							Похожие автомобили
-						</h3>
-
-						<SimilarCars price={data.priceUSD} id={data.id} />
+						
+						<SimilarCars price={data.priceUSD} id={data.id} year={data.year} />
 					</div>
 
 					<MapComp />

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CauruselSimilar = ({ data }) => {
+	console.log("🚀 🚀 🚀  _ CauruselSimilar _ data:", data)
 	const responsive = {
 		superLargeDesktop: {
 			breakpoint: { max: 4000, min: 3000 },

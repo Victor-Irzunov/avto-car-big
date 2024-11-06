@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 export const Catalog = ({ data, isAdmin }) => {
+	console.log("🚀 🚀 🚀  _ Каталог _ data:", data)
+	console.log("🚀 🚀 🚀  _ Кол-во авто: ", data.length)
 
 	const [visibleCars, setVisibleCars] = useState(6);
 

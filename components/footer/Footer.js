@@ -90,14 +90,14 @@ const Footer = observer(() => {
 									Пригон из ЕС
 								</Link>
 							</li>
-							<li className=''>
+							{/* <li className=''>
 								<Link
 									href={`${process.env.NEXT_PUBLIC_BASE_URL}/traid-in/`}
 									className="hover:text-primary"
 								>
 									Traid-in
 								</Link>
-							</li>
+							</li> */}
 							<li className=''>
 								{
 									user.userData?.isAdmin ?

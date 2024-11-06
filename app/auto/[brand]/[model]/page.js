@@ -48,7 +48,7 @@ function Page() {
           </div>
         </div>
         <div className='sd:container mx-auto'>
-          <div className='bg-white/60 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
+          <div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
             <div className=''>
               <div className='bg-[#1B1464] rounded-3xl sd:px-7 xz:px-4 py-9'>
                 <h2 className='sd:block xz:hidden sd:text-5xl xz:text-3xl font-semibold text-white'>
@@ -69,7 +69,7 @@ function Page() {
             </div>
           </div>
         </div>
-    </section>
+      </section>
     </main >
   );
 }

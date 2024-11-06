@@ -1,6 +1,6 @@
 const LizingArticle = () => {
 	return (
-		<article className="bg-white/80 text-secondary py-10 rounded-3xl shadow-lg space-y-8">
+		<article className="bg-white/85 text-secondary py-10 rounded-3xl shadow-lg space-y-8">
 			<div className='container mx-auto'>
 				{/* Main Title */}
 				<h2 className="text-3xl font-bold text-blue-600">Лизинг на автомобиль</h2>
@@ -66,7 +66,7 @@ const LizingArticle = () => {
 					</p>
 					<p className="leading-relaxed">
 						<strong>Справка о доходах:</strong> Справка о размере получаемого дохода за последние 3 месяца
-						
+
 						<span className="block text-sm text-gray-500 mt-1">* Возможно оформление лизинга без справки о доходах, уточняйте условия по телефонам.</span>
 					</p>
 					<p className="leading-relaxed">

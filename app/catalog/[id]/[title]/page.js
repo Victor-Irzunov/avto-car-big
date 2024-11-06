@@ -80,7 +80,7 @@ export default async function page({ params: { id } }) {
 
 					<div className='grid sd:grid-cols-3 xz:grid-cols-1 gap-4'>
 
-						<div className='sd:col-span-2 xz:col-span-1 bg-white/60 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary'>
+						<div className='sd:col-span-2 xz:col-span-1 bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary'>
 							<h1 className='sd:text-3xl xz:text-xl font-semibold uppercase px-2'>
 								Продажа {data.title}, {data.year}<span className="lowercase">г.</span>
 							</h1>
@@ -162,7 +162,7 @@ export default async function page({ params: { id } }) {
 							</article>
 						</div>
 
-						<article className='bg-white/60 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
+						<article className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
 							<div className=''>
 								<div className='sd:block xz:hidden'>
 									<p className='text-4xl font-semibold text-secondary text-right'>
@@ -284,7 +284,7 @@ export default async function page({ params: { id } }) {
 					</div>
 
 
-					<div className='bg-white/60 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary mt-14'>
+					<div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary mt-14'>
 						<h3 className='sd:text-3xl xz:text-xl font-semibold text-center'>
 							Похожие автомобили
 						</h3>

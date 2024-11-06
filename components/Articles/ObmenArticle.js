@@ -5,10 +5,10 @@ import BtnComp from "../btn/BtnComp";
 
 const ObmenArticle = () => {
 	return (
-		<article className="sd:mt-20 xz:mt-10 bg-white/80 text-secondary sd:px-8 xz:px-3 py-14 rounded-3xl">
+		<article className="sd:mt-20 xz:mt-10 bg-white/85 text-secondary sd:px-8 xz:px-3 py-14 rounded-3xl">
 			<div className='container mx-auto'>
 				<h2 className="sd:text-5xl xz:text-2xl font-semibold">
-				Обмен автомобиля в Минске
+					Обмен автомобиля в Минске
 				</h2>
 
 				<div className="mt-6">

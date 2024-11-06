@@ -6,6 +6,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function getData() {
+	console.log('Запрос в CatalogMain')
 	try {
 		const data = await prisma.car.findMany({
 			include: {
@@ -27,7 +28,6 @@ async function getData() {
 }
 export default async function CatalogMain() {
 	const data = await getData()
-	console.log("🚀 🚀 🚀  _ CatalogMain _ data:", data)
 
 	return (
 		<section className='sd:mt-16 xz:mt-10'>

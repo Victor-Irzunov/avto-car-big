@@ -4,6 +4,7 @@ import PageComponent from "@/components/Comp/PageComponent";
 const prisma = new PrismaClient();
 
 async function getData() {
+	console.log('Запрос в каталоге')
 	try {
 		const data = await prisma.car.findMany({
 			include: {
@@ -44,5 +45,8 @@ export const metadata = {
 
 export default async function Page() {
 	const data = await getData();
+	console.log("🚀 🚀 🚀 Страница каталога _ data:", data)
+
 	return <PageComponent data={data} />;
+
 }

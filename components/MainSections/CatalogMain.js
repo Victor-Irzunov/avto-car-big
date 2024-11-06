@@ -27,6 +27,7 @@ async function getData() {
 }
 export default async function CatalogMain() {
 	const data = await getData()
+	console.log("🚀 🚀 🚀  _ CatalogMain _ data:", data)
 
 	return (
 		<section className='sd:mt-16 xz:mt-10'>

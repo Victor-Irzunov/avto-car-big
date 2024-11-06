@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export const Catalog = ({ data, isAdmin }) => {
 
-	const [visibleCars, setVisibleCars] = useState(3);
+	const [visibleCars, setVisibleCars] = useState(6);
 
 	const loadMoreCars = () => setVisibleCars((prevVisible) => prevVisible + 3);
 

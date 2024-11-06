@@ -45,6 +45,8 @@ export const metadata = {
 
 export default async function Page() {
 	const data = await getData();
+	console.log("🚀 🚀 🚀  _Количество  data:", data.length)
+	console.log("🚀 🚀 🚀  _ Каталог_ data:", data)
 
 	return <PageComponent data={data} />;
 

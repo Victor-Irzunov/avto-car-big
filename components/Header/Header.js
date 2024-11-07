@@ -21,7 +21,7 @@ export default function Header() {
 	return (
 		<header className="z-50 relative sd:pt-5 xz:pt-2 days-one-regular">
 			<div className="container mx-auto">
-				<div className="flex justify-between items-center sd:py-3 xz:py-1 bg-white/70 rounded-xl sd:px-8 xz:px-3">
+				<div className="flex justify-between items-center sd:py-3 xz:py-1 bg-white/90 rounded-xl sd:px-8 xz:px-3">
 
 					{/* Desktop Menu */}
 					<div className="xz:hidden sd:block w-full">

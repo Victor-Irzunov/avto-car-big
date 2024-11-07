@@ -1,12 +1,23 @@
+"use client"
 import Image from "next/image"
 import phoneNumbers from "@/config/config"
+import { useEffect, useState } from "react";
 
 const MapComp = () => {
+	const [showMap, setShowMap] = useState(false);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setShowMap(true);
+		}, 5000); // Ожидание 5 секунд
+
+		return () => clearTimeout(timer); // Очищаем таймер при размонтировании компонента
+	}, []);
 	return (
 		<section className='sd:block xz:hidden mt-10 py-16'>
 			<div className='container mx-auto'>
 				<div className='relative text-white'>
-					<div className='absolute -top-5 left-10 bg-[#2D3192] px-6 py-8 z-10 text-center rounded-xl'>
+					<div className={`${showMap ? 'block' : 'hidden'} absolute -top-5 left-10 bg-[#2D3192] px-6 py-8 z-10 text-center rounded-xl`}>
 						<div className=''>
 							<Image src='/logo/logo2.webp' alt='Логотип - продажа авто в кредит и лизинг' width={120} height={120} className="mx-auto" />
 						</div>
@@ -48,14 +59,17 @@ const MapComp = () => {
 							style={{ color: '#eee', fontSize: '12px', position: 'absolute', top: '28px' }}>
 							Продажа автомобилей с пробегом в Минске
 						</a>
-						<iframe
-							src="https://yandex.by/map-widget/v1/?ll=27.578063%2C53.921117&mode=search&oid=122416526987&ol=biz&z=16.72"
-							width="100%"
-							height="400"
-							frameBorder="1"
-							allowFullScreen
-							style={{ position: 'relative' }}>
-						</iframe>
+						{showMap && (
+							<iframe
+								src="https://yandex.by/map-widget/v1/?ll=27.578063%2C53.921117&mode=search&oid=122416526987&ol=biz&z=16.72"
+								width="100%"
+								height="400"
+								frameBorder="1"
+								allowFullScreen
+								loading="lazy"
+								style={{ position: 'relative' }}
+							></iframe>
+						)}
 					</div>
 				</div>
 

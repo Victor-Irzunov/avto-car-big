@@ -7,7 +7,7 @@ const PodborAvto = () => {
 	return (
 		<section className='sd:mt-0 xz:mt-10 relative'>
 			<div className='container mx-auto'>
-				<div className='bg-white/85 rounded-3xl sd:py-16 xz:py-5 sd:px-10 xz:px-2'>
+				<div className='bg-white/80 rounded-3xl sd:py-16 xz:py-5 sd:px-10 xz:px-2'>
 					<h2 className='sd:block xz:hidden text-3xl font-semibold text-[#12142B] text-center uppercase'>
 						Поможем подобрать автомобиль как у нас на площадке так и за её пределами
 					</h2>

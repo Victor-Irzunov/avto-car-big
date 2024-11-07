@@ -28,24 +28,26 @@ const GetCarForm = () => {
 	};
 
 	return (
-		<>
+		<div className='pl-10'>
 			<Form
 				form={form}
 				name="getProduct"
 				onFinish={onFinish}
 				labelCol={{ span: 24 }}
-				wrapperCol={{ span: 16 }}
+				wrapperCol={{ span: 24 }}
 			>
 				<Form.Item
-					label="Введите номер товара"
+					label="Введите ID авто"
 					name="id"
 					rules={[{ required: true, message: 'Введите артикль продукта' }]}
 				>
 					<InputNumber />
 				</Form.Item>
 
-				<Form.Item wrapperCol={{ offset: 5, span: 16 }}>
-					<Button type="primary" className='text-black bg-white' htmlType="submit">
+				<Form.Item
+					// wrapperCol={{ offset: 5, span: 16 }}
+				>
+					<Button type="primary" className='text-white bg-primary' htmlType="submit">
 						Получить
 					</Button>
 				</Form.Item>
@@ -59,7 +61,7 @@ const GetCarForm = () => {
 					:
 					null
 			}
-		</>
+		</div>
 	)
 }
 

@@ -16,7 +16,7 @@ export const carData = {
 	Infiniti: ['JX', 'QX30', 'QX60', 'QX70'],
 	Jaguar: ['XJ'],
 	Jeep: ['Compass', 'Grand Cherokee', 'Wrangler', 'Renegade', 'Cherokee', 'Commander', 'Liberty', 'Patriot'],
-	Kia: ["Cee`d", 'Forte', 'Optima', 'Rio', 'Soul', 'Sportage'],
+	Kia: ["Ceed", 'Forte', 'Optima', 'Rio', 'Soul', 'Sportage'],
 	Lada: ['Largus', '2109', '2114', '2121 Нива', 'Granta', 'Kalina', 'Largus', 'Priora', 'Vesta', 'XRAY'],
 	LandRover: ['Discovery', 'Freelander', 'Range Rover', 'Range Rover Evoque', 'Range Rover Sport', 'Range Rover Velar', 'Discovery Sport', 'Defender',],
 	Lexus: ['RX', 'NX', 'UX', 'IS', 'CT', 'GS', 'LS', 'LX', 'ES', 'GX', 'LC'],

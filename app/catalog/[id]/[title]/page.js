@@ -84,6 +84,9 @@ export default async function page({ params: { id } }) {
 							<h1 className='sd:text-3xl xz:text-xl font-semibold uppercase px-2'>
 								Продажа {data.title}, {data.year}<span className="lowercase">г.</span>
 							</h1>
+							<p className='pl-2 text-gray-400 text-xs uppercase'>
+							id: {data.id}
+							</p>
 							<GalleryComponent images={JSON.parse(data.images)} title={data.title} />
 
 							<article className='sd:hidden xz:block mt-12'>

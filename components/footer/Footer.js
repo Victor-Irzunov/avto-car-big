@@ -105,7 +105,9 @@ const Footer = observer(() => {
 											href={`${process.env.NEXT_PUBLIC_BASE_URL}/super-admin/`}
 											className="cursor-pointer hover:text-primary"
 										>
-											<Image src='/svg/entrance.svg' alt='Вход' width={25} height={25} />
+											<p className=''>
+											Админ панель
+											</p>
 										</Link>
 										:
 										<Link

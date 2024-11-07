@@ -51,4 +51,4 @@ export default async function Page() {
 }
 
 // При использовании ISR, установите revalidate
-export const revalidate = 60; // Перегенерация каждые 60 секунд
+export const revalidate = 30; // Перегенерация каждые 30 секунд

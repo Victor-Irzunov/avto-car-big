@@ -2,6 +2,7 @@ import Image from "next/image";
 import { DataCar } from "@/constans/CarData";
 import Link from "next/link";
 import { PrismaClient } from '@prisma/client';
+import { transliterate } from "@/transliterate/transliterate";
 
 const prisma = new PrismaClient();
 
@@ -26,6 +27,11 @@ async function getData() {
 		throw error;
 	}
 }
+
+const titleLink = (brandName) => {
+	return transliterate(brandName).replace(/\s+/g, '-').toLowerCase();
+};
+
 export default async function CatalogMain() {
 	const data = await getData()
 	console.log("🚀 🚀 🚀  _ CatalogMain _ data:", data)
@@ -38,9 +44,11 @@ export default async function CatalogMain() {
 						Каталог Авто
 					</h4>
 					<div className='mt-6 xz:grid sd:hidden grid-cols-3 gap-1 px-3'>
-						{DataCar.map((el) => (
-							<div key={el.id} className=''>
-								<h5 className='text-xs font-medium text-secondary'>{el.brand}</h5>
+						{DataCar.map((brand) => (
+							<div key={brand.id} className=''>
+								<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/${titleLink(brand.brand)}/`} className='sd:text-base xz:text-sm font-medium text-secondary'>
+									{brand.brand}
+								</Link>
 							</div>
 						))}
 					</div>

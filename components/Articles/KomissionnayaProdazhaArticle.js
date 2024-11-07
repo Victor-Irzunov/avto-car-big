@@ -50,7 +50,7 @@ const KomissionnayaProdazhaArticle = () => {
 
 					<div className='bg-gray-400 p-3 text-secondary rounded-xl'>
 						<div className="relative bg-white border rounded-xl p-4 text-left shadow-md">
-							<div className="font-semibold">Нужна дополнительная информация по обмену авто?</div>
+							<div className="font-semibold">Нужна дополнительная информация по комиссионной продаже авто?</div>
 							<p className="text-gray-700">Я с удовольствием проконсультирую Вас по телефону.</p>
 							<div className="absolute -bottom-2 left-10 w-4 h-4 bg-white  rotate-45"></div>
 						</div>
@@ -58,13 +58,13 @@ const KomissionnayaProdazhaArticle = () => {
 							<div className=''>
 								<Image
 									src='/fon/fon5.webp'
-									alt='Менеджер по обмену авто' width={80} height={80}
+									alt='Менеджер по комиссионной продаже авто' width={80} height={80}
 									className="rounded-full"
 								/>
 							</div>
 							<div className=''>
 								<p className='font-semibold sd:text-base xz:text-xs'>
-									Менеджер по обмену
+									Менеджер по комиссионной продаже
 								</p>
 								<p className='text-gray-700'>
 									Максим

@@ -7,6 +7,7 @@ import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 import Link from "next/link"
 import SimilarCars from "@/components/similarCars/SimilarCars"
+import Image from "next/image";
 
 const prisma = new PrismaClient();
 
@@ -73,7 +74,7 @@ export default async function page({ params: { id } }) {
 	}
 
 	return (
-		<main className='py-20 min-h-screen'>
+		<main className='sd:py-20 xz:py-7 min-h-screen'>
 			<div className='w-full bg-cover fon bg-center' />
 			<section className='relative'>
 				<div className='container mx-auto'>
@@ -85,7 +86,7 @@ export default async function page({ params: { id } }) {
 								Продажа {data.title}, {data.year}<span className="lowercase">г.</span>
 							</h1>
 							<p className='pl-2 text-gray-400 text-xs uppercase'>
-							id: {data.id}
+								id: {data.id}
 							</p>
 							<GalleryComponent images={JSON.parse(data.images)} title={data.title} />
 
@@ -149,10 +150,38 @@ export default async function page({ params: { id } }) {
 										ул. пер. С. Ковалевской, д.54 к.1 каб.303-106
 									</p>
 
+
+
 									<div className='xz:w-full sd:w-auto flex sd:flex-row xz:flex-col justify-end sd:space-x-4 xz:space-x-0 sd:space-y-0 xz:space-y-3 col-span-2'>
-										<a href={`tel:${phoneNumbers.mainPhoneLink}`} className="btn btn-outline btn-secondary px-10 rounded-full">
-											Позвонить
-										</a>
+										<div className="dropdown dropdown-top dropdown-end text-white">
+											<button tabIndex={0} className="btn btn-outline btn-secondary px-10 rounded-full w-full">
+												Позвонить
+											</button>
+											<div tabIndex={0} className={`dropdown-content bg-[#2D3192] z-[1] px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl`}>
+												<div className=''>
+													<Image src='/logo/logo2.webp' alt='Логотип - продажа авто в кредит и лизинг' width={120} height={120} className="mx-auto" />
+												</div>
+												<p className='text-xl'>
+													Мы в Минске
+												</p>
+												<div className='mt-5'>
+													<Image src='/svg/location-white.svg' alt='Адрес автосалона' width={30} height={30} className="mx-auto mb-2" />
+													<a href="https://yandex.by/maps/-/CDdkfUlz" target="_blank" className="mt-2 text-sm">
+														Минск, ул. Куйбышева 40, <br />
+														Паркинг 4 этаж
+													</a>
+												</div>
+												<div className='mt-5'>
+													<Image src='/svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} className="mx-auto mb-2" />
+													<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
+														{phoneNumbers.secondaryPhone} МТС
+													</a>
+													<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
+														{phoneNumbers.mainPhone} A1
+													</a>
+												</div>
+											</div>
+										</div>
 
 										<Link
 											href={`${process.env.NEXT_PUBLIC_BASE_URL}/credit/${data.id}/${data.titleLink}`}
@@ -288,7 +317,7 @@ export default async function page({ params: { id } }) {
 
 
 					<div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary mt-14'>
-						
+
 						<SimilarCars price={data.priceUSD} id={data.id} year={data.year} />
 					</div>
 

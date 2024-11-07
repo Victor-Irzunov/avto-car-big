@@ -91,10 +91,37 @@ const page = () => {
 							</div>
 						</div>
 
-						<div className='mt-12 flex sd:flex-row xz:flex-col sd:items-center xz:items-stretch relative sd:space-x-4 sd:space-y-0 xz:space-y-4'>
-							<a href={`tel:${phoneNumbers.mainPhoneLink}`} className="btn text-lg px-10 rounded-full bg-[#D0D0D2] border-none text-[#636363]">
-								Позвонить
-							</a>
+						<div className='mt-12 flex sd:flex-row xz:flex-col sd:items-center xz:items-stretch relative z-10 sd:space-x-4 sd:space-y-0 xz:space-y-4'>
+
+							<div className="dropdown dropdown-top text-white">
+								<button tabIndex={0} className="btn text-lg px-10 w-full rounded-full bg-[#D0D0D2] border-none text-[#636363]">
+									Позвонить
+								</button>
+								<div tabIndex={0} className={`dropdown-content bg-[#2D3192] z-30 px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl`}>
+									<div className=''>
+										<Image src='/logo/logo2.webp' alt='Логотип - продажа авто в кредит и лизинг' width={120} height={120} className="mx-auto" />
+									</div>
+									<p className='text-xl'>
+										Мы в Минске
+									</p>
+									<div className='mt-5'>
+										<Image src='/svg/location-white.svg' alt='Адрес автосалона' width={30} height={30} className="mx-auto mb-2" />
+										<a href="https://yandex.by/maps/-/CDdkfUlz" target="_blank" className="mt-2 text-sm">
+											Минск, ул. Куйбышева 40, <br />
+											Паркинг 4 этаж
+										</a>
+									</div>
+									<div className='mt-5'>
+										<Image src='/svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} className="mx-auto mb-2" />
+										<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
+											{phoneNumbers.secondaryPhone} МТС
+										</a>
+										<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
+											{phoneNumbers.mainPhone} A1
+										</a>
+									</div>
+								</div>
+							</div>
 							<BtnComp title='Получить консультацию' index={299} wFull />
 						</div>
 					</div>

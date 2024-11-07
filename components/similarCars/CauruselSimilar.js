@@ -3,9 +3,13 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from 'react';
+import phoneNumbers from '@/config/config';
 
 const CauruselSimilar = ({ data }) => {
-	console.log("🚀 🚀 🚀  _ CauruselSimilar _ data:", data)
+	console.log("🚀 🚀 🚀  _ CauruselSimilar _ data:", data);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
 	const responsive = {
 		superLargeDesktop: {
 			breakpoint: { max: 4000, min: 3000 },
@@ -25,27 +29,58 @@ const CauruselSimilar = ({ data }) => {
 		}
 	};
 
-	const ButtonGroup = ({ next, previous }) => {
-		return (
-			<div className="carousel-button-group gap-4 flex justify-center items-center w-full relative mt-6">
-				<button className='block p-3 bg-white/5 rounded-md' onClick={previous}>
-					<Image src='/svg/arrow-left.svg' alt='' width={40} height={40} />
-				</button>
-				<button onClick={next}>
-					<span className='block p-3 bg-white/5 rounded-md'>
-						<Image src='/svg/arrow-right.svg' alt='' width={40} height={40} />
-					</span>
-				</button>
-			</div>
-		);
-	};
+	const ButtonGroup = ({ next, previous }) => (
+		<div className="carousel-button-group gap-4 flex justify-center items-center w-full relative mt-6">
+			<button className='block p-3 bg-white/5 rounded-md' onClick={previous}>
+				<Image src='/svg/arrow-left.svg' alt='' width={40} height={40} />
+			</button>
+			<button onClick={next}>
+				<span className='block p-3 bg-white/5 rounded-md'>
+					<Image src='/svg/arrow-right.svg' alt='' width={40} height={40} />
+				</span>
+			</button>
+		</div>
+	);
 
 	return (
 		<div>
+			{/* Модальное окно */}
+			{isModalOpen && (
+				<div className="modal modal-open">
+					<div className="modal-box relative" style={{background:'transparent'}}>
+						<button
+							className="btn btn-sm btn-circle absolute right-2 top-2"
+							onClick={() => setIsModalOpen(false)}
+						>✕</button>
+						<div className="bg-[#2D3192] px-6 py-8 text-center rounded-xl text-white">
+							<div>
+								<Image src='/logo/logo2.webp' alt='Логотип - продажа авто в кредит и лизинг' width={120} height={120} className="mx-auto" />
+							</div>
+							<p className='text-xl'>Мы в Минске</p>
+							<div className='mt-5'>
+								<Image src='/svg/location-white.svg' alt='Адрес автосалона' width={30} height={30} className="mx-auto mb-2" />
+								<a href="https://yandex.by/maps/-/CDdkfUlz" target="_blank" className="mt-2 text-sm">
+									Минск, ул. Куйбышева 40, <br />
+									Паркинг 4 этаж
+								</a>
+							</div>
+							<div className='mt-5'>
+								<Image src='/svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} className="mx-auto mb-2" />
+								<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
+									{phoneNumbers.secondaryPhone} МТС
+								</a>
+								<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
+									{phoneNumbers.mainPhone} A1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			)}
+
 			<Carousel
 				responsive={responsive}
 				arrows={false}
-				// showDots={true}
 				autoPlaySpeed={5000}
 				renderButtonGroupOutside={true}
 				autoPlay
@@ -65,7 +100,6 @@ const CauruselSimilar = ({ data }) => {
 											src={`${process.env.NEXT_PUBLIC_BASE_URL}/uploads/${image.original}`}
 											alt={car.title}
 											className="w-full h-full object-cover"
-											// objectFit="cover"
 											width={250}
 											height={250}
 										/>
@@ -102,9 +136,12 @@ const CauruselSimilar = ({ data }) => {
 								</li>
 							</ul>
 							<div className="card-actions justify-between sd:px-0 xy:px-2">
-								<a href="tel:8029" className="btn btn-circle sd:btn-lg xz:btn-sm btn-outline btn-secondary">
+								<button
+									onClick={() => setIsModalOpen(true)}
+									className="btn btn-circle sd:btn-lg xz:btn-sm btn-outline btn-secondary"
+								>
 									<Image src='/svg/phone1.svg' alt='Телефон' width={25} height={25} className="sd:w-9 xz:w-5" />
-								</a>
+								</button>
 								<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/catalog/${car.id}/${car.titleLink}`}>
 									<button className="btn sd:btn-lg xz:btn-sm btn-primary rounded-full sd:px-7 xz:px-2 sd:text-base xz:text-xs">
 										Подробнее
@@ -115,8 +152,8 @@ const CauruselSimilar = ({ data }) => {
 					</article>
 				))}
 			</Carousel>
-		</div >
+		</div>
 	)
 }
 
-export default CauruselSimilar
+export default CauruselSimilar;

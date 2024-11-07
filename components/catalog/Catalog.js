@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import phoneNumbers from "@/config/config";
 
 export const Catalog = ({ data, isAdmin }) => {
 	console.log("🚀 🚀 🚀  _ Каталог _ data:", data)
@@ -68,9 +69,37 @@ export const Catalog = ({ data, isAdmin }) => {
 								</li>
 							</ul>
 							<div className="card-actions justify-between sd:px-0 xy:px-2">
-								<a href="tel:8029" className="btn btn-circle sd:btn-lg xz:btn-sm btn-outline btn-secondary">
-									<Image src='/svg/phone1.svg' alt='Телефон' width={25} height={25} className="sd:w-9 xz:w-5" />
-								</a>
+
+								<div className="dropdown dropdown-top text-white">
+									<button tabIndex={0} className="btn btn-circle sd:btn-lg xz:btn-sm btn-outline btn-secondar">
+										<Image src='/svg/phone1.svg' alt='Телефон' width={25} height={25} className="sd:w-9 xz:w-5 sd:hover:invert" />
+									</button>
+									<div tabIndex={0} className={`dropdown-content bg-[#2D3192] z-30 px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl`}>
+										<div className=''>
+											<Image src='/logo/logo2.webp' alt='Логотип - продажа авто в кредит и лизинг' width={120} height={120} className="mx-auto" />
+										</div>
+										<p className='text-xl'>
+											Мы в Минске
+										</p>
+										<div className='mt-5'>
+											<Image src='/svg/location-white.svg' alt='Адрес автосалона' width={30} height={30} className="mx-auto mb-2" />
+											<a href="https://yandex.by/maps/-/CDdkfUlz" target="_blank" className="mt-2 text-sm">
+												Минск, ул. Куйбышева 40, <br />
+												Паркинг 4 этаж
+											</a>
+										</div>
+										<div className='mt-5'>
+											<Image src='/svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} className="mx-auto mb-2" />
+											<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
+												{phoneNumbers.secondaryPhone} МТС
+											</a>
+											<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
+												{phoneNumbers.mainPhone} A1
+											</a>
+										</div>
+									</div>
+								</div>
+
 								<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/catalog/${car.id}/${car.titleLink}`}>
 									<button className="btn sd:btn-lg xz:btn-sm btn-primary rounded-full sd:px-7 xz:px-2 sd:text-base xz:text-xs">
 										Подробнее

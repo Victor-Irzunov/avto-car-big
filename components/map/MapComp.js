@@ -9,7 +9,7 @@ const MapComp = () => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setShowMap(true);
-		}, 5000); // Ожидание 5 секунд
+		}, 3000);
 
 		return () => clearTimeout(timer); // Очищаем таймер при размонтировании компонента
 	}, []);
@@ -34,14 +34,12 @@ const MapComp = () => {
 						<div className='mt-5'>
 							<Image src='/svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} className="mx-auto mb-2" />
 							<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
-								{phoneNumbers.secondaryPhone} A1
+								{phoneNumbers.secondaryPhone} МТС
 							</a>
 							<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
-								{phoneNumbers.mainPhone} МТС
+								{phoneNumbers.mainPhone} A1
 							</a>
 						</div>
-
-
 					</div>
 					<div style={{ position: 'relative', overflow: 'hidden' }}>
 						<a

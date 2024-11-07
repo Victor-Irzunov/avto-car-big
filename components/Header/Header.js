@@ -208,18 +208,23 @@ export default function Header() {
 									</li> */}
 								</ul>
 
-								<div className='absolute bottom-10 left-5 text-white'>
+								<div className='absolute bottom-10 left-5 text-white mt-4'>
 									<div className='flex items-center space-x-1'>
-										<Image src='svg/location-white.svg' alt='Адрес автосалона' width={40} height={40} />
+										<Image src='/svg/location-white.svg' alt='Адрес автосалона' width={40} height={40} />
 										<a href='https://yandex.by/maps/-/CDd7nHZo' target='_blank' className='font-semibold'>
 											Минск, ул. Куйбышева, 40, Паркинг 4 этаж
 										</a>
 									</div>
-									<div className='flex items-center space-x-2 mt-2 pl-1'>
-										<Image src='svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} />
-										<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-semibold'>
-											{phoneNumbers.mainPhone}
-										</a>
+									<div className='flex items-center space-x-2 mt-4 pl-1'>
+										<Image src='/svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} />
+										<div className=''>
+											<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-semibold block'>
+												{phoneNumbers.mainPhone}
+											</a>
+											<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-semibold block mt-3'>
+												{phoneNumbers.secondaryPhone}
+											</a>
+										</div>
 									</div>
 								</div>
 								<button onClick={closeDrawer} className="absolute top-4 left-4 text-4xl text-white">

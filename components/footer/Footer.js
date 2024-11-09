@@ -60,7 +60,7 @@ const Footer = observer(() => {
 							</li>
 							<li className=''>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_BASE_URL}/kredit/`}
+									href={`${process.env.NEXT_PUBLIC_BASE_URL}/credit/`}
 									className="hover:text-primary"
 								>
 									Кредит

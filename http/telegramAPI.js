@@ -1,8 +1,8 @@
 import axios from 'axios'
-// const token = '7386040655:AAGYZpNYhz3abNYW7tmPhvREEEuOA-YMnzs'
-// const chat_id = '-1002236134171'
-const token = '5562126487:AAGqX2TBd3toX15OgSCQ2yW55RNfgtBWQko'
-const chat_id = '-1001794221917'
+const token = '7386040655:AAGYZpNYhz3abNYW7tmPhvREEEuOA-YMnzs'
+const chat_id = '-1002236134171'
+// const token = '5562126487:AAGqX2TBd3toX15OgSCQ2yW55RNfgtBWQko'
+// const chat_id = '-1001794221917'
 const uri_api = `https://api.telegram.org/bot${token}/sendMessage`
 
 export const sendOrderTelegram = async (obj) => {

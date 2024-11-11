@@ -32,6 +32,26 @@ const GalleryComponent = ({ images, title }) => {
 		}
 	}
 
+	// Custom render function for main image with fixed aspect ratio
+	const renderImage = (item) => (
+		<div
+			className="relative w-full"
+			style={{
+				paddingTop: '75%', // Соотношение сторон 4:3 (100 / 4 * 3)
+				overflow: 'hidden',
+				borderRadius: '8px',
+			}}
+		>
+			<Image
+				src={item.original}
+				alt={title}
+				layout="fill"
+				objectFit="cover"
+				className="absolute inset-0 w-full h-full"
+			/>
+		</div>
+	)
+
 	return (
 		<div className='mt-8'>
 			<div className="relative">
@@ -45,37 +65,49 @@ const GalleryComponent = ({ images, title }) => {
 						startIndex={currentIndex}
 						onClick={() => openModal(currentIndex)}
 						onSlide={(index) => setCurrentIndex(index)}
+						renderItem={renderImage} // Используем кастомную функцию рендеринга изображения
 					/>
 				</div>
 
 				<div className="flex overflow-x-scroll mt-4 space-x-2">
 					{galleryItems.map((item, index) => (
-						<Image
-							width={112}
-							height={80}
+						<div
 							key={index}
-							src={item.thumbnail}
 							className={`w-28 h-20 cursor-pointer ${currentIndex === index ? 'border-2 border-blue-500' : ''}`}
 							onClick={() => changeMainImage(index)}
-							alt={title}
-						/>
+							style={{
+								position: 'relative',
+								width: '112px',
+								height: '84px', // Высота в соотношении 4:3 для ширины 112px
+								overflow: 'hidden',
+								borderRadius: '8px',
+							}}
+						>
+							<Image
+								src={item.thumbnail}
+								width={112}
+								height={84}
+								alt={title}
+								className="object-cover w-full h-full"
+							/>
+						</div>
 					))}
 				</div>
 			</div>
 
 			{isModalOpen && (
 				<div className="modal modal-open">
-					<div className="modal-box relative w-11/12 max-w-4xl">
+					<div className="modal-box relative w-11/12" style={{background:'transparent'}}>
 						<button
 							onClick={closeModal}
-							className="btn btn-sm btn-circle absolute right-2 top-2"
+							className="btn btn-sm border-none text-black btn-circle bg-white absolute right-2 top-2 text-2xl"
 						>
 							✕
 						</button>
 						<img
 							src={galleryItems[currentIndex].original}
 							alt={title}
-							className="rounded-lg w-full h-auto"
+							className="rounded-lg w-full h-auto" // В модальном окне оригинальный формат
 						/>
 						<div className="flex justify-between mt-4">
 							<button

@@ -73,12 +73,12 @@ const GalleryComponent = ({ images, title }) => {
 					{galleryItems.map((item, index) => (
 						<div
 							key={index}
-							className={`w-28 h-20 cursor-pointer ${currentIndex === index ? 'border-2 border-blue-500' : ''}`}
+							className={`min-w-28 min-h-20 cursor-pointer ${currentIndex === index ? 'border-2 border-blue-500' : ''}`}
 							onClick={() => changeMainImage(index)}
 							style={{
 								position: 'relative',
 								width: '112px',
-								height: '84px', // Высота в соотношении 4:3 для ширины 112px
+								height: '84px',
 								overflow: 'hidden',
 								borderRadius: '8px',
 							}}

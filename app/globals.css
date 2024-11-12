@@ -216,3 +216,8 @@ body {
 .blink-animation {
   animation: blink 2s infinite;
 }
+
+
+.overflow-x-scroll {
+  -webkit-overflow-scrolling: touch;
+}

@@ -4,6 +4,7 @@ import { useParams, useSearchParams } from 'next/navigation';
 import FormPodborAvto from "@/components/Form/FormPodborAvto";
 import { getAllFilterCars } from '@/http/adminAPI';
 import { Catalog } from '@/components/catalog/Catalog';
+import phoneNumbers from '@/config/config';
 
 function Page() {
   const params = useParams();
@@ -65,7 +66,26 @@ function Page() {
             </div>
 
             <div>
-              <Catalog data={filteredCars} />
+              {
+                filteredCars.length
+                  ?
+                  <Catalog data={filteredCars} />
+                  :
+                  <div className='mt-14 text-center'>
+                    <p className='sd:text-5xl xz:text-2xl'>
+                      ничего не найдено
+                    </p>
+                    <div className='mt-10'>
+                      <p className=''>
+                        Если вы не нашли то, что искали, позвоните нам — мы обязательно вам поможем!
+                      </p>
+
+                      <a href={`tel:${phoneNumbers.mainPhoneLink}`} className="sd:text-3xl xz:text-xl">
+                        {phoneNumbers.mainPhone}
+                      </a>
+                    </div>
+                  </div>
+              }
             </div>
           </div>
         </div>

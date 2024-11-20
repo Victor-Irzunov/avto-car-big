@@ -277,6 +277,11 @@ const EditCarForm = ({ carData, setProduct }) => {
 					priceBYN: carData.priceUSD * dollar,
 				}}
 			>
+
+				<Form.Item name="vip" label="VIP" valuePropName="checked">
+					<Checkbox>VIP</Checkbox>
+				</Form.Item>
+
 				<Form.Item name="brand" label="Марка" rules={[{ required: true, message: 'Выберите марку' }]}>
 					<Select placeholder="Выберите марку" onChange={handleBrandChange} value={selectedBrand}>
 						{DataCar.map((brand) => (
@@ -293,7 +298,7 @@ const EditCarForm = ({ carData, setProduct }) => {
 					</Select>
 				</Form.Item>
 
-				<Form.Item name="generation" label="Поколение" rules={[{ required: true, message: 'Выберите поколение' }]}>
+				<Form.Item name="generation" label="Поколение">
 					<Select
 						placeholder="Выберите поколение"
 						disabled={!selectedModel}
@@ -305,6 +310,7 @@ const EditCarForm = ({ carData, setProduct }) => {
 						))}
 					</Select>
 				</Form.Item>
+
 
 				<Form.Item name="title" label="Название" rules={[{ required: true, message: 'Введите название автомобиля' }]}>
 					<Input placeholder="Lada (ВАЗ) 2121 Нива I" />

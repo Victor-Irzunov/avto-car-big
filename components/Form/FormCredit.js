@@ -162,9 +162,6 @@ const FormCredit = ({ carData }) => {
 		messageForm += `<b>Официальная зарплата:</b> ${officialSalary || 'Не указано'} BYN\n`;
 		messageForm += `<b>Платежи по действующему кредиту:</b> ${currentCreditPayment || 'Не указано'} BYN\n`;
 
-
-		console.log("🚀 🚀 🚀  _ handleSubmit _ dataToSend:", dataToSend);
-
 		try {
 			const response = await sendOrderTelegram(messageForm);
 			if (response) {
@@ -173,6 +170,9 @@ const FormCredit = ({ carData }) => {
 				setTimeout(() => {
 					setIsActive(false);
 				}, 5000);
+			}
+			if (response.ok) {
+				window.location.href = '/thank-you';
 			}
 		} catch (error) {
 			alert("Ошибка при отправке данных.");

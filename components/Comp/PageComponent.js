@@ -47,11 +47,11 @@ const PageComponent = observer(({ data }) => {
 						</div>
 
 						<div className='container mx-auto'>
-							<div className='mt-6 grid sd:grid-cols-5 xz:grid-cols-3 gap-1 sd:px-3 xz:px-1.5 relative'>
-								<div className='col-span-4 grid grid-cols-3'>
+							<div className='mt-6 grid sd:grid-cols-5 xz:grid-cols-1 gap-1 sd:px-3 xz:px-1.5 relative'>
+								<div className='col-span-4 grid sd:grid-cols-5 xz:grid-cols-3'>
 									{DataCar.map((brand) => (
 										<div key={brand.id} className=''>
-											<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/${titleLink(brand.brand)}/`} className='sd:text-base xz:text-sm font-medium text-secondary'>
+											<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/${titleLink(brand.brand)}/`} className='sd:text-base xz:text-xs font-medium text-secondary'>
 												{brand.brand}
 											</Link>
 										</div>
@@ -64,6 +64,11 @@ const PageComponent = observer(({ data }) => {
 								</div>
 							</div>
 
+						</div>
+						<div className='my-7'>
+							<p className='text-right text-secondary'>
+								Количество авто в автосалоне: {data.length} шт.
+							</p>
 						</div>
 						<Catalog data={data} isAdmin={user.userData?.isAdmin} />
 					</div>

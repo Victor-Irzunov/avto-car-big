@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { getAllFilterCars } from '@/http/adminAPI';
 import { Catalog } from '../catalog/Catalog';
+import phoneNumbers from '@/config/config';
 
 export default function FilteredCarsComponent({ brand, model }) {
   const searchParams = useSearchParams();
@@ -33,5 +34,28 @@ export default function FilteredCarsComponent({ brand, model }) {
     fetchFilteredCars();
   }, [searchParams, brand, model]);
 
-  return <Catalog data={filteredCars} />;
+  return (
+    <>
+      {
+        filteredCars.length ?
+          <Catalog data={filteredCars} />
+          :
+          <div className='mt-14 text-center'>
+            <p className='sd:text-5xl xz:text-2xl'>
+              ничего не найдено
+            </p>
+            <div className='mt-10'>
+              <p className=''>
+                Если вы не нашли то, что искали, позвоните нам — мы обязательно вам поможем!
+              </p>
+
+              <a href={`tel:${phoneNumbers.mainPhoneLink}`} className="sd:text-3xl xz:text-xl">
+                {phoneNumbers.mainPhone}
+              </a>
+            </div>
+          </div>
+      }
+    </>
+  )
+
 }

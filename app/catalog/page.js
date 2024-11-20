@@ -8,15 +8,19 @@ async function getData() {
 	try {
 		const data = await prisma.car.findMany({
 			include: {
-				brand: true,
-				model: true,
-				generation: true,
+			  brand: true,
+			  model: true,
+			  generation: true,
 			},
-		});
-		return data || []; // Возвращаем пустой массив, если данных нет
+			orderBy: [
+			  { vip: 'desc' },
+			  { createdAt: 'desc' },
+			],
+		 });
+		return data || [];
 	} catch (error) {
 		console.error("Ошибки при запросе:", error);
-		return []; // Возвращаем пустой массив в случае ошибки
+		return [];
 	}
 }
 

@@ -30,6 +30,10 @@ const page = () => {
 						Кредит на авто б/у в Минске
 					</h1>
 
+					<h2 className='sd:text-xl xz:text-base mt-8 text-center'>
+						Для физ. лиц без первого взноса
+					</h2>
+
 					<div className=''>
 						<FormCreditNoCarData />
 					</div>

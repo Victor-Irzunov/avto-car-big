@@ -1,21 +1,19 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import phoneNumbers from "@/config/config";
 
 export const Catalog = ({ data, isAdmin }) => {
   const [visibleCars, setVisibleCars] = useState(6);
-  const [openDropdown, setOpenDropdown] = useState(null); // состояние для управления видимостью dropdown
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   const loadMoreCars = () => setVisibleCars((prevVisible) => prevVisible + 6);
 
   const toggleDropdown = (carId) => {
-    setOpenDropdown(openDropdown === carId ? null : carId); // переключение видимости dropdown по carId
+    setOpenDropdown(openDropdown === carId ? null : carId);
   };
 
   const handleCardClick = (e, car) => {
-    // Если клик не по кнопке, выполняем переход
     if (!e.target.closest(".phone-button")) {
       window.location.href = `${process.env.NEXT_PUBLIC_BASE_URL}/catalog/${car.id}/${car.titleLink}`;
     }
@@ -23,6 +21,7 @@ export const Catalog = ({ data, isAdmin }) => {
 
   return (
     <div className="sd:container mx-auto">
+      
       <div className="grid sd:grid-cols-3 xz:grid-cols-1 sd:gap-8 xz:gap-2 mt-9">
         {data.slice(0, visibleCars).map((car) => (
           <article key={car.id} className="card bg-white rounded-3xl shadow-xl">
@@ -32,6 +31,28 @@ export const Catalog = ({ data, isAdmin }) => {
                   {car.id}
                 </span>
               ) : null}
+              {
+                car.vip ?
+                  <div className="absolute top-2 left-2">
+                    <Image
+                      src='/svg/fire.svg'
+                      alt='Горячее предложение'
+                      width={20} height={20}
+                    />
+                  </div>
+                  :
+                  null
+              }
+              {
+                car.vip ?
+                  <div className="absolute bottom-1 left-1">
+                    <p className='uppercase text-[9px] text-primary bg-white py-0.5 px-1 rounded-sm'>
+                      рекомендуем
+                    </p>
+                  </div>
+                  :
+                  null
+              }
               <div className="carousel rounded-t-3xl w-full h-full">
                 {JSON.parse(car.images).map((image, index) => (
                   <div key={index} className="carousel-item w-full mx-0.5">
@@ -61,12 +82,12 @@ export const Catalog = ({ data, isAdmin }) => {
               onClick={(e) => handleCardClick(e, car)}
             >
               <p className="text-info sd:text-lg xz:text-sm">
-                {car.priceUSD} USD{" "}
+                <span className={`${car.vip ? 'text-primary' : ''}`}> {car.priceUSD} USD</span>{" "}
                 <span className="font-semibold sd:text-xl xz:text-base">
                   / {car.priceBYN} BYN
                 </span>
               </p>
-              <h3 className="card-title text-secondary sd:text-base xz:text-base">
+              <h3 className={`card-title text-secondary sd:text-base xz:text-base`}>
                 {car.title}
               </h3>
               <ul className="text-[#333333] sd:text-sm xz:text-xs">

@@ -57,13 +57,15 @@ model Car {
   salon             String    @default("")
   material          String    @default("")
   description       String    @db.Text
-
-  brandId           Int       
-  modelId           Int       
-  generationId      Int       
-  brand             Brand     @relation(fields: [brandId], references: [id])
-  model             Model     @relation(fields: [modelId], references: [id])
-  generation        Generation @relation(fields: [generationId], references: [id])
+  vip               Boolean   @default(false) // Поле для VIP статуса
+  createdAt         DateTime  @default(now())
+  
+  brandId           Int        
+  modelId           Int        
+  generationId      Int?       // Поле теперь опционально
+  brand             Brand      @relation(fields: [brandId], references: [id])
+  model             Model      @relation(fields: [modelId], references: [id])
+  generation        Generation? @relation(fields: [generationId], references: [id]) // Опциональное отношение
 
   airbags           String?
   climate           String?

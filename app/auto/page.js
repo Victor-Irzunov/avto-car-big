@@ -40,7 +40,8 @@ function Page() {
               </div>
             </div>
 
-            {/* Динамически загружаемый компонент */}
+
+           
             <FilteredCarsComponent brand={brand} model={model} />
           </div>
         </div>

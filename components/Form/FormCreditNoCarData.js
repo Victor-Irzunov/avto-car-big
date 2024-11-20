@@ -4,6 +4,8 @@ import { DatePicker, ConfigProvider } from 'antd';
 import locale from 'antd/lib/locale/ru_RU';
 import { sendOrderTelegram } from "@/http/telegramAPI";
 import { dollarExchangeRate } from "@/Api-bank/api";
+import phoneNumbers from "@/config/config";
+import Image from "next/image";
 
 const getYearSuffix = (years) => {
 	if (years <= 1) return 'год';
@@ -150,12 +152,15 @@ const FormCreditNoCarData = ({ title = 'Кредитный калькулято�
 		messageForm += `<b>Платежи по действующему кредиту:</b> ${currentCreditPayment || 'Не указано'} BYN\n`;
 
 		try {
-			await sendOrderTelegram(messageForm);
+			const response = await sendOrderTelegram(messageForm);
 			resetForm();
 			setIsActive(true)
 			setTimeout(() => {
 				setIsActive(false)
 			}, 5000)
+			if (response.ok) {
+				window.location.href = '/thank-you';
+			}
 		} catch (error) {
 			alert("Ошибка при отправке данных.");
 		}
@@ -324,10 +329,81 @@ const FormCreditNoCarData = ({ title = 'Кредитный калькулято�
 						</div>
 					</div>
 
-					{/* Отправка формы */}
-					<button type="submit" className="btn btn-primary text-white rounded-full mt-12">Отправить заявку</button>
+					<div className='flex space-x-6 mt-12'>
+						<div className=''>
+							<button type="submit" className="btn btn-primary text-white rounded-full">
+								Отправить заявку
+							</button>
+						</div>
+					</div>
 				</div>
 			</form>
+
+
+			<div className="dropdown dropdown-top text-white mt-12 w-full">
+				<button
+					tabIndex={0}
+					className="btn rounded-full btn-outline btn-primary w-full"
+				>
+					Позвонить
+				</button>
+
+				<div
+					tabIndex={0}
+					className={`dropdown-content bg-[#2D3192] z-30 px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl`}
+				>
+					<div>
+						<Image
+							src="/logo/logo2.webp"
+							alt="Логотип - продажа авто в кредит и лизинг"
+							width={120}
+							height={120}
+							className="mx-auto"
+						/>
+					</div>
+					<p className="text-xl">Мы в Минске</p>
+					<div className="mt-5">
+						<Image
+							src="/svg/location-white.svg"
+							alt="Адрес автосалона"
+							width={30}
+							height={30}
+							className="mx-auto mb-2"
+						/>
+						<a
+							href="https://yandex.by/maps/-/CDdkfUlz"
+							target="_blank"
+							className="mt-2 text-sm"
+						>
+							Минск, ул. Куйбышева 40, <br />
+							Паркинг 4 этаж
+						</a>
+					</div>
+					<div className="mt-5">
+						<Image
+							src="/svg/phone-white.svg"
+							alt="Телефон автосалона"
+							width={25}
+							height={25}
+							className="mx-auto mb-2"
+						/>
+						<a
+							href={`tel:${phoneNumbers.secondaryPhoneLink}`}
+							className="font-light"
+						>
+							{phoneNumbers.secondaryPhone} МТС
+						</a>
+						<a
+							href={`tel:${phoneNumbers.mainPhoneLink}`}
+							className="font-light mt-2 block"
+						>
+							{phoneNumbers.mainPhone} A1
+						</a>
+					</div>
+				</div>
+
+			</div>
+
 
 			{
 				isActive ?

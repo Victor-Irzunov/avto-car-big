@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useEffect, useState } from 'react';
 import { Button, Form, Input, message, Upload, Radio, Checkbox, Select } from 'antd';
@@ -42,23 +41,20 @@ const bodyTypeOptions = ['Седан', 'Универсал', 'Внедорожн
 const driveOptions = ['Передний привод', 'Задний привод', 'Полный привод'];
 const engineCapacityOptions = Array.from({ length: 81 }, (_, i) => `${(i + 10) / 10}л`);
 
-
 const CreateCarForm = () => {
   const [form] = Form.useForm();
   const [imageList, setImageList] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedModel, setSelectedModel] = useState(null);
   const [selectedGeneration, setSelectedGeneration] = useState(null);
-  const [dollar, serDollar] = useState(null)
-
+  const [dollar, setDollar] = useState(null);
 
   useEffect(() => {
     dollarExchangeRate().then(data => {
-      serDollar(data.data.Cur_OfficialRate)
-    })
-  }, [])
+      setDollar(data.data.Cur_OfficialRate);
+    });
+  }, []);
 
-  // const handleImageUpload = ({ fileList }) => setImageList(fileList);
   const handleRemoveImage = (id) => setImageList((prevList) => prevList.filter((file) => file.uid !== id));
 
   const handleDragEnd = (event) => {
@@ -84,7 +80,6 @@ const CreateCarForm = () => {
       onRemove(id);
     };
 
-    // Проверка: используем `image.original` (проверка на `instanceof File` перед использованием `createObjectURL`)
     const imageUrl = image.original instanceof File ? URL.createObjectURL(image.original) : null;
 
     return (
@@ -107,11 +102,9 @@ const CreateCarForm = () => {
     );
   };
 
-
   const handleImageUpload = async ({ fileList }) => {
     const processedImages = await Promise.all(
       fileList.map(async (file) => {
-        // Проверяем, является ли файл экземпляром File, чтобы избежать повторной обработки
         if (file.originFileObj || file instanceof File) {
           const original = await resizeFile(file.originFileObj || file, 1280, 720, 70);
           const thumbnail = await resizeFile(file.originFileObj || file, 300, 169, 85);
@@ -124,7 +117,6 @@ const CreateCarForm = () => {
 
     setImageList(processedImages);
   };
-
 
   const handleBrandChange = (value) => {
     setSelectedBrand(value);
@@ -142,11 +134,10 @@ const CreateCarForm = () => {
     setSelectedGeneration(value);
   };
 
-
   const onFinish = async (values) => {
     const preparedValues = { ...values };
     ['climate', 'safety', 'airbags', 'assistance', 'exterior', 'interior', 'lights', 'heating', 'multimedia', 'comfort'].forEach((field) => {
-      preparedValues[field] = preparedValues[field] || []; // Если undefined, замените на пустой массив
+      preparedValues[field] = preparedValues[field] || [];
     });
 
     const formData = new FormData();
@@ -188,7 +179,11 @@ const CreateCarForm = () => {
       </p>
 
       <Form form={form} name="createCar" onFinish={onFinish} labelCol={{ span: 5 }} wrapperCol={{ span: 16 }}>
-        {/* Выбор бренда */}
+
+        <Form.Item name="vip" label="Приоритет" valuePropName="checked">
+          <Checkbox>VIP</Checkbox>
+        </Form.Item>
+
         <Form.Item name="brand" label="Марка" rules={[{ required: true, message: 'Выберите марку' }]}>
           <Select placeholder="Выберите марку" onChange={handleBrandChange}>
             {DataCar.map((brand) => (
@@ -197,7 +192,6 @@ const CreateCarForm = () => {
           </Select>
         </Form.Item>
 
-        {/* Выбор модели */}
         <Form.Item name="model" label="Модель" rules={[{ required: true, message: 'Выберите модель' }]}>
           <Select placeholder="Выберите модель" onChange={handleModelChange} disabled={!selectedBrand}>
             {selectedBrand && DataCar.find((brand) => brand.brand === selectedBrand).type.map((model) => (
@@ -206,8 +200,7 @@ const CreateCarForm = () => {
           </Select>
         </Form.Item>
 
-        {/* Выбор поколения */}
-        <Form.Item name="generation" label="Поколение" rules={[{ required: true, message: 'Выберите поколение' }]}>
+        <Form.Item name="generation" label="Поколение">
           <Select placeholder="Выберите поколение" disabled={!selectedModel} onChange={handleGenerationChange}>
             {selectedModel &&
               DataCar.find((brand) => brand.brand === selectedBrand)
@@ -239,7 +232,6 @@ const CreateCarForm = () => {
             })}
           </Select>
         </Form.Item>
-
 
         <Form.Item name="engine" label="Двигатель" rules={[{ required: true, message: 'Выберите тип двигателя' }]}>
           <Radio.Group optionType="button" buttonStyle="solid">
@@ -302,7 +294,8 @@ const CreateCarForm = () => {
         </Form.Item>
 
 
-        {/* Checkbox */}
+
+        {/* Checkbox для доп. опций */}
         {Object.keys(carOptions).filter(key => !['salon', 'material'].includes(key)).map((optionKey) => (
           <Form.Item key={optionKey} name={optionKey} label={optionLabels[optionKey]}>
             <Checkbox.Group
@@ -350,4 +343,3 @@ const CreateCarForm = () => {
 };
 
 export default CreateCarForm;
-

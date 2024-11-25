@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <head>
         <GoogleTagManager gtmId="GTM-NN2CR9Z5" />
+        <meta name="yandex-verification" content="c94bf9a7e9d13c40" />
       </head>
 
       <MyContextProvider>

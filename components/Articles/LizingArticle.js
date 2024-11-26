@@ -3,7 +3,7 @@ const LizingArticle = () => {
 		<article className="bg-white/85 text-secondary py-10 rounded-3xl shadow-lg space-y-8">
 			<div className='container mx-auto'>
 				{/* Main Title */}
-				<h2 className="text-3xl font-bold text-blue-600">Лизинг на автомобиль</h2>
+				<h2 className="text-3xl font-bold text-blue-600">Лизинг на автомобиль: Автосалон «АвтоКар»</h2>
 
 				{/* First Section */}
 				<section className="space-y-2 mt-6">

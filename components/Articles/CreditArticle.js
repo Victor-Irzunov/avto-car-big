@@ -7,7 +7,7 @@ const CreditArticle = () => {
 		<article className='bg-white/85 text-secondary py-8 rounded-3xl'>
 			<div className='container mx-auto'>
 				<h2 className='text-2xl font-bold mb-4'>Купить машину в кредит</h2>
-				<h3 className='text-xl font-semibold mb-2'>Автокредит на автомобиль (мотоцикл)</h3>
+				<h3 className='text-xl font-semibold mb-2'>Автокредит на автомобиль (мотоцикл) | Автосалон «АвтоКар»</h3>
 				<p className='mb-4'>
 					Иметь собственный автомобиль – мечта многих людей. Обладание личным транспортным средством дает неоспоримые преимущества:
 				</p>

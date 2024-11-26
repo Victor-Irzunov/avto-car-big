@@ -43,7 +43,7 @@ const PrigonIzEsArticle = () => {
 
 					<div className=''>
 						<h3 className="mt-6 sd:text-4xl xz:text-2xl font-semibold">
-							Доставка автомобилей из Европы
+							Доставка автомобилей из Европы: Автосалон «АвтоКар»
 						</h3>
 						<div className="grid sd:grid-cols-3 xz:grid-cols-1 gap-8 relative mt-8">
 							<div className="sd:col-span-2 xz:col-span-1">

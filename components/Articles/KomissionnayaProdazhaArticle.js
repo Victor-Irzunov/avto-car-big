@@ -7,7 +7,7 @@ const KomissionnayaProdazhaArticle = () => {
 		<article className="sd:mt-10 xz:mt-10 bg-white/85 text-secondary sd:px-8 xz:px-3 py-14 rounded-3xl">
 			<div className='container mx-auto'>
 				<h2 className="sd:text-5xl xz:text-2xl font-semibold">
-					Комиссионная продажа автомобилей
+					Комиссионная продажа автомобилей: Автосалон «АвтоКар»
 				</h2>
 
 				<div className='mt-5'>

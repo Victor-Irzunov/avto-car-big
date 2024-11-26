@@ -15,6 +15,10 @@ async function getData() {
 				model: true,
 				generation: true,
 			},
+			orderBy: [
+				{ vip: 'desc' },
+				{ createdAt: 'desc' },
+			],
 		});
 		if (!data || data.length === 0) {
 			return [];
@@ -34,7 +38,6 @@ const titleLink = (brandName) => {
 
 export default async function CatalogMain() {
 	const data = await getData()
-	console.log("🚀 🚀 🚀  _ CatalogMain _ data:", data)
 
 	return (
 		<section className='sd:mt-16 xz:mt-10'>
@@ -71,14 +74,38 @@ export default async function CatalogMain() {
 										))}
 									</div>
 									<div className='absolute bottom-1 right-1'>
-
 										<Image src='/svg/left-right.svg' alt='Рука и палец для фото влево и вправо' width={25} height={25} className="opacity-90" />
-
 									</div>
+
+									{
+										car.vip ?
+											<div className="absolute top-2 left-2">
+												<Image
+													src='/svg/fire.svg'
+													alt='Горячее предложение'
+													width={20} height={20}
+												/>
+											</div>
+											:
+											null
+									}
+									{
+										car.vip ?
+											<div className="absolute bottom-1 left-1">
+												<p className='uppercase text-[9px] text-primary bg-white py-0.5 px-1 rounded-sm'>
+													рекомендуем
+												</p>
+											</div>
+											:
+											null
+									}
 								</figure>
 								<div className="card-body sd:p-4 xz:p-2">
-									<p className='text-info sd:text-lg xz:text-sm'>
-										{car.priceUSD} USD <span className="font-semibold sd:text-xl xz:text-base">/ {car.priceBYN} BYN</span>
+									<p className="text-info sd:text-lg xz:text-sm">
+										<span className={`${car.vip ? 'text-primary' : ''}`}> {car.priceUSD} USD</span>{" "}
+										<span className="font-semibold sd:text-xl xz:text-base">
+											/ {car.priceBYN} BYN
+										</span>
 									</p>
 									<h5 className="card-title text-secondary sd:text-base xz:text-sm">
 										{car.title}

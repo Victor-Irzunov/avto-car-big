@@ -7,7 +7,7 @@ import { observer } from 'mobx-react-lite';
 import Image from "next/image";
 import Link from "next/link";
 import { transliterate } from "@/transliterate/transliterate";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 
 const titleLink = (brandName) => {
@@ -15,8 +15,19 @@ const titleLink = (brandName) => {
 };
 
 const PageComponent = observer(({ data }) => {
-
 	const { user } = useContext(MyContext)
+	const [showAll, setShowAll] = useState(false);
+
+	// Фильтруем марки, которые начинаются с букв A, B, C
+	const filteredCars = DataCar.filter(
+		(brand) => ['A', 'B', 'C'].includes(brand.brand[0].toUpperCase())
+	);
+
+	// Обработчик для переключения отображения всех брендов
+	const toggleShowAll = () => setShowAll(!showAll);
+
+	// Выбор, какие данные показывать
+	const displayedCars = showAll ? DataCar : filteredCars;
 
 	return (
 		<main className='sd:py-16 xz:py-8 min-h-svh'>
@@ -29,6 +40,7 @@ const PageComponent = observer(({ data }) => {
 						</h1>
 					</div>
 				</div>
+
 				<div className='sd:container mx-auto'>
 					<div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
 						<div className=''>
@@ -48,14 +60,33 @@ const PageComponent = observer(({ data }) => {
 
 						<div className='container mx-auto'>
 							<div className='mt-6 grid sd:grid-cols-5 xz:grid-cols-1 gap-1 sd:px-3 xz:px-1.5 relative'>
-								<div className='col-span-4 grid sd:grid-cols-5 xz:grid-cols-3'>
-									{DataCar.map((brand) => (
-										<div key={brand.id} className=''>
-											<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/${titleLink(brand.brand)}/`} className='sd:text-base xz:text-xs font-medium text-secondary'>
+								<div className="col-span-4 grid sd:grid-cols-5 xz:grid-cols-3">
+									{displayedCars.map((brand) => (
+										<div key={brand.id}>
+											<Link
+												href={`${process.env.NEXT_PUBLIC_BASE_URL}/${titleLink(brand.brand)}/`}
+												className="sd:text-base xz:text-xs font-medium text-secondary"
+											>
 												{brand.brand}
 											</Link>
 										</div>
 									))}
+									{!showAll && (
+										<button
+											onClick={toggleShowAll}
+											className="col-span-full mt-4 text-blue-500 hover:underline"
+										>
+											Показать все
+										</button>
+									)}
+									{showAll && (
+										<button
+											onClick={toggleShowAll}
+											className="col-span-full mt-4 text-blue-500 hover:underline"
+										>
+											Скрыть
+										</button>
+									)}
 								</div>
 								<div className=''>
 									<div className='sticky top-9 bg-neutral rounded-3xl py-5 px-5 max-h-32 sd:flex xz:hidden justify-center items-center'>

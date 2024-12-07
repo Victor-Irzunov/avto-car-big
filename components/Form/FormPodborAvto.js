@@ -6,6 +6,11 @@ import { DataCar } from '@/constans/CarData';
 import qs from 'qs';
 import { transliterate } from '@/transliterate/transliterate';
 
+const engineOptions = ['Бензин', 'Дизель', 'Газ', 'Электро'];
+const transmissionOptions = ['Автомат', 'Механика'];
+const bodyTypeOptions = ['Седан', 'Универсал', 'Внедорожник', 'Минивэн', 'Хэтчбек', 'Микроавтобус', 'Купе', 'Кабриолет', 'Пикап', 'Другое'];
+const driveOptions = ['Передний привод', 'Задний привод', 'Полный привод'];
+
 const FormPodborAvto = () => {
   const router = useRouter();
   const [selectedBrand, setSelectedBrand] = useState('');
@@ -16,6 +21,10 @@ const FormPodborAvto = () => {
   const [yearTo, setYearTo] = useState('');
   const [priceFrom, setPriceFrom] = useState('');
   const [priceTo, setPriceTo] = useState('');
+  const [selectedEngine, setSelectedEngine] = useState('');
+  const [selectedTransmission, setSelectedTransmission] = useState('');
+  const [selectedBodyType, setSelectedBodyType] = useState('');
+  const [selectedDrive, setSelectedDrive] = useState('');
 
   const years = Array.from({ length: 2024 - 1990 + 1 }, (_, i) => 2024 - i);
   const prices = Array.from({ length: 200000 / 1000 }, (_, i) => (i + 1) * 1000);
@@ -34,22 +43,25 @@ const FormPodborAvto = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Проверяем выбранные данные и формируем путь
     const brandPath = selectedBrand ? transliterate(selectedBrand).replace(/\s+/g, '-').toLowerCase() : '';
     const modelPath = selectedModel ? transliterate(selectedModel).replace(/\s+/g, '-').toLowerCase() : '';
-    const basePath = selectedBrand ? `/auto/${brandPath}${selectedModel ? `/${modelPath}` : ''}` : `/auto`;
+    const basePath = selectedBrand ? `/auto/${brandPath}${selectedModel ? `/${modelPath}` : ''}` : '/auto';
 
-    // Собираем параметры фильтрации
+
     const query = {
-      generation: selectedGeneration,
-      yearFrom,
-      yearTo,
-      priceFrom,
-      priceTo,
+      generation: selectedGeneration || undefined,
+      yearFrom: yearFrom || undefined,
+      yearTo: yearTo || undefined,
+      priceFrom: priceFrom || undefined,
+      priceTo: priceTo || undefined,
       currency,
+      engine: selectedEngine || undefined,
+      transmission: selectedTransmission || undefined,
+      bodyType: selectedBodyType || undefined,
+      drive: selectedDrive || undefined,
     };
+    
 
-    // Формируем строку запроса, исключая пустые значения
     const queryString = qs.stringify(query, { skipNulls: true, addQueryPrefix: true });
     router.push(`${basePath}${queryString}`);
   };
@@ -139,6 +151,76 @@ const FormPodborAvto = () => {
         </div>
       </div>
 
+
+
+      {/* Тип двигателя */}
+      <div>
+        <label className="label text-white">Тип двигателя</label>
+        <select
+          className="select select-bordered w-full bg-white text-black"
+          value={selectedEngine}
+          onChange={(e) => setSelectedEngine(e.target.value)}
+        >
+          <option value="">Выберите двигатель</option>
+          {engineOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Тип трансмиссии */}
+      <div>
+        <label className="label text-white">Тип трансмиссии</label>
+        <select
+          className="select select-bordered w-full bg-white text-black"
+          value={selectedTransmission}
+          onChange={(e) => setSelectedTransmission(e.target.value)}
+        >
+          <option value="">Выберите трансмиссию</option>
+          {transmissionOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Тип кузова */}
+      <div>
+        <label className="label text-white">Тип кузова</label>
+        <select
+          className="select select-bordered w-full bg-white text-black"
+          value={selectedBodyType}
+          onChange={(e) => setSelectedBodyType(e.target.value)}
+        >
+          <option value="">Выберите кузов</option>
+          {bodyTypeOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Тип привода */}
+      <div>
+        <label className="label text-white">Тип привода</label>
+        <select
+          className="select select-bordered w-full bg-white text-black"
+          value={selectedDrive}
+          onChange={(e) => setSelectedDrive(e.target.value)}
+        >
+          <option value="">Выберите привод</option>
+          {driveOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
       {/* Цена */}
       <div className="col-span-2">
         <label className="label text-white">Цена</label>
@@ -161,6 +243,7 @@ const FormPodborAvto = () => {
           </select>
         </div>
       </div>
+
 
       {/* Валюта и кнопка поиска */}
       <div className="col-span-2 flex items-center">

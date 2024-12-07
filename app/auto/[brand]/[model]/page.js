@@ -13,19 +13,26 @@ function Page() {
   const { brand, model } = params;
   const [filteredCars, setFilteredCars] = useState([]);
 
+
   useEffect(() => {
+    console.log("searchParams", searchParams);
     const fetchFilteredCars = async () => {
       const queryParams = {
-        brand,
+        brand: brand || null,
         model: model || null,
-        generation: searchParams.get('generation'),
-        yearFrom: searchParams.get('yearFrom'),
-        yearTo: searchParams.get('yearTo'),
-        priceFrom: searchParams.get('priceFrom'),
-        priceTo: searchParams.get('priceTo'),
-        currency: searchParams.get('currency'),
+        generation: searchParams.get('generation') || null,
+        yearFrom: searchParams.get('yearFrom') || null,
+        yearTo: searchParams.get('yearTo') || null,
+        priceFrom: searchParams.get('priceFrom') || null,
+        priceTo: searchParams.get('priceTo') || null,
+        currency: searchParams.get('currency') || null,
+        engine: searchParams.get('engine') || null,
+        transmission: searchParams.get('transmission') || null,
+        bodyType: searchParams.get('bodyType') || null,
+        drive: searchParams.get('drive') || null,
       };
-
+  
+      console.log("queryParams", queryParams); // Отладка
       try {
         const cars = await getAllFilterCars(queryParams);
         setFilteredCars(cars);
@@ -33,9 +40,10 @@ function Page() {
         console.error("Ошибка загрузки отфильтрованных автомобилей:", error);
       }
     };
-
+  
     fetchFilteredCars();
   }, [searchParams, brand, model]);
+  
 
   return (
     <main className='sd:py-16 xz:py-8 min-h-svh'>

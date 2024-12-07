@@ -57,7 +57,7 @@ module.exports = {
           "success": "#36D399",
           "warning": "#FBBD23",
           "error": "#F87272",
-          "light": "#F5F5F5",   // Светлый цвет
+          "light": "#ffffff",   // Светлый цвет
           "dark": "#333333",     // Темный цвет
           "gray-100": "#F7FAFC",
           "gray-500": "#A0AEC0",

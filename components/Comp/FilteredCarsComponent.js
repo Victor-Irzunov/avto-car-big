@@ -21,6 +21,10 @@ export default function FilteredCarsComponent({ brand, model }) {
         priceFrom: searchParams.get('priceFrom') || null,
         priceTo: searchParams.get('priceTo') || null,
         currency: searchParams.get('currency') || null,
+        engine: searchParams.get('engine') || null,
+        transmission: searchParams.get('transmission') || null,
+        bodyType: searchParams.get('bodyType') || null,
+        drive: searchParams.get('drive') || null,
       };
 
       try {

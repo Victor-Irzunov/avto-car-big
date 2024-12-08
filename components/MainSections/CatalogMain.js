@@ -7,7 +7,6 @@ import { transliterate } from "@/transliterate/transliterate";
 const prisma = new PrismaClient();
 
 async function getData() {
-	console.log('Запрос в CatalogMain')
 	try {
 		const data = await prisma.car.findMany({
 			include: {

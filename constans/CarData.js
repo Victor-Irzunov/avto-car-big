@@ -124,6 +124,15 @@ export const DataCar = [
 		]
 	},
 	{
+		id: 67,
+		brand: 'Alpina',
+		type: [
+			{ id: 1, model: 'B30', generations: ['G20'] },
+			{ id: 2, model: 'B7', generations: ['F01', 'F02'] },
+			{ id: 3, model: 'XD3', generations: ['G01'] }
+		]
+	},
+	{
 		id: 8,
 		brand: 'Bmw',
 		type: [
@@ -181,6 +190,92 @@ export const DataCar = [
 			{ id: 2, model: 'U5 Plus', generations: [] },
 			{ id: 3, model: 'X35', generations: [] },
 			{ id: 4, model: 'X55', generations: [] }
+		]
+	},
+	{
+		id: 101,
+		brand: 'Baojun',
+		type: [
+			{ id: 1, model: 'Yep', generations: [] }
+		]
+	},
+	{
+		id: 102,
+		brand: 'BAW',
+		type: [
+			{ id: 1, model: 'Ace M7', generations: [] }
+		]
+	},
+	{
+		id: 103,
+		brand: 'Belgee',
+		type: [
+			{ id: 1, model: 'X50', generations: [] },
+			{ id: 2, model: 'X70', generations: [] }
+		]
+	},
+	{
+		id: 104,
+		brand: 'Bentley',
+		type: [
+			{ id: 1, model: 'Bentayga', generations: [] },
+			{ id: 2, model: 'Continental Flying', generations: [] },
+			{ id: 3, model: 'Continental GT', generations: [] },
+			{ id: 4, model: 'Flying Spur', generations: [] }
+		]
+	},
+	{
+		id: 106,
+		brand: 'Brilliance',
+		type: [
+			{ id: 1, model: 'H230', generations: [] },
+			{ id: 2, model: 'V3', generations: [] }
+		]
+	},
+	{
+		id: 107,
+		brand: 'Buick',
+		type: [
+			{ id: 1, model: 'Cascada', generations: [] },
+			{ id: 2, model: 'Enclave', generations: ['I рестайлинг', 'I'] },
+			{ id: 3, model: 'Encore', generations: ['I Рестайлинг', 'I'] },
+			{ id: 4, model: 'Encore GX', generations: ['I Рестайлинг', 'I'] },
+			{ id: 5, model: 'Envision', generations: ['II', 'I Рестайлинг', 'I'] },
+			{ id: 6, model: 'Envesta', generations: [] },
+			{ id: 7, model: 'LaCrosse', generations: ['II Рестайлинг', 'II'] },
+			{ id: 8, model: 'Locerne', generations: [] },
+			{ id: 9, model: 'Regal', generations: ['VI', 'V Рестайлинг', 'V'] },
+			{ id: 10, model: 'RendezVous', generations: [] },
+			{ id: 11, model: 'Velite 6', generations: ['I Рестайлинг', 'I'] }
+		]
+	},
+	{
+		id: 111,
+		brand: 'BYD',
+		type: [
+			{ id: 1, model: 'D1', generations: [] },
+			{ id: 2, model: 'Dolphin', generations: [] },
+			{ id: 3, model: 'E2', generations: [] },
+			{ id: 4, model: 'E6', generations: [] },
+			{ id: 5, model: 'F3', generations: [] },
+			{ id: 6, model: 'Han', generations: [] },
+			{ id: 7, model: 'Qin', generations: [] },
+			{ id: 8, model: 'S2', generations: [] },
+			{ id: 9, model: 'Sea Lion 07', generations: [] },
+			{ id: 10, model: 'Seagull', generations: [] },
+			{ id: 11, model: 'Seal', generations: [] },
+			{ id: 12, model: 'Seal 06', generations: [] },
+			{ id: 13, model: 'Song', generations: [] },
+			{ id: 14, model: 'Sing L', generations: [] },
+			{ id: 15, model: 'Song Max', generations: [] },
+			{ id: 16, model: 'Song Plus EV', generations: [] },
+			{ id: 17, model: 'Song Pro', generations: [] },
+			{ id: 18, model: 'Tang', generations: [] },
+			{ id: 19, model: 'Yangwang U8', generations: [] },
+			{ id: 20, model: 'Yuan', generations: [] },
+			{ id: 21, model: 'Yuan Plus', generations: [] },
+			{ id: 22, model: 'Yang Pro', generations: [] },
+			{ id: 23, model: 'Yang Up', generations: [] }
 		]
 	},
 	{
@@ -286,6 +381,45 @@ export const DataCar = [
 		],
 	},
 	{
+		id: 112,
+		brand: 'Cadillac',
+		type: [
+			{ id: 1, model: 'ATS', generations: ['I Рестайлинг', 'I'] },
+			{ id: 2, model: 'BLS', generations: [] },
+			{ id: 3, model: 'CT4', generations: [] },
+			{ id: 4, model: 'CT5', generations: [] },
+			{ id: 5, model: 'CT6', generations: ['I Рестайлинг', 'I'] },
+			{ id: 6, model: 'CTS', generations: ['III', 'II', 'I'] },
+			{ id: 7, model: 'De Ville', generations: ['XI', 'VII', 'VI'] },
+			{ id: 8, model: 'Eldorado', generations: ['X', 'VIII'] },
+			{ id: 9, model: 'ELR', generations: [] },
+			{ id: 10, model: 'Escalade', generations: ['V', 'IV', 'III', 'II'] },
+			{ id: 11, model: 'Seville', generations: ['V', 'IV'] },
+			{ id: 12, model: 'SRX', generations: ['II Рестайлинг', 'II', 'I'] },
+			{ id: 13, model: 'STS', generations: [] },
+			{ id: 14, model: 'XT4', generations: [] },
+			{ id: 15, model: 'XT5', generations: [] },
+			{ id: 16, model: 'XT6', generations: [] }
+		]
+	},
+	{
+		id: 113,
+		brand: 'Changan',
+		type: [
+			{ id: 1, model: 'Alsvin', generations: [] },
+			{ id: 2, model: 'Auchan A600 EV', generations: [] },
+			{ id: 3, model: 'Benben E-Star', generations: [] },
+			{ id: 4, model: 'CS35', generations: [] },
+			{ id: 5, model: 'CS75 PLUS', generations: [] },
+			{ id: 6, model: 'Eado', generations: [] },
+			{ id: 7, model: 'Hunter', generations: [] },
+			{ id: 8, model: 'Qiyuan A05', generations: [] },
+			{ id: 9, model: 'Qiyuan Q05', generations: [] },
+			{ id: 10, model: 'Uni-K', generations: [] },
+			{ id: 11, model: 'Uni-T', generations: [] }
+		]
+	},
+	{
 		id: 14,
 		brand: 'Dacia',
 		type: [
@@ -313,6 +447,75 @@ export const DataCar = [
 			{ id: 15, model: 'RAM', generations: ['II', 'III', 'IV'] },
 			{ id: 16, model: 'Ram van', generations: ['III'] },
 			{ id: 17, model: 'Stratus', generations: ['I', 'II', 'II рестайлинг'] }
+		]
+	},
+	{
+		id: 121,
+		brand: 'Daewoo',
+		type: [
+			{ id: 1, model: 'Espero', generations: ['KLEJ рестайлинг', 'KLEJ рестайлинг'] },
+			{ id: 2, model: 'Evanda', generations: [] },
+			{ id: 3, model: 'Gentra', generations: ['II'] },
+			{ id: 4, model: 'Kalos', generations: [] },
+			{ id: 5, model: 'Lacetti', generations: ['I, рестайлинг', 'I'] },
+			{ id: 6, model: 'Lanos', generations: ['T150', 'T100'] },
+			{ id: 7, model: 'Leganza', generations: [] },
+			{ id: 8, model: 'Matiz', generations: ['M250 рестайлинг', 'M150 рестайлинг', 'M100'] },
+			{ id: 9, model: 'Musso', generations: [] },
+			{ id: 10, model: 'Nexia', generations: ['I 2-й рестайлинг', 'I рестайлинг', 'I'] },
+			{ id: 11, model: 'Nubira', generations: ['J200', 'J150,J190 рестайлинг', 'J100'] },
+			{ id: 12, model: 'Rezzo', generations: [] },
+			{ id: 13, model: 'Tacuma', generations: ['I'] },
+			{ id: 14, model: 'Winstorm', generations: [] }
+		]
+	},
+	{
+		id: 122,
+		brand: 'Daihatsu',
+		type: [
+			{ id: 1, model: 'Applausse', generations: ['I'] },
+			{ id: 2, model: 'Cuore', generations: ['L276', 'L251', 'L700'] },
+			{ id: 3, model: 'Gran Move', generations: ['I рестайлинг', 'I'] },
+			{ id: 4, model: 'Materia', generations: [] },
+			{ id: 5, model: 'Move', generations: ['L900'] },
+			{ id: 6, model: 'Sirion', generations: ['II рестайлинг', 'II', 'I'] },
+			{ id: 7, model: 'Taft', generations: [] },
+			{ id: 8, model: 'Terios', generations: ['II'] },
+			{ id: 9, model: 'YRV', generations: ['I'] }
+		]
+	},
+	{
+		id: 123,
+		brand: 'Datsun',
+		type: [
+			{ id: 1, model: 'Mi-DO', generations: ['I'] },
+			{ id: 2, model: 'On-DO', generations: ['I рестайлинг', 'I'] }
+		]
+	},
+	{
+		id: 124,
+		brand: 'Denza',
+		type: [
+			{ id: 1, model: 'N7', generations: [] }
+		]
+	},
+	{
+		id: 125,
+		brand: 'Dongfeng',
+		type: [
+			{ id: 1, model: 'Aeolus E70', generations: [] },
+			{ id: 2, model: 'Aeolus Huge', generations: [] },
+			{ id: 3, model: 'Aeolus Shine', generations: ['I рестайлинг'] },
+			{ id: 4, model: 'Aeolus Shine GS', generations: ['I рестайлинг'] },
+			{ id: 5, model: 'Aeolus Shine Max', generations: [] },
+			{ id: 6, model: 'BOX', generations: [] },
+			{ id: 7, model: 'E11K', generations: [] },
+			{ id: 8, model: 'Eπ 007', generations: [] },
+			{ id: 9, model: 'Forthing M4 U-Tour', generations: [] },
+			{ id: 10, model: 'Forthing T5 EVO', generations: [] },
+			{ id: 11, model: 'H30', generations: [] },
+			{ id: 12, model: 'Mage', generations: [] },
+			{ id: 13, model: 'S30', generations: [] }
 		]
 	},
 	{
@@ -420,6 +623,13 @@ export const DataCar = [
 		]
 	},
 	{
+		id: 126,
+		brand: 'Ferrari',
+		type: [
+			{ id: 1, model: '360', generations: [] }
+		]
+	},
+	{
 		id: 18,
 		brand: 'Geely',
 		type: [
@@ -467,6 +677,49 @@ export const DataCar = [
 			{ id: 4, model: 'Sierra', generations: ['IV'] },
 			{ id: 5, model: 'Terrain', generations: ['I', 'II', 'II рестайлинг'] },
 			{ id: 6, model: 'Vandura', generations: [] }
+		]
+	},
+	{
+		id: 127,
+		brand: 'GAC',
+		type: [
+			{ id: 1, model: 'Aion S', generations: [] },
+			{ id: 2, model: 'Aion V', generations: [] },
+			{ id: 3, model: 'Aion Y', generations: [] },
+			{ id: 4, model: 'Trumpchi Emkoo', generations: [] },
+			{ id: 5, model: 'Trumpchi GE3', generations: [] },
+			{ id: 6, model: 'Trumpchi GS8', generations: ['II'] },
+			{ id: 7, model: 'Trumpchi M8', generations: ['II'] }
+		]
+	},
+
+	{
+		id: 128,
+		brand: 'Genesis',
+		type: [
+			{ id: 1, model: 'G70', generations: ['I', 'I рестайлинг'] },
+			{ id: 2, model: 'G80', generations: ['I', 'I рестайлинг'] },
+			{ id: 3, model: 'G90', generations: ['I', 'I рестайлинг'] },
+			{ id: 4, model: 'GV 70', generations: [] },
+			{ id: 5, model: 'GV80', generations: [] }
+		]
+	},
+	{
+		id: 129,
+		brand: 'Great Wall',
+		type: [
+			{ id: 1, model: 'Coolbear', generations: [] },
+			{ id: 2, model: 'Deer', generations: [] },
+			{ id: 3, model: 'Hover', generations: [] },
+			{ id: 4, model: 'Hover H3', generations: ['I', 'I рестайлинг'] },
+			{ id: 5, model: 'Hover H5', generations: [] },
+			{ id: 6, model: 'Hover H6', generations: [] },
+			{ id: 7, model: 'Hover M4', generations: [] },
+			{ id: 8, model: 'Pegasus', generations: [] },
+			{ id: 9, model: 'Peri', generations: [] },
+			{ id: 10, model: 'Safe', generations: [] },
+			{ id: 11, model: 'Sing', generations: [] },
+			{ id: 12, model: 'Wingle', generations: ['3', '5'] }
 		]
 	},
 	{
@@ -879,6 +1132,67 @@ export const DataCar = [
 		]
 	},
 	{
+		id: 130,
+		brand: 'Hafei',
+		type: [
+			{ id: 1, model: 'Lobo', generations: [] }
+		]
+	},
+	{
+		id: 131,
+		brand: 'Haima',
+		type: [
+			{ id: 1, model: '3', generations: [] },
+			{ id: 2, model: '7X', generations: [] },
+			{ id: 3, model: '8S', generations: [] }
+		]
+	},
+	{
+		id: 132,
+		brand: 'HiPhi',
+		type: [
+			{ id: 1, model: 'Z', generations: [] }
+		]
+	},
+	{
+		id: 133,
+		brand: 'Hongqi',
+		type: [
+			{ id: 1, model: 'E-HS9', generations: [] },
+			{ id: 2, model: 'E-QM5', generations: [] },
+			{ id: 3, model: 'H5', generations: ['II'] },
+			{ id: 4, model: 'HQ9', generations: [] },
+			{ id: 5, model: 'HS5', generations: [] }
+		]
+	},
+	{
+		id: 134,
+		brand: 'Hongxing',
+		type: [
+			{ id: 1, model: 'Noble', generations: [] }
+		]
+	},
+	{
+		id: 135,
+		brand: 'Hozon',
+		type: [
+			{ id: 1, model: 'Neta Aya', generations: [] },
+			{ id: 2, model: 'Neta GT', generations: [] },
+			{ id: 3, model: 'Neta S', generations: [] },
+			{ id: 4, model: 'Neta U', generations: [] },
+			{ id: 5, model: 'Neta U-II', generations: [] },
+			{ id: 6, model: 'Neta X', generations: [] }
+		]
+	},
+	{
+		id: 136,
+		brand: 'Hummer',
+		type: [
+			{ id: 1, model: 'H2', generations: ['I', 'I рестайлинг'] },
+			{ id: 2, model: 'H3', generations: [] }
+		]
+	},
+	{
 		id: 23,
 		brand: 'Infiniti',
 		type: [
@@ -899,6 +1213,24 @@ export const DataCar = [
 			{ id: 15, model: 'QX60', generations: ['L50', 'L50 рестайлинг'] },
 			{ id: 16, model: 'QX70', generations: [] },
 			{ id: 17, model: 'QX80', generations: ['Z62', 'Z62 2-й рестайлинг', 'Z62 3-й рестайлинг', 'Z63'] }
+		]
+	},
+	{
+		id: 137,
+		brand: 'Iran Khondro',
+		type: [
+			{ id: 1, model: 'Samand', generations: [] }
+		]
+	},
+	{
+		id: 138,
+		brand: 'Isuzu',
+		type: [
+			{ id: 1, model: 'Amigo', generations: ['II'] },
+			{ id: 2, model: 'Axiom', generations: [] },
+			{ id: 3, model: 'Oasis', generations: [] },
+			{ id: 4, model: 'Rodeo', generations: ['I', 'II'] },
+			{ id: 5, model: 'Trooper', generations: ['I', 'I рестайлинг', 'II рестайлинг'] }
 		]
 	},
 	{
@@ -933,6 +1265,56 @@ export const DataCar = [
 			{ id: 8, model: 'Renegade', generations: ['I', 'I рестайлинг'] },
 			{ id: 9, model: 'Wagoneer', generations: ['WS'] },
 			{ id: 10, model: 'Wrangler', generations: ['YJ', 'TJ', 'JK', 'JL'] }
+		]
+	},
+	{
+		id: 139,
+		brand: 'JAC',
+		type: [
+			{ id: 1, model: 'E30X', generations: [] },
+			{ id: 2, model: 'IEVS 4', generations: [] },
+			{ id: 3, model: 'J7', generations: [] },
+			{ id: 4, model: 'JS4', generations: [] },
+			{ id: 5, model: 'JS6', generations: [] },
+			{ id: 6, model: 'Refine', generations: [] },
+			{ id: 7, model: 'Rein', generations: ['I'] },
+			{ id: 8, model: 'Ruifeng E3', generations: [] },
+			{ id: 9, model: 'S5', generations: [] },
+			{ id: 10, model: 'T6', generations: [] },
+			{ id: 11, model: 'T8 Pro', generations: [] },
+			{ id: 12, model: 'T9 Hunter', generations: [] }
+		]
+	},
+	{
+		id: 140,
+		brand: 'Jetour',
+		type: [
+			{ id: 1, model: 'Dashing', generations: [] },
+			{ id: 2, model: 'T2', generations: [] },
+			{ id: 3, model: 'X50', generations: [] },
+			{ id: 4, model: 'X70 PLUS', generations: ['I', 'I рестайлинг'] },
+			{ id: 5, model: 'X90 PLUS', generations: [] }
+		]
+	},
+	{
+		id: 141,
+		brand: 'Jetta',
+		type: [
+			{ id: 1, model: 'VS7', generations: ['I'] }
+		]
+	},
+	{
+		id: 142,
+		brand: 'Jiyue',
+		type: [
+			{ id: 1, model: '01', generations: [] }
+		]
+	},
+	{
+		id: 143,
+		brand: 'Jmev',
+		type: [
+			{ id: 1, model: 'EV3', generations: [] }
 		]
 	},
 	{
@@ -977,6 +1359,13 @@ export const DataCar = [
 			{ id: 36, model: 'Stonic', generations: [] },
 			{ id: 37, model: 'Venga', generations: ['I', 'I рестайлинг'] },
 			{ id: 38, model: 'XCeed', generations: [] }
+		]
+	},
+	{
+		id: 144,
+		brand: 'Kaiyi',
+		type: [
+			{ id: 1, model: 'E5', generations: [] }
 		]
 	},
 	{
@@ -1082,6 +1471,70 @@ export const DataCar = [
 			{ id: 10, model: 'Nautilus', generations: [] },
 			{ id: 11, model: 'Navigator', generations: ['1 поколение', '2 поколение', '3 поколение', '4 поколение'] },
 			{ id: 12, model: 'Town Car', generations: ['2 поколение', '3 поколение'] }
+		]
+	},
+	{
+		id: 117,
+		brand: 'Lynk & Co',
+		type: [
+			{ id: 1, model: '02', generations: [] },
+			{ id: 2, model: '03', generations: [] },
+			{ id: 3, model: '06', generations: [] },
+			{ id: 4, model: '08', generations: [] }
+		]
+	},
+	{
+		id: 118,
+		brand: 'Lotus',
+		type: [
+			{ id: 1, model: 'Eletre', generations: [] }
+		]
+	},
+	{
+		id: 119,
+		brand: 'Lixiang',
+		type: [
+			{ id: 1, model: 'L6', generations: [] },
+			{ id: 2, model: 'L7', generations: [] },
+			{ id: 3, model: 'L8', generations: [] },
+			{ id: 4, model: 'L9', generations: [] },
+			{ id: 5, model: 'Mega', generations: [] },
+			{ id: 6, model: 'One', generations: [] }
+		]
+	},
+	{
+		id: 120,
+		brand: 'Livan',
+		type: [
+			{ id: 1, model: 'Ruilan 7', generations: [] },
+			{ id: 2, model: 'Ruilan 9', generations: [] }
+		]
+	},
+
+	{
+		id: 145,
+		brand: 'Lancia',
+		type: [
+			{ id: 1, model: 'Dedra', generations: [] },
+			{ id: 2, model: 'Delta', generations: ['II', 'III', 'III рестайлинг'] },
+			{ id: 3, model: 'Kappa', generations: [] },
+			{ id: 4, model: 'Lybra', generations: [] },
+			{ id: 5, model: 'Musa', generations: ['I', 'I рестайлинг'] },
+			{ id: 6, model: 'Phedra', generations: ['I', 'I рестайлинг'] },
+			{ id: 7, model: 'Prisma', generations: [] },
+			{ id: 8, model: 'Thema', generations: ['I'] },
+			{ id: 9, model: 'Thesis', generations: [] },
+			{ id: 10, model: 'Ypsion', generations: ['I'] },
+			{ id: 11, model: 'Zeta', generations: [] }
+		]
+	},
+	{
+		id: 146,
+		brand: 'Leapmotor',
+		type: [
+			{ id: 1, model: 'C01', generations: [] },
+			{ id: 2, model: 'C11', generations: ['I', 'I рестайлинг'] },
+			{ id: 3, model: 'C16', generations: [] }
 		]
 	},
 	{
@@ -1243,6 +1696,65 @@ export const DataCar = [
 		]
 	},
 	{
+		id: 108,
+		brand: 'Mini',
+		type: [
+			{ id: 1, model: 'Cabrio', generations: ['1 поколение', '2 поколение', '3 рестайлинг', '3•2й рестайлинг'] },
+			{ id: 2, model: 'Clubman', generations: ['R55 поколение', 'R55 рестайлинг', 'F54 поколение', 'F54 рестайлинг'] },
+			{ id: 3, model: 'Cooper', generations: ['R50 поколение', 'R50/R53 рестайлинг', 'R56 поколение', 'R56 рестайлинг', 'F55/F56 поколение', 'F55/F56 рестайлинг', 'F55/F56 • 2й рестайлинг'] },
+			{ id: 4, model: 'Cooper SE', generations: [] },
+			{ id: 5, model: 'Countryman', generations: ['R60 поколение', 'F60 поколение', 'F60 рестайлинг', 'U25'] },
+			{ id: 6, model: 'Paceman', generations: [] }
+		]
+	},
+	{
+		id: 109,
+		brand: 'MG',
+		type: [
+			{ id: 1, model: '3', generations: ['2 поколение', '2 рестайлинг'] },
+			{ id: 2, model: '350', generations: [] },
+			{ id: 3, model: '550', generations: [] },
+			{ id: 4, model: '6', generations: [] },
+			{ id: 5, model: 'Cyberster', generations: [] },
+			{ id: 6, model: 'One', generations: [] },
+			{ id: 7, model: 'ZS', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
+			{ id: 8, model: 'ZT', generations: [] }
+		]
+	},
+	{
+		id: 110,
+		brand: 'Mercury',
+		type: [
+			{ id: 1, model: 'Mariner', generations: [] },
+			{ id: 2, model: 'Milan', generations: [] },
+			{ id: 3, model: 'Sable', generations: [] }
+		]
+	},
+
+
+	{
+		id: 114,
+		brand: 'Maserati',
+		type: [
+			{ id: 1, model: 'Ghibli', generations: [] },
+			{ id: 2, model: 'Levante', generations: [] }
+		]
+	},
+	{
+		id: 115,
+		brand: 'Maple',
+		type: [
+			{ id: 1, model: 'X3 Pro', generations: [] }
+		]
+	},
+	{
+		id: 116,
+		brand: 'M-hero',
+		type: [
+			{ id: 1, model: '917', generations: [] }
+		]
+	},
+	{
 		id: 36,
 		brand: 'Nissan',
 		type: [
@@ -1311,6 +1823,14 @@ export const DataCar = [
 		],
 	},
 	{
+		id: 105,
+		brand: 'Nio',
+		type: [
+			{ id: 1, model: 'ES8', generations: [] },
+			{ id: 2, model: 'ET7', generations: [] }
+		]
+	},
+	{
 		id: 37,
 		brand: 'Opel',
 		type: [
@@ -1347,6 +1867,20 @@ export const DataCar = [
 			{ id: 31, model: 'Vivaro', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '3 поколение'] },
 			{ id: 32, model: 'Zafira', generations: ['A поколение', 'A рестайлинг', 'B поколение', 'B рестайлинг', 'C поколение', 'C рестайлинг'] },
 			{ id: 33, model: 'Zafira Life', generations: [] }
+		]
+	},
+	{
+		id: 83,
+		brand: 'Oting',
+		type: [
+			{ id: 1, model: 'Paladin', generations: [] }
+		]
+	},
+	{
+		id: 84,
+		brand: 'Ora',
+		type: [
+			{ id: 1, model: 'Good Cat', generations: [] }
 		]
 	},
 	{
@@ -1406,7 +1940,52 @@ export const DataCar = [
 			{ id: 9, model: 'Taycan', generations: [] }
 		]
 	},
-
+	{
+		id: 78,
+		brand: 'Proton',
+		type: [
+			{ id: 1, model: 'Persona', generations: [] },
+			{ id: 2, model: 'Putra', generations: [] },
+			{ id: 3, model: 'Satria', generations: [] },
+			{ id: 4, model: 'Wira', generations: [] }
+		]
+	},
+	{
+		id: 79,
+		brand: 'Pontiac',
+		type: [
+			{ id: 1, model: 'Bonneville', generations: [] },
+			{ id: 2, model: 'Firebird', generations: [] },
+			{ id: 3, model: 'G6', generations: [] },
+			{ id: 4, model: 'Grand AM', generations: ['4 поколение', '5 поколение'] },
+			{ id: 5, model: 'Solstice', generations: [] },
+			{ id: 6, model: 'Trans Sport', generations: ['1 поколение', '2 поколение'] },
+			{ id: 7, model: 'Vibe', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] }
+		]
+	},
+	{
+		id: 80,
+		brand: 'Polestar',
+		type: [
+			{ id: 1, model: '2', generations: [] }
+		]
+	},
+	{
+		id: 81,
+		brand: 'Polar',
+		type: [
+			{ id: 1, model: 'Stone 01', generations: [] }
+		]
+	},
+	{
+		id: 82,
+		brand: 'Plymouth',
+		type: [
+			{ id: 1, model: 'Breeze', generations: [] },
+			{ id: 2, model: 'Neon', generations: [] },
+			{ id: 3, model: 'Voyager', generations: [] }
+		]
+	},
 	{
 		id: 40,
 		brand: 'Renault',
@@ -1454,451 +2033,6 @@ export const DataCar = [
 			{ id: 41, model: 'Twingo', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг', '2 поколение', '3 поколение', '3 рестайлинг'] },
 			{ id: 42, model: 'Vel Satis', generations: ['1 поколение', '1 рестайлинг'] },
 			{ id: 43, model: 'ZOE', generations: ['1 поколение', '1 рестайлинг'] }
-		]
-	},
-	{
-		id: 41,
-		brand: 'Saab',
-		type: [
-			{ id: 1, model: '9-3', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
-			{ id: 2, model: '9-5', generations: ['1 поколение', '1 рестайлинг', '1•2-й рестайлинг'] },
-			{ id: 3, model: '9-7X', generations: [] },
-			{ id: 4, model: '900', generations: [] },
-			{ id: 5, model: '9000', generations: [] }
-		]
-	},
-	{
-		id: 42,
-		brand: 'Suzuki',
-		type: [
-			{ id: 1, model: 'Grand Vitara', generations: ['2005…2015', 'FT', 'FT рестайлинг', 'JT', 'JT рестайлинг', 'JT 2-й рестайлинг'] },
-			{ id: 2, model: 'Baleno', generations: ['1995–2007', '2015…', '1 поколение', '2 поколение'] },
-			{ id: 3, model: 'SX4', generations: ['2006…2013', '1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 4, model: 'Swift', generations: ['2010…', '2 поколение', '2 рестайлинг', '3 поколение', '4 поколение', '5 поколение'] },
-			{ id: 5, model: 'Jimny', generations: ['1998–2018', '2018…', '3 поколение', '3 рестайлинг', '4 поколение'] },
-			{ id: 6, model: 'Liana', generations: ['2001–2007', '1 поколение', '1 рестайлинг'] },
-			{ id: 7, model: 'Vitara', generations: ['2015…', 'TA', '4 поколение', '4 рестайлинг'] },
-			{ id: 8, model: 'Aerio', generations: ['2000–2007'] },
-			{ id: 9, model: 'Alto', generations: ['2009…2014', '4 поколение', '5 поколение', '6 поколение', '7 поколение', '8 поколение'] },
-			{ id: 10, model: 'Esteem', generations: ['1995…2002'] },
-			{ id: 11, model: 'Forenza', generations: ['2004…2008'] },
-			{ id: 12, model: 'Celerio', generations: [] },
-			{ id: 13, model: 'Reno', generations: [] },
-			{ id: 14, model: 'Samurai', generations: [] },
-			{ id: 15, model: 'Splash', generations: [] },
-			{ id: 16, model: 'Wagon R+', generations: ['1 поколение', '2 поколение'] },
-			{ id: 17, model: 'XL-7', generations: ['1 поколение', '2 поколение'] },
-			{ id: 18, model: 'Ignis', generations: ['1 поколение', '2 поколение'] },
-			{ id: 19, model: 'Kizashi', generations: [] }
-		]
-	},
-	{
-		id: 43,
-		brand: 'Tesla',
-		type: [
-			{ id: 1, model: 'Model 3', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
-			{ id: 2, model: 'Model S', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
-			{ id: 3, model: 'Model X', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 4, model: 'Model Y', generations: [] }
-		]
-	},
-	{
-		id: 44,
-		brand: 'Toyota',
-		type: [
-			{ id: 1, model: '4Runner', generations: ['2 рестайлинг', '3 рестайлинг', '4 поколение', '5 рестайлинг'] },
-			{ id: 2, model: 'Alphard', generations: ['1 рестайлинг', '2 рестайлинг'] },
-			{ id: 3, model: 'Auris', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 4, model: 'Avalon', generations: ['3 поколение', '4 рестайлинг', '5 поколение'] },
-			{ id: 5, model: 'Avensis', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '3-2-й рестайлинг'] },
-			{ id: 6, model: 'Avensis Verso', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 7, model: 'Aygo', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 8, model: 'Aygo X', generations: [] },
-			{ id: 9, model: 'BZ3', generations: [] },
-			{ id: 10, model: 'BZ4X', generations: [] },
-			{ id: 11, model: 'C-HR', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 12, model: 'Camry', generations: ['V10 рестайлинг', 'XV10', 'XV10 рестайлинг', 'XV20', 'XV30', 'XV30 рестайлинг', 'XV40', 'XV40 рестайлинг', 'XV50', 'XV55 рестайлинг', 'XV55 2-й рестайлинг', 'XV70', 'XV70 рестайлинг', 'XV80'] },
-			{ id: 13, model: 'Camry Solara', generations: ['XV20', 'XV20 рестайлинг', 'XV30', 'XV30 рестайлинг'] },
-			{ id: 14, model: 'Carina', generations: ['4 поколение', '5 поколение', '6 поколение'] },
-			{ id: 15, model: 'Carina E', generations: [] },
-			{ id: 16, model: 'Celica', generations: ['5 поколение', '6 поколение', '6 рестайлинг', '7 поколение', '7 рестайлинг'] },
-			{ id: 17, model: 'Corolla', generations: ['4 поколение', '5 поколение', '6 поколение', '7 поколение', '8 поколение', '8 рестайлинг', '9 поколение', '9 рестайлинг', '10 поколение', '10 рестайлинг', '11 поколение', '11 рестайлинг', '12 поколение'] },
-			{ id: 18, model: 'Corolla Cross', generations: [] },
-			{ id: 19, model: 'Corolla Verso', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
-			{ id: 20, model: 'Crown', generations: [] },
-			{ id: 21, model: 'Echo', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 22, model: 'FJ Cruiser', generations: [] },
-			{ id: 23, model: 'GR86', generations: [] },
-			{ id: 24, model: 'GT86', generations: ['1 рестайлинг'] },
-			{ id: 25, model: 'Hiace', generations: ['4 поколение', '6 поколение'] },
-			{ id: 26, model: 'Highlander', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение'] },
-			{ id: 27, model: 'Hilux', generations: ['7 поколение', '7 рестайлинг', '7-2-й рестайлинг', '8 поколение', '8 рестайлинг'] },
-			{ id: 28, model: 'IQ', generations: [] },
-			{ id: 29, model: 'Land Cruiser', generations: ['J70', 'J80', 'J80 рестайлинг', 'J100', 'J100 рестайлинг', 'J100 2-й рестайлинг', 'J200', 'J200 рестайлинг', 'J200 2-й рестайлинг', 'J300'] },
-			{ id: 30, model: 'Land Cruiser Prado', generations: ['J70', 'J90', 'J90 рестайлинг', 'J120', 'J150', 'J150 рестайлинг', 'J150 2-й рестайлинг', 'J150 3-й рестайлинг', 'J250'] },
-			{ id: 31, model: 'Mark 2', generations: [] },
-			{ id: 32, model: 'Matrix', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
-			{ id: 33, model: 'MR2', generations: ['2 поколение'] },
-			{ id: 34, model: 'Paseo', generations: ['2 поколение'] },
-			{ id: 35, model: 'Picnic', generations: [] },
-			{ id: 36, model: 'Previa', generations: ['1 поколение', '2 поколение'] },
-			{ id: 37, model: 'Prius', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение'] },
-			{ id: 38, model: 'Prius C', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 39, model: 'Prius PHV', generations: [] },
-			{ id: 40, model: 'Prius Prime', generations: [] },
-			{ id: 41, model: 'Prius V(+)', generations: ['ZVW40/41', 'ZVW40/41 рестайлинг'] },
-			{ id: 42, model: 'ProAce City', generations: [] },
-			{ id: 43, model: 'ProAce Verso', generations: [] },
-			{ id: 44, model: 'RAV4', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '3-2-й рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение'] },
-			{ id: 45, model: 'Sequoia', generations: ['1 поколение', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 46, model: 'Sienna', generations: ['2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '3-2-й рестайлинг', '4 поколение'] },
-			{ id: 47, model: 'Starlet', generations: [] },
-			{ id: 48, model: 'Supra', generations: [] },
-			{ id: 49, model: 'Tacoma', generations: [] },
-			{ id: 50, model: 'Tercel', generations: [] },
-			{ id: 51, model: 'Tundra', generations: ['1 рестайлинг', '2 поколение', '2 рестайлинг', '2-2-й рестайлинг', '3 поколение'] },
-			{ id: 52, model: 'Urban Cruiser', generations: [] },
-			{ id: 53, model: 'Venza', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
-			{ id: 54, model: 'Verso', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 55, model: 'Verso-s', generations: [] },
-			{ id: 56, model: 'Yaris', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', 'IA', 'DJ|DL', '3-2-й рестайлинг', '4 поколение'] },
-			{ id: 57, model: 'Yaris Cross', generations: [] },
-			{ id: 58, model: 'Yaris Verso', generations: ['1 поколение', '1 рестайлинг'] }
-		]
-	},
-	{
-		id: 45,
-		brand: 'Volkswagen',
-		type: [
-			{ id: 1, model: 'Amarok', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 2, model: 'Arteon', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 3, model: 'Arteon R', generations: [] },
-			{ id: 4, model: 'Atlas', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 5, model: 'Atlas Cross Sport', generations: [] },
-			{ id: 6, model: 'Beetle', generations: ['А4', 'А4 рестайлинг', 'А5'] },
-			{ id: 7, model: 'Bora', generations: ['1 поколение'] },
-			{ id: 8, model: 'Caddy', generations: ['1 поколение', '2 поколение', '3 поколение', '3 рестайлинг', '4 поколение', '5 поколение'] },
-			{ id: 9, model: 'Caddy Maxi', generations: ['3 поколение', '3 рестайлинг', '4 поколение', '5 поколение'] },
-			{ id: 10, model: 'California', generations: ['T6 рестайлинг'] },
-			{ id: 11, model: 'Caravelle', generations: ['3 поколение', '4 поколение', '5 поколение', '5 рестайлинг', '6 поколение', '6 рестайлинг'] },
-			{ id: 12, model: 'Derby', generations: ['1 поколение'] },
-			{ id: 13, model: 'e-Bora', generations: [] },
-			{ id: 14, model: 'e-Caddy', generations: [] },
-			{ id: 15, model: 'e-Golf', generations: ['7 поколение', '7 рестайлинг'] },
-			{ id: 16, model: 'Eos', generations: ['1 поколение', '1 Рестайлинг'] },
-			{ id: 17, model: 'Eurovan', generations: [] },
-			{ id: 18, model: 'Fox', generations: ['2 рестайлинг'] },
-			{ id: 19, model: 'Golf', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение', '6 поколение', '7 поколение', '7 рестайлинг', '8 поколение'] },
-			{ id: 20, model: 'Golf Alltrack', generations: [] },
-			{ id: 21, model: 'Golf GTD', generations: [] },
-			{ id: 22, model: 'Golf GTE', generations: [] },
-			{ id: 23, model: 'Golf GTI', generations: ['2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение', '6 поколение', '7 поколение', '7 рестайлинг', '8 поколение'] },
-			{ id: 24, model: 'Golf Plus', generations: ['1 поколение', '1 Рестайлинг'] },
-			{ id: 25, model: 'Golf R', generations: ['6 поколение', '7 поколение', '7 рестайлинг', '8 поколение'] },
-			{ id: 26, model: 'Golf Sportsvan', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 27, model: 'ID.3', generations: [] },
-			{ id: 28, model: 'ID.4', generations: [] },
-			{ id: 29, model: 'ID.6', generations: [] },
-			{ id: 30, model: 'ID.Unyx', generations: [] },
-			{ id: 31, model: 'Jetta', generations: ['1 поколение', '2 поколение', '2 рестайлинг', '3 поколение', '4 поколение', '5 поколение', '6 поколение', '6 рестайлинг', '7 поколение', '7 рестайлинг'] },
-			{ id: 32, model: 'Lupo', generations: [] },
-			{ id: 33, model: 'Multivan', generations: ['Т4', 'Т5', 'Т5 рестайлинг', 'Т6', 'Т6.1'] },
-			{ id: 34, model: 'Passat', generations: ['B2', 'B3', 'B4', 'B5', 'B5 рестайлинг', 'B6', 'B7', 'B8', 'B8 рестайлинг'] },
-			{ id: 35, model: 'Passat(USA)', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
-			{ id: 36, model: 'Passat Alltrack', generations: ['B7', 'B8', 'B8 рестайлинг'] },
-			{ id: 37, model: 'Passat CC', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 38, model: 'Phaeton', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
-			{ id: 39, model: 'Pointer', generations: [] },
-			{ id: 40, model: 'Polo', generations: ['2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение', '5 рестайлинг', '6 поколение'] },
-			{ id: 41, model: 'Polo Sedan', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
-			{ id: 42, model: 'Santana', generations: [] },
-			{ id: 43, model: 'Scirocco', generations: ['2 поколение', '3 поколение'] },
-			{ id: 44, model: 'Sharan', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг', '2 поколение', '2-й рестайлинг'] },
-			{ id: 45, model: 'T-Cross', generations: [] },
-			{ id: 46, model: 'T-Roc', generations: [] },
-			{ id: 47, model: 'Taos', generations: [] },
-			{ id: 48, model: 'Tayron', generations: ['1 Рестайлинг'] },
-			{ id: 49, model: 'Teramont', generations: ['1 поколение'] },
-			{ id: 50, model: 'Tiguan', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2-й рестайлинг'] },
-			{ id: 51, model: 'Tiguan Allspace', generations: ['2 поколение', '2-й рестайлинг'] },
-			{ id: 52, model: 'Tiguan R', generations: [] },
-			{ id: 53, model: 'Touareg', generations: ['1 поколение', '1-й рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг'] },
-			{ id: 54, model: 'Touran', generations: ['1 поколение', '1-й рестайлинг', '1-2-й рестайлинг', '2 поколение'] },
-			{ id: 55, model: 'Transporter', generations: ['Т3', 'Т4', 'Т5', 'Т5 рестайлинг', 'Т6', 'Т6 рестайлинг'] },
-			{ id: 56, model: 'Up!', generations: ['1 поколение', '1-й рестайлинг'] },
-			{ id: 57, model: 'Vento', generations: [] }
-		]
-	},
-	{
-		id: 46,
-		brand: 'Volvo',
-		type: [
-			{ id: 1, model: '240', generations: [] },
-			{ id: 2, model: '260', generations: [] },
-			{ id: 3, model: '300', generations: [] },
-			{ id: 4, model: '440', generations: [] },
-			{ id: 5, model: '460', generations: [] },
-			{ id: 6, model: '740', generations: [] },
-			{ id: 7, model: '850', generations: [] },
-			{ id: 8, model: '940', generations: [] },
-			{ id: 9, model: '960', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 10, model: 'C30', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 11, model: 'C40', generations: [] },
-			{ id: 12, model: 'C70', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 13, model: 'S40', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 14, model: 'S60', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 15, model: 'S70', generations: [] },
-			{ id: 16, model: 'S80', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 17, model: 'S90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 18, model: 'V40', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 19, model: 'V40 Cross Country', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 20, model: 'V50', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 21, model: 'V60', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
-			{ id: 22, model: 'V60 Cross Country', generations: ['1 поколение', '2 поколение'] },
-			{ id: 23, model: 'V70', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 24, model: 'V90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 25, model: 'V90 Cross Country', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 26, model: 'XC40', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 27, model: 'XC60', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 28, model: 'XC70', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 29, model: 'XC90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] }
-		]
-	},
-	{
-		id: 47,
-		brand: 'VAZ',
-		type: [
-			{ id: 1, model: 'Granta', generations: ['2011…'] },
-			{ id: 2, model: 'Niva Travel', generations: ['2020…'] },
-			{ id: 3, model: 'Vesta Cross', generations: ['2015…'] }
-		]
-	},
-
-	{
-		id: 48,
-		brand: 'УАЗ',
-		type: [
-			{ id: 1, model: '2206', generations: [] },
-			{ id: 2, model: '2363 Пикап', generations: [] },
-			{ id: 3, model: '31', generations: [] },
-			{ id: 4, model: '3160', generations: [] },
-			{ id: 5, model: '3909', generations: [] },
-			{ id: 6, model: '451', generations: [] },
-			{ id: 7, model: '452', generations: ['1 поколение (1965-1985)', '2 поколение (1985-2020)'] },
-			{ id: 8, model: '469', generations: [] },
-			{ id: 9, model: 'Hunter', generations: [] },
-			{ id: 10, model: 'Патриот', generations: ['1 (2005-2012)', '1 Рестайлинг (2012-2014)', '1 - 2-й Рестайлинг (2014-2016)', '1-3-й Рестайлинг (2016-2024)'] }
-		]
-	},
-	{
-		id: 49,
-		brand: 'ТагАЗ',
-		type: [
-			{ id: 1, model: 'RoadPartner', generations: [] },
-			{ id: 2, model: 'Tager', generations: [] }
-		]
-	},
-	{
-		id: 50,
-		brand: 'Москвич',
-		type: [
-			{ id: 1, model: '2137', generations: [] },
-			{ id: 2, model: '2141', generations: [] },
-			{ id: 3, model: '403', generations: [] },
-			{ id: 4, model: '408', generations: [] },
-			{ id: 5, model: '427', generations: [] },
-			{ id: 6, model: '2140', generations: [] },
-			{ id: 7, model: '401', generations: [] },
-			{ id: 8, model: '407', generations: [] },
-			{ id: 9, model: '412', generations: [] }
-		]
-	},
-	{
-		id: 51,
-		brand: 'ЛуАЗ',
-		type: [
-			{ id: 1, model: '967', generations: [] },
-			{ id: 2, model: '969', generations: [] }
-		]
-	},
-	{
-		id: 52,
-		brand: 'ИЖ',
-		type: [
-			{ id: 1, model: '2125', generations: ['1 поколение (1973-1982)', '1 рестайлинг (1982-1997)'] },
-			{ id: 2, model: '2126', generations: [] },
-			{ id: 3, model: '2117', generations: [] }
-		]
-	},
-	{
-		id: 53,
-		brand: 'ЗАЗ',
-		type: [
-			{ id: 1, model: '1102 Таврия', generations: [] },
-			{ id: 2, model: '1103 Slavuta', generations: [] },
-			{ id: 3, model: '965', generations: [] },
-			{ id: 4, model: '966', generations: [] },
-			{ id: 5, model: '968', generations: ['A поколение (1970-1979)', 'M поколение (1979-1994)'] },
-			{ id: 6, model: 'Chance', generations: [] },
-			{ id: 7, model: 'Forza', generations: [] },
-			{ id: 8, model: 'Lanos', generations: [] },
-			{ id: 9, model: 'Pick-up', generations: [] },
-			{ id: 10, model: 'Send', generations: [] },
-			{ id: 11, model: 'Vida', generations: [] }
-		]
-	},
-	{
-		id: 54,
-		brand: 'ГАЗ',
-		type: [
-			{ id: 1, model: '12 (ЗИМ)', generations: [] },
-			{ id: 2, model: '13 «Чайка»', generations: [] },
-			{ id: 3, model: '14 «Чайка»', generations: [] },
-			{ id: 4, model: '21', generations: [] },
-			{ id: 5, model: '22', generations: [] },
-			{ id: 6, model: '24', generations: ['1 серия (1964-1977)', '2 серия (1977-1985)', '10 (1985-1992)'] },
-			{ id: 7, model: '3102', generations: [] },
-			{ id: 8, model: '31029', generations: [] },
-			{ id: 9, model: '3110', generations: [] },
-			{ id: 10, model: '31105', generations: [] },
-			{ id: 11, model: '3111', generations: [] },
-			{ id: 12, model: '67', generations: [] },
-			{ id: 13, model: '69', generations: [] },
-			{ id: 14, model: 'М-20 Победа', generations: [] },
-			{ id: 15, model: 'Volga Siber', generations: [] },
-			{ id: 16, model: 'Тигр', generations: [] }
-		]
-	},
-	{
-		id: 55,
-		brand: 'Богдан',
-		type: [
-			{ id: 1, model: '2310', generations: [] }
-		]
-	},
-	{
-		id: 56,
-		brand: 'ZX',
-		type: [
-			{ id: 1, model: 'Grand Tiger', generations: [] }
-		]
-	},
-	{
-		id: 57,
-		brand: 'Zotye',
-		type: [
-			{ id: 1, model: 'Coupa', generations: [] },
-			{ id: 2, model: 'E200', generations: [] },
-			{ id: 3, model: 'T600', generations: [] },
-			{ id: 4, model: 'Z300', generations: [] }
-		]
-	},
-	{
-		id: 58,
-		brand: 'Zeekr',
-		type: [
-			{ id: 1, model: '001', generations: ['1 поколение (2021-2024)', '1 рестайлинг (2023 - )'] },
-			{ id: 2, model: '001FR', generations: [] },
-			{ id: 3, model: '007', generations: [] },
-			{ id: 4, model: '009', generations: [] },
-			{ id: 5, model: 'X', generations: [] },
-			{ id: 6, model: 'Young', generations: [] },
-			{ id: 7, model: 'Guang Xiaoxin', generations: [] }
-		]
-	},
-	{
-		id: 59,
-		brand: 'Xpeng',
-		type: [
-			{ id: 1, model: 'G3', generations: [] }
-		]
-	},
-	{
-		id: 60,
-		brand: 'Xiaomi',
-		type: [
-			{ id: 1, model: 'SU7', generations: [] }
-		]
-	},
-	{
-		id: 61,
-		brand: 'Wuling',
-		type: [
-			{ id: 1, model: 'Binguo', generations: [] },
-			{ id: 2, model: 'Hongguang S', generations: [] }
-		]
-	},
-	{
-		id: 62,
-		brand: 'Wey',
-		type: [
-			{ id: 1, model: 'Coffee 01', generations: [] }
-		]
-	},
-	{
-		id: 63,
-		brand: 'Weltmeister',
-		type: [
-			{ id: 1, model: 'EX5', generations: [] },
-			{ id: 2, model: 'W6', generations: [] }
-		]
-	},
-	{
-		id: 64,
-		brand: 'Wartburg',
-		type: [
-			{ id: 1, model: '353', generations: [] }
-		]
-	},
-
-	{
-		id: 65,
-		brand: 'Voyah',
-		type: [
-			{ id: 1, model: 'Dream', generations: [] },
-			{ id: 2, model: 'Free', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
-			{ id: 3, model: 'Passion', generations: [] }
-		]
-	},
-	{
-		id: 66,
-		brand: 'Vortex',
-		type: [
-			{ id: 1, model: 'Tingo', generations: [] }
-		]
-	},
-
-	{
-		id: 67,
-		brand: 'Alpina',
-		type: [
-			{ id: 1, model: 'B30', generations: ['G20'] },
-			{ id: 2, model: 'B7', generations: ['F01', 'F02'] },
-			{ id: 3, model: 'XD3', generations: ['G01'] }
-		]
-	},
-	{
-		id: 68,
-		brand: 'Saturn',
-		type: [
-			{ id: 1, model: 'SC', generations: [] },
-			{ id: 2, model: 'SL', generations: [] },
-			{ id: 3, model: 'VUE', generations: [] }
-		]
-	},
-	{
-		id: 69,
-		brand: 'Santana',
-		type: [
-			{ id: 1, model: 'PS-10', generations: [] }
-		]
-	},
-	{
-		id: 70,
-		brand: 'Saipa',
-		type: [
-			{ id: 1, model: 'Quick', generations: [] },
-			{ id: 2, model: 'Shahin', generations: [] }
 		]
 	},
 	{
@@ -1963,99 +2097,63 @@ export const DataCar = [
 		]
 	},
 	{
-		id: 78,
-		brand: 'Proton',
+		id: 41,
+		brand: 'Saab',
 		type: [
-			{ id: 1, model: 'Persona', generations: [] },
-			{ id: 2, model: 'Putra', generations: [] },
-			{ id: 3, model: 'Satria', generations: [] },
-			{ id: 4, model: 'Wira', generations: [] }
+			{ id: 1, model: '9-3', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
+			{ id: 2, model: '9-5', generations: ['1 поколение', '1 рестайлинг', '1•2-й рестайлинг'] },
+			{ id: 3, model: '9-7X', generations: [] },
+			{ id: 4, model: '900', generations: [] },
+			{ id: 5, model: '9000', generations: [] }
 		]
 	},
 	{
-		id: 79,
-		brand: 'Pontiac',
+		id: 42,
+		brand: 'Suzuki',
 		type: [
-			{ id: 1, model: 'Bonneville', generations: [] },
-			{ id: 2, model: 'Firebird', generations: [] },
-			{ id: 3, model: 'G6', generations: [] },
-			{ id: 4, model: 'Grand AM', generations: ['4 поколение', '5 поколение'] },
-			{ id: 5, model: 'Solstice', generations: [] },
-			{ id: 6, model: 'Trans Sport', generations: ['1 поколение', '2 поколение'] },
-			{ id: 7, model: 'Vibe', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] }
+			{ id: 1, model: 'Grand Vitara', generations: ['2005…2015', 'FT', 'FT рестайлинг', 'JT', 'JT рестайлинг', 'JT 2-й рестайлинг'] },
+			{ id: 2, model: 'Baleno', generations: ['1995–2007', '2015…', '1 поколение', '2 поколение'] },
+			{ id: 3, model: 'SX4', generations: ['2006…2013', '1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 4, model: 'Swift', generations: ['2010…', '2 поколение', '2 рестайлинг', '3 поколение', '4 поколение', '5 поколение'] },
+			{ id: 5, model: 'Jimny', generations: ['1998–2018', '2018…', '3 поколение', '3 рестайлинг', '4 поколение'] },
+			{ id: 6, model: 'Liana', generations: ['2001–2007', '1 поколение', '1 рестайлинг'] },
+			{ id: 7, model: 'Vitara', generations: ['2015…', 'TA', '4 поколение', '4 рестайлинг'] },
+			{ id: 8, model: 'Aerio', generations: ['2000–2007'] },
+			{ id: 9, model: 'Alto', generations: ['2009…2014', '4 поколение', '5 поколение', '6 поколение', '7 поколение', '8 поколение'] },
+			{ id: 10, model: 'Esteem', generations: ['1995…2002'] },
+			{ id: 11, model: 'Forenza', generations: ['2004…2008'] },
+			{ id: 12, model: 'Celerio', generations: [] },
+			{ id: 13, model: 'Reno', generations: [] },
+			{ id: 14, model: 'Samurai', generations: [] },
+			{ id: 15, model: 'Splash', generations: [] },
+			{ id: 16, model: 'Wagon R+', generations: ['1 поколение', '2 поколение'] },
+			{ id: 17, model: 'XL-7', generations: ['1 поколение', '2 поколение'] },
+			{ id: 18, model: 'Ignis', generations: ['1 поколение', '2 поколение'] },
+			{ id: 19, model: 'Kizashi', generations: [] }
 		]
 	},
 	{
-		id: 80,
-		brand: 'Polestar',
+		id: 68,
+		brand: 'Saturn',
 		type: [
-			{ id: 1, model: '2', generations: [] }
+			{ id: 1, model: 'SC', generations: [] },
+			{ id: 2, model: 'SL', generations: [] },
+			{ id: 3, model: 'VUE', generations: [] }
 		]
 	},
 	{
-		id: 81,
-		brand: 'Polar',
+		id: 69,
+		brand: 'Santana',
 		type: [
-			{ id: 1, model: 'Stone 01', generations: [] }
+			{ id: 1, model: 'PS-10', generations: [] }
 		]
 	},
 	{
-		id: 82,
-		brand: 'Plymouth',
+		id: 70,
+		brand: 'Saipa',
 		type: [
-			{ id: 1, model: 'Breeze', generations: [] },
-			{ id: 2, model: 'Neon', generations: [] },
-			{ id: 3, model: 'Voyager', generations: [] }
-		]
-	},
-	{
-		id: 83,
-		brand: 'Oting',
-		type: [
-			{ id: 1, model: 'Paladin', generations: [] }
-		]
-	},
-	{
-		id: 84,
-		brand: 'Ora',
-		type: [
-			{ id: 1, model: 'Good Cat', generations: [] }
-		]
-	},
-	{
-		id: 85,
-		brand: 'VGV',
-		type: [
-			{ id: 1, model: 'U75 Plus', generations: [] }
-		]
-	},
-	{
-		id: 86,
-		brand: 'Trabant',
-		type: [
-			{ id: 1, model: 'P601', generations: [] }
-		]
-	},
-	{
-		id: 87,
-		brand: 'Think',
-		type: [
-			{ id: 1, model: 'City', generations: [] }
-		]
-	},
-	{
-		id: 88,
-		brand: 'Tata',
-		type: [
-			{ id: 1, model: 'Safari', generations: [] },
-			{ id: 2, model: 'Telcoline', generations: [] }
-		]
-	},
-	{
-		id: 89,
-		brand: 'Tank',
-		type: [
-			{ id: 1, model: '500', generations: [] }
+			{ id: 1, model: 'Quick', generations: [] },
+			{ id: 2, model: 'Shahin', generations: [] }
 		]
 	},
 	{
@@ -2190,514 +2288,413 @@ export const DataCar = [
 		]
 	},
 	{
-		id: 101,
-		brand: 'Baojun',
+		id: 43,
+		brand: 'Tesla',
 		type: [
-			{ id: 1, model: 'Yep', generations: [] }
+			{ id: 1, model: 'Model 3', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
+			{ id: 2, model: 'Model S', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
+			{ id: 3, model: 'Model X', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 4, model: 'Model Y', generations: [] }
 		]
 	},
 	{
-		id: 102,
-		brand: 'BAW',
+		id: 44,
+		brand: 'Toyota',
 		type: [
-			{ id: 1, model: 'Ace M7', generations: [] }
+			{ id: 1, model: '4Runner', generations: ['2 рестайлинг', '3 рестайлинг', '4 поколение', '5 рестайлинг'] },
+			{ id: 2, model: 'Alphard', generations: ['1 рестайлинг', '2 рестайлинг'] },
+			{ id: 3, model: 'Auris', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 4, model: 'Avalon', generations: ['3 поколение', '4 рестайлинг', '5 поколение'] },
+			{ id: 5, model: 'Avensis', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '3-2-й рестайлинг'] },
+			{ id: 6, model: 'Avensis Verso', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 7, model: 'Aygo', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 8, model: 'Aygo X', generations: [] },
+			{ id: 9, model: 'BZ3', generations: [] },
+			{ id: 10, model: 'BZ4X', generations: [] },
+			{ id: 11, model: 'C-HR', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 12, model: 'Camry', generations: ['V10 рестайлинг', 'XV10', 'XV10 рестайлинг', 'XV20', 'XV30', 'XV30 рестайлинг', 'XV40', 'XV40 рестайлинг', 'XV50', 'XV55 рестайлинг', 'XV55 2-й рестайлинг', 'XV70', 'XV70 рестайлинг', 'XV80'] },
+			{ id: 13, model: 'Camry Solara', generations: ['XV20', 'XV20 рестайлинг', 'XV30', 'XV30 рестайлинг'] },
+			{ id: 14, model: 'Carina', generations: ['4 поколение', '5 поколение', '6 поколение'] },
+			{ id: 15, model: 'Carina E', generations: [] },
+			{ id: 16, model: 'Celica', generations: ['5 поколение', '6 поколение', '6 рестайлинг', '7 поколение', '7 рестайлинг'] },
+			{ id: 17, model: 'Corolla', generations: ['4 поколение', '5 поколение', '6 поколение', '7 поколение', '8 поколение', '8 рестайлинг', '9 поколение', '9 рестайлинг', '10 поколение', '10 рестайлинг', '11 поколение', '11 рестайлинг', '12 поколение'] },
+			{ id: 18, model: 'Corolla Cross', generations: [] },
+			{ id: 19, model: 'Corolla Verso', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
+			{ id: 20, model: 'Crown', generations: [] },
+			{ id: 21, model: 'Echo', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 22, model: 'FJ Cruiser', generations: [] },
+			{ id: 23, model: 'GR86', generations: [] },
+			{ id: 24, model: 'GT86', generations: ['1 рестайлинг'] },
+			{ id: 25, model: 'Hiace', generations: ['4 поколение', '6 поколение'] },
+			{ id: 26, model: 'Highlander', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение'] },
+			{ id: 27, model: 'Hilux', generations: ['7 поколение', '7 рестайлинг', '7-2-й рестайлинг', '8 поколение', '8 рестайлинг'] },
+			{ id: 28, model: 'IQ', generations: [] },
+			{ id: 29, model: 'Land Cruiser', generations: ['J70', 'J80', 'J80 рестайлинг', 'J100', 'J100 рестайлинг', 'J100 2-й рестайлинг', 'J200', 'J200 рестайлинг', 'J200 2-й рестайлинг', 'J300'] },
+			{ id: 30, model: 'Land Cruiser Prado', generations: ['J70', 'J90', 'J90 рестайлинг', 'J120', 'J150', 'J150 рестайлинг', 'J150 2-й рестайлинг', 'J150 3-й рестайлинг', 'J250'] },
+			{ id: 31, model: 'Mark 2', generations: [] },
+			{ id: 32, model: 'Matrix', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
+			{ id: 33, model: 'MR2', generations: ['2 поколение'] },
+			{ id: 34, model: 'Paseo', generations: ['2 поколение'] },
+			{ id: 35, model: 'Picnic', generations: [] },
+			{ id: 36, model: 'Previa', generations: ['1 поколение', '2 поколение'] },
+			{ id: 37, model: 'Prius', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение'] },
+			{ id: 38, model: 'Prius C', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 39, model: 'Prius PHV', generations: [] },
+			{ id: 40, model: 'Prius Prime', generations: [] },
+			{ id: 41, model: 'Prius V(+)', generations: ['ZVW40/41', 'ZVW40/41 рестайлинг'] },
+			{ id: 42, model: 'ProAce City', generations: [] },
+			{ id: 43, model: 'ProAce Verso', generations: [] },
+			{ id: 44, model: 'RAV4', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '3-2-й рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение'] },
+			{ id: 45, model: 'Sequoia', generations: ['1 поколение', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 46, model: 'Sienna', generations: ['2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '3-2-й рестайлинг', '4 поколение'] },
+			{ id: 47, model: 'Starlet', generations: [] },
+			{ id: 48, model: 'Supra', generations: [] },
+			{ id: 49, model: 'Tacoma', generations: [] },
+			{ id: 50, model: 'Tercel', generations: [] },
+			{ id: 51, model: 'Tundra', generations: ['1 рестайлинг', '2 поколение', '2 рестайлинг', '2-2-й рестайлинг', '3 поколение'] },
+			{ id: 52, model: 'Urban Cruiser', generations: [] },
+			{ id: 53, model: 'Venza', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
+			{ id: 54, model: 'Verso', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 55, model: 'Verso-s', generations: [] },
+			{ id: 56, model: 'Yaris', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', 'IA', 'DJ|DL', '3-2-й рестайлинг', '4 поколение'] },
+			{ id: 57, model: 'Yaris Cross', generations: [] },
+			{ id: 58, model: 'Yaris Verso', generations: ['1 поколение', '1 рестайлинг'] }
 		]
 	},
 	{
-		id: 103,
-		brand: 'Belgee',
+		id: 86,
+		brand: 'Trabant',
 		type: [
-			{ id: 1, model: 'X50', generations: [] },
-			{ id: 2, model: 'X70', generations: [] }
+			{ id: 1, model: 'P601', generations: [] }
 		]
 	},
 	{
-		id: 104,
-		brand: 'Bentley',
+		id: 87,
+		brand: 'Think',
 		type: [
-			{ id: 1, model: 'Bentayga', generations: [] },
-			{ id: 2, model: 'Continental Flying', generations: [] },
-			{ id: 3, model: 'Continental GT', generations: [] },
-			{ id: 4, model: 'Flying Spur', generations: [] }
+			{ id: 1, model: 'City', generations: [] }
 		]
 	},
 	{
-		id: 105,
-		brand: 'Nio',
+		id: 88,
+		brand: 'Tata',
 		type: [
-			{ id: 1, model: 'ES8', generations: [] },
-			{ id: 2, model: 'ET7', generations: [] }
+			{ id: 1, model: 'Safari', generations: [] },
+			{ id: 2, model: 'Telcoline', generations: [] }
 		]
 	},
 	{
-		id: 106,
-		brand: 'Brilliance',
+		id: 89,
+		brand: 'Tank',
 		type: [
-			{ id: 1, model: 'H230', generations: [] },
-			{ id: 2, model: 'V3', generations: [] }
+			{ id: 1, model: '500', generations: [] }
 		]
 	},
 	{
-		id: 107,
-		brand: 'Buick',
+		id: 45,
+		brand: 'Volkswagen',
 		type: [
-			{ id: 1, model: 'Cascada', generations: [] },
-			{ id: 2, model: 'Enclave', generations: ['I рестайлинг', 'I'] },
-			{ id: 3, model: 'Encore', generations: ['I Рестайлинг', 'I'] },
-			{ id: 4, model: 'Encore GX', generations: ['I Рестайлинг', 'I'] },
-			{ id: 5, model: 'Envision', generations: ['II', 'I Рестайлинг', 'I'] },
-			{ id: 6, model: 'Envesta', generations: [] },
-			{ id: 7, model: 'LaCrosse', generations: ['II Рестайлинг', 'II'] },
-			{ id: 8, model: 'Locerne', generations: [] },
-			{ id: 9, model: 'Regal', generations: ['VI', 'V Рестайлинг', 'V'] },
-			{ id: 10, model: 'RendezVous', generations: [] },
-			{ id: 11, model: 'Velite 6', generations: ['I Рестайлинг', 'I'] }
+			{ id: 1, model: 'Amarok', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 2, model: 'Arteon', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 3, model: 'Arteon R', generations: [] },
+			{ id: 4, model: 'Atlas', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 5, model: 'Atlas Cross Sport', generations: [] },
+			{ id: 6, model: 'Beetle', generations: ['А4', 'А4 рестайлинг', 'А5'] },
+			{ id: 7, model: 'Bora', generations: ['1 поколение'] },
+			{ id: 8, model: 'Caddy', generations: ['1 поколение', '2 поколение', '3 поколение', '3 рестайлинг', '4 поколение', '5 поколение'] },
+			{ id: 9, model: 'Caddy Maxi', generations: ['3 поколение', '3 рестайлинг', '4 поколение', '5 поколение'] },
+			{ id: 10, model: 'California', generations: ['T6 рестайлинг'] },
+			{ id: 11, model: 'Caravelle', generations: ['3 поколение', '4 поколение', '5 поколение', '5 рестайлинг', '6 поколение', '6 рестайлинг'] },
+			{ id: 12, model: 'Derby', generations: ['1 поколение'] },
+			{ id: 13, model: 'e-Bora', generations: [] },
+			{ id: 14, model: 'e-Caddy', generations: [] },
+			{ id: 15, model: 'e-Golf', generations: ['7 поколение', '7 рестайлинг'] },
+			{ id: 16, model: 'Eos', generations: ['1 поколение', '1 Рестайлинг'] },
+			{ id: 17, model: 'Eurovan', generations: [] },
+			{ id: 18, model: 'Fox', generations: ['2 рестайлинг'] },
+			{ id: 19, model: 'Golf', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение', '6 поколение', '7 поколение', '7 рестайлинг', '8 поколение'] },
+			{ id: 20, model: 'Golf Alltrack', generations: [] },
+			{ id: 21, model: 'Golf GTD', generations: [] },
+			{ id: 22, model: 'Golf GTE', generations: [] },
+			{ id: 23, model: 'Golf GTI', generations: ['2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение', '6 поколение', '7 поколение', '7 рестайлинг', '8 поколение'] },
+			{ id: 24, model: 'Golf Plus', generations: ['1 поколение', '1 Рестайлинг'] },
+			{ id: 25, model: 'Golf R', generations: ['6 поколение', '7 поколение', '7 рестайлинг', '8 поколение'] },
+			{ id: 26, model: 'Golf Sportsvan', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 27, model: 'ID.3', generations: [] },
+			{ id: 28, model: 'ID.4', generations: [] },
+			{ id: 29, model: 'ID.6', generations: [] },
+			{ id: 30, model: 'ID.Unyx', generations: [] },
+			{ id: 31, model: 'Jetta', generations: ['1 поколение', '2 поколение', '2 рестайлинг', '3 поколение', '4 поколение', '5 поколение', '6 поколение', '6 рестайлинг', '7 поколение', '7 рестайлинг'] },
+			{ id: 32, model: 'Lupo', generations: [] },
+			{ id: 33, model: 'Multivan', generations: ['Т4', 'Т5', 'Т5 рестайлинг', 'Т6', 'Т6.1'] },
+			{ id: 34, model: 'Passat', generations: ['B2', 'B3', 'B4', 'B5', 'B5 рестайлинг', 'B6', 'B7', 'B8', 'B8 рестайлинг'] },
+			{ id: 35, model: 'Passat(USA)', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
+			{ id: 36, model: 'Passat Alltrack', generations: ['B7', 'B8', 'B8 рестайлинг'] },
+			{ id: 37, model: 'Passat CC', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 38, model: 'Phaeton', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
+			{ id: 39, model: 'Pointer', generations: [] },
+			{ id: 40, model: 'Polo', generations: ['2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', '4 поколение', '4 рестайлинг', '5 поколение', '5 рестайлинг', '6 поколение'] },
+			{ id: 41, model: 'Polo Sedan', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
+			{ id: 42, model: 'Santana', generations: [] },
+			{ id: 43, model: 'Scirocco', generations: ['2 поколение', '3 поколение'] },
+			{ id: 44, model: 'Sharan', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг', '2 поколение', '2-й рестайлинг'] },
+			{ id: 45, model: 'T-Cross', generations: [] },
+			{ id: 46, model: 'T-Roc', generations: [] },
+			{ id: 47, model: 'Taos', generations: [] },
+			{ id: 48, model: 'Tayron', generations: ['1 Рестайлинг'] },
+			{ id: 49, model: 'Teramont', generations: ['1 поколение'] },
+			{ id: 50, model: 'Tiguan', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2-й рестайлинг'] },
+			{ id: 51, model: 'Tiguan Allspace', generations: ['2 поколение', '2-й рестайлинг'] },
+			{ id: 52, model: 'Tiguan R', generations: [] },
+			{ id: 53, model: 'Touareg', generations: ['1 поколение', '1-й рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг'] },
+			{ id: 54, model: 'Touran', generations: ['1 поколение', '1-й рестайлинг', '1-2-й рестайлинг', '2 поколение'] },
+			{ id: 55, model: 'Transporter', generations: ['Т3', 'Т4', 'Т5', 'Т5 рестайлинг', 'Т6', 'Т6 рестайлинг'] },
+			{ id: 56, model: 'Up!', generations: ['1 поколение', '1-й рестайлинг'] },
+			{ id: 57, model: 'Vento', generations: [] }
 		]
 	},
 	{
-		id: 108,
-		brand: 'Mini',
+		id: 46,
+		brand: 'Volvo',
 		type: [
-			{ id: 1, model: 'Cabrio', generations: ['1 поколение', '2 поколение', '3 рестайлинг', '3•2й рестайлинг'] },
-			{ id: 2, model: 'Clubman', generations: ['R55 поколение', 'R55 рестайлинг', 'F54 поколение', 'F54 рестайлинг'] },
-			{ id: 3, model: 'Cooper', generations: ['R50 поколение', 'R50/R53 рестайлинг', 'R56 поколение', 'R56 рестайлинг', 'F55/F56 поколение', 'F55/F56 рестайлинг', 'F55/F56 • 2й рестайлинг'] },
-			{ id: 4, model: 'Cooper SE', generations: [] },
-			{ id: 5, model: 'Countryman', generations: ['R60 поколение', 'F60 поколение', 'F60 рестайлинг', 'U25'] },
-			{ id: 6, model: 'Paceman', generations: [] }
+			{ id: 1, model: '240', generations: [] },
+			{ id: 2, model: '260', generations: [] },
+			{ id: 3, model: '300', generations: [] },
+			{ id: 4, model: '440', generations: [] },
+			{ id: 5, model: '460', generations: [] },
+			{ id: 6, model: '740', generations: [] },
+			{ id: 7, model: '850', generations: [] },
+			{ id: 8, model: '940', generations: [] },
+			{ id: 9, model: '960', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 10, model: 'C30', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 11, model: 'C40', generations: [] },
+			{ id: 12, model: 'C70', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 13, model: 'S40', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 14, model: 'S60', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 15, model: 'S70', generations: [] },
+			{ id: 16, model: 'S80', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 17, model: 'S90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 18, model: 'V40', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 19, model: 'V40 Cross Country', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 20, model: 'V50', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 21, model: 'V60', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
+			{ id: 22, model: 'V60 Cross Country', generations: ['1 поколение', '2 поколение'] },
+			{ id: 23, model: 'V70', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 24, model: 'V90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 25, model: 'V90 Cross Country', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 26, model: 'XC40', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 27, model: 'XC60', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 28, model: 'XC70', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+			{ id: 29, model: 'XC90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] }
 		]
 	},
 	{
-		id: 109,
-		brand: 'MG',
+		id: 47,
+		brand: 'VAZ',
 		type: [
-			{ id: 1, model: '3', generations: ['2 поколение', '2 рестайлинг'] },
-			{ id: 2, model: '350', generations: [] },
-			{ id: 3, model: '550', generations: [] },
-			{ id: 4, model: '6', generations: [] },
-			{ id: 5, model: 'Cyberster', generations: [] },
-			{ id: 6, model: 'One', generations: [] },
-			{ id: 7, model: 'ZS', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
-			{ id: 8, model: 'ZT', generations: [] }
+			{ id: 1, model: 'Granta', generations: ['2011…'] },
+			{ id: 2, model: 'Niva Travel', generations: ['2020…'] },
+			{ id: 3, model: 'Vesta Cross', generations: ['2015…'] }
 		]
 	},
 	{
-		id: 110,
-		brand: 'Mercury',
+		id: 65,
+		brand: 'Voyah',
 		type: [
-			{ id: 1, model: 'Mariner', generations: [] },
-			{ id: 2, model: 'Milan', generations: [] },
-			{ id: 3, model: 'Sable', generations: [] }
+			{ id: 1, model: 'Dream', generations: [] },
+			{ id: 2, model: 'Free', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
+			{ id: 3, model: 'Passion', generations: [] }
 		]
 	},
 	{
-		id: 111,
-		brand: 'BYD',
+		id: 66,
+		brand: 'Vortex',
 		type: [
-			{ id: 1, model: 'D1', generations: [] },
-			{ id: 2, model: 'Dolphin', generations: [] },
-			{ id: 3, model: 'E2', generations: [] },
-			{ id: 4, model: 'E6', generations: [] },
-			{ id: 5, model: 'F3', generations: [] },
-			{ id: 6, model: 'Han', generations: [] },
-			{ id: 7, model: 'Qin', generations: [] },
-			{ id: 8, model: 'S2', generations: [] },
-			{ id: 9, model: 'Sea Lion 07', generations: [] },
-			{ id: 10, model: 'Seagull', generations: [] },
-			{ id: 11, model: 'Seal', generations: [] },
-			{ id: 12, model: 'Seal 06', generations: [] },
-			{ id: 13, model: 'Song', generations: [] },
-			{ id: 14, model: 'Sing L', generations: [] },
-			{ id: 15, model: 'Song Max', generations: [] },
-			{ id: 16, model: 'Song Plus EV', generations: [] },
-			{ id: 17, model: 'Song Pro', generations: [] },
-			{ id: 18, model: 'Tang', generations: [] },
-			{ id: 19, model: 'Yangwang U8', generations: [] },
-			{ id: 20, model: 'Yuan', generations: [] },
-			{ id: 21, model: 'Yuan Plus', generations: [] },
-			{ id: 22, model: 'Yang Pro', generations: [] },
-			{ id: 23, model: 'Yang Up', generations: [] }
+			{ id: 1, model: 'Tingo', generations: [] }
 		]
 	},
 	{
-		id: 112,
-		brand: 'Cadillac',
+		id: 85,
+		brand: 'VGV',
 		type: [
-			{ id: 1, model: 'ATS', generations: ['I Рестайлинг', 'I'] },
-			{ id: 2, model: 'BLS', generations: [] },
-			{ id: 3, model: 'CT4', generations: [] },
-			{ id: 4, model: 'CT5', generations: [] },
-			{ id: 5, model: 'CT6', generations: ['I Рестайлинг', 'I'] },
-			{ id: 6, model: 'CTS', generations: ['III', 'II', 'I'] },
-			{ id: 7, model: 'De Ville', generations: ['XI', 'VII', 'VI'] },
-			{ id: 8, model: 'Eldorado', generations: ['X', 'VIII'] },
-			{ id: 9, model: 'ELR', generations: [] },
-			{ id: 10, model: 'Escalade', generations: ['V', 'IV', 'III', 'II'] },
-			{ id: 11, model: 'Seville', generations: ['V', 'IV'] },
-			{ id: 12, model: 'SRX', generations: ['II Рестайлинг', 'II', 'I'] },
-			{ id: 13, model: 'STS', generations: [] },
-			{ id: 14, model: 'XT4', generations: [] },
-			{ id: 15, model: 'XT5', generations: [] },
-			{ id: 16, model: 'XT6', generations: [] }
+			{ id: 1, model: 'U75 Plus', generations: [] }
 		]
 	},
 	{
-		id: 113,
-		brand: 'Changan',
+		id: 61,
+		brand: 'Wuling',
 		type: [
-			{ id: 1, model: 'Alsvin', generations: [] },
-			{ id: 2, model: 'Auchan A600 EV', generations: [] },
-			{ id: 3, model: 'Benben E-Star', generations: [] },
-			{ id: 4, model: 'CS35', generations: [] },
-			{ id: 5, model: 'CS75 PLUS', generations: [] },
-			{ id: 6, model: 'Eado', generations: [] },
-			{ id: 7, model: 'Hunter', generations: [] },
-			{ id: 8, model: 'Qiyuan A05', generations: [] },
-			{ id: 9, model: 'Qiyuan Q05', generations: [] },
-			{ id: 10, model: 'Uni-K', generations: [] },
-			{ id: 11, model: 'Uni-T', generations: [] }
+			{ id: 1, model: 'Binguo', generations: [] },
+			{ id: 2, model: 'Hongguang S', generations: [] }
 		]
 	},
 	{
-		id: 114,
-		brand: 'Maserati',
+		id: 62,
+		brand: 'Wey',
 		type: [
-			{ id: 1, model: 'Ghibli', generations: [] },
-			{ id: 2, model: 'Levante', generations: [] }
+			{ id: 1, model: 'Coffee 01', generations: [] }
 		]
 	},
 	{
-		id: 115,
-		brand: 'Maple',
+		id: 63,
+		brand: 'Weltmeister',
 		type: [
-			{ id: 1, model: 'X3 Pro', generations: [] }
+			{ id: 1, model: 'EX5', generations: [] },
+			{ id: 2, model: 'W6', generations: [] }
 		]
 	},
 	{
-		id: 116,
-		brand: 'M-hero',
+		id: 64,
+		brand: 'Wartburg',
 		type: [
-			{ id: 1, model: '917', generations: [] }
+			{ id: 1, model: '353', generations: [] }
 		]
 	},
 	{
-		id: 117,
-		brand: 'Lynk & Co',
+		id: 59,
+		brand: 'Xpeng',
 		type: [
-			{ id: 1, model: '02', generations: [] },
-			{ id: 2, model: '03', generations: [] },
-			{ id: 3, model: '06', generations: [] },
-			{ id: 4, model: '08', generations: [] }
+			{ id: 1, model: 'G3', generations: [] }
 		]
 	},
 	{
-		id: 118,
-		brand: 'Lotus',
+		id: 60,
+		brand: 'Xiaomi',
 		type: [
-			{ id: 1, model: 'Eletre', generations: [] }
+			{ id: 1, model: 'SU7', generations: [] }
 		]
 	},
 	{
-		id: 119,
-		brand: 'Lixiang',
+		id: 56,
+		brand: 'ZX',
 		type: [
-			{ id: 1, model: 'L6', generations: [] },
-			{ id: 2, model: 'L7', generations: [] },
-			{ id: 3, model: 'L8', generations: [] },
-			{ id: 4, model: 'L9', generations: [] },
-			{ id: 5, model: 'Mega', generations: [] },
-			{ id: 6, model: 'One', generations: [] }
+			{ id: 1, model: 'Grand Tiger', generations: [] }
 		]
 	},
 	{
-		id: 120,
-		brand: 'Livan',
+		id: 57,
+		brand: 'Zotye',
 		type: [
-			{ id: 1, model: 'Ruilan 7', generations: [] },
-			{ id: 2, model: 'Ruilan 9', generations: [] }
-		]
-	},
-
-	{
-		id: 121,
-		brand: 'Daewoo',
-		type: [
-			{ id: 1, model: 'Espero', generations: ['KLEJ рестайлинг', 'KLEJ рестайлинг'] },
-			{ id: 2, model: 'Evanda', generations: [] },
-			{ id: 3, model: 'Gentra', generations: ['II'] },
-			{ id: 4, model: 'Kalos', generations: [] },
-			{ id: 5, model: 'Lacetti', generations: ['I, рестайлинг', 'I'] },
-			{ id: 6, model: 'Lanos', generations: ['T150', 'T100'] },
-			{ id: 7, model: 'Leganza', generations: [] },
-			{ id: 8, model: 'Matiz', generations: ['M250 рестайлинг', 'M150 рестайлинг', 'M100'] },
-			{ id: 9, model: 'Musso', generations: [] },
-			{ id: 10, model: 'Nexia', generations: ['I 2-й рестайлинг', 'I рестайлинг', 'I'] },
-			{ id: 11, model: 'Nubira', generations: ['J200', 'J150,J190 рестайлинг', 'J100'] },
-			{ id: 12, model: 'Rezzo', generations: [] },
-			{ id: 13, model: 'Tacuma', generations: ['I'] },
-			{ id: 14, model: 'Winstorm', generations: [] }
+			{ id: 1, model: 'Coupa', generations: [] },
+			{ id: 2, model: 'E200', generations: [] },
+			{ id: 3, model: 'T600', generations: [] },
+			{ id: 4, model: 'Z300', generations: [] }
 		]
 	},
 	{
-		id: 122,
-		brand: 'Daihatsu',
+		id: 58,
+		brand: 'Zeekr',
 		type: [
-			{ id: 1, model: 'Applausse', generations: ['I'] },
-			{ id: 2, model: 'Cuore', generations: ['L276', 'L251', 'L700'] },
-			{ id: 3, model: 'Gran Move', generations: ['I рестайлинг', 'I'] },
-			{ id: 4, model: 'Materia', generations: [] },
-			{ id: 5, model: 'Move', generations: ['L900'] },
-			{ id: 6, model: 'Sirion', generations: ['II рестайлинг', 'II', 'I'] },
-			{ id: 7, model: 'Taft', generations: [] },
-			{ id: 8, model: 'Terios', generations: ['II'] },
-			{ id: 9, model: 'YRV', generations: ['I'] }
+			{ id: 1, model: '001', generations: ['1 поколение (2021-2024)', '1 рестайлинг (2023 - )'] },
+			{ id: 2, model: '001FR', generations: [] },
+			{ id: 3, model: '007', generations: [] },
+			{ id: 4, model: '009', generations: [] },
+			{ id: 5, model: 'X', generations: [] },
+			{ id: 6, model: 'Young', generations: [] },
+			{ id: 7, model: 'Guang Xiaoxin', generations: [] }
 		]
 	},
 	{
-		id: 123,
-		brand: 'Datsun',
+		id: 55,
+		brand: 'Богдан',
 		type: [
-			{ id: 1, model: 'Mi-DO', generations: ['I'] },
-			{ id: 2, model: 'On-DO', generations: ['I рестайлинг', 'I'] }
+			{ id: 1, model: '2310', generations: [] }
 		]
 	},
 	{
-		id: 124,
-		brand: 'Denza',
+		id: 54,
+		brand: 'ГАЗ',
 		type: [
-			{ id: 1, model: 'N7', generations: [] }
+			{ id: 1, model: '12 (ЗИМ)', generations: [] },
+			{ id: 2, model: '13 «Чайка»', generations: [] },
+			{ id: 3, model: '14 «Чайка»', generations: [] },
+			{ id: 4, model: '21', generations: [] },
+			{ id: 5, model: '22', generations: [] },
+			{ id: 6, model: '24', generations: ['1 серия (1964-1977)', '2 серия (1977-1985)', '10 (1985-1992)'] },
+			{ id: 7, model: '3102', generations: [] },
+			{ id: 8, model: '31029', generations: [] },
+			{ id: 9, model: '3110', generations: [] },
+			{ id: 10, model: '31105', generations: [] },
+			{ id: 11, model: '3111', generations: [] },
+			{ id: 12, model: '67', generations: [] },
+			{ id: 13, model: '69', generations: [] },
+			{ id: 14, model: 'М-20 Победа', generations: [] },
+			{ id: 15, model: 'Volga Siber', generations: [] },
+			{ id: 16, model: 'Тигр', generations: [] }
 		]
 	},
 	{
-		id: 125,
-		brand: 'Dongfeng',
+		id: 53,
+		brand: 'ЗАЗ',
 		type: [
-			{ id: 1, model: 'Aeolus E70', generations: [] },
-			{ id: 2, model: 'Aeolus Huge', generations: [] },
-			{ id: 3, model: 'Aeolus Shine', generations: ['I рестайлинг'] },
-			{ id: 4, model: 'Aeolus Shine GS', generations: ['I рестайлинг'] },
-			{ id: 5, model: 'Aeolus Shine Max', generations: [] },
-			{ id: 6, model: 'BOX', generations: [] },
-			{ id: 7, model: 'E11K', generations: [] },
-			{ id: 8, model: 'Eπ 007', generations: [] },
-			{ id: 9, model: 'Forthing M4 U-Tour', generations: [] },
-			{ id: 10, model: 'Forthing T5 EVO', generations: [] },
-			{ id: 11, model: 'H30', generations: [] },
-			{ id: 12, model: 'Mage', generations: [] },
-			{ id: 13, model: 'S30', generations: [] }
+			{ id: 1, model: '1102 Таврия', generations: [] },
+			{ id: 2, model: '1103 Slavuta', generations: [] },
+			{ id: 3, model: '965', generations: [] },
+			{ id: 4, model: '966', generations: [] },
+			{ id: 5, model: '968', generations: ['A поколение (1970-1979)', 'M поколение (1979-1994)'] },
+			{ id: 6, model: 'Chance', generations: [] },
+			{ id: 7, model: 'Forza', generations: [] },
+			{ id: 8, model: 'Lanos', generations: [] },
+			{ id: 9, model: 'Pick-up', generations: [] },
+			{ id: 10, model: 'Send', generations: [] },
+			{ id: 11, model: 'Vida', generations: [] }
 		]
 	},
 	{
-		id: 126,
-		brand: 'Ferrari',
+		id: 52,
+		brand: 'ИЖ',
 		type: [
-			{ id: 1, model: '360', generations: [] }
-		]
-	},
-
-	{
-		id: 127,
-		brand: 'GAC',
-		type: [
-			{ id: 1, model: 'Aion S', generations: [] },
-			{ id: 2, model: 'Aion V', generations: [] },
-			{ id: 3, model: 'Aion Y', generations: [] },
-			{ id: 4, model: 'Trumpchi Emkoo', generations: [] },
-			{ id: 5, model: 'Trumpchi GE3', generations: [] },
-			{ id: 6, model: 'Trumpchi GS8', generations: ['II'] },
-			{ id: 7, model: 'Trumpchi M8', generations: ['II'] }
-		]
-	},
-
-	{
-		id: 128,
-		brand: 'Genesis',
-		type: [
-			{ id: 1, model: 'G70', generations: ['I', 'I рестайлинг'] },
-			{ id: 2, model: 'G80', generations: ['I', 'I рестайлинг'] },
-			{ id: 3, model: 'G90', generations: ['I', 'I рестайлинг'] },
-			{ id: 4, model: 'GV 70', generations: [] },
-			{ id: 5, model: 'GV80', generations: [] }
+			{ id: 1, model: '2125', generations: ['1 поколение (1973-1982)', '1 рестайлинг (1982-1997)'] },
+			{ id: 2, model: '2126', generations: [] },
+			{ id: 3, model: '2117', generations: [] }
 		]
 	},
 	{
-		id: 129,
-		brand: 'Great Wall',
+		id: 51,
+		brand: 'ЛуАЗ',
 		type: [
-			{ id: 1, model: 'Coolbear', generations: [] },
-			{ id: 2, model: 'Deer', generations: [] },
-			{ id: 3, model: 'Hover', generations: [] },
-			{ id: 4, model: 'Hover H3', generations: ['I', 'I рестайлинг'] },
-			{ id: 5, model: 'Hover H5', generations: [] },
-			{ id: 6, model: 'Hover H6', generations: [] },
-			{ id: 7, model: 'Hover M4', generations: [] },
-			{ id: 8, model: 'Pegasus', generations: [] },
-			{ id: 9, model: 'Peri', generations: [] },
-			{ id: 10, model: 'Safe', generations: [] },
-			{ id: 11, model: 'Sing', generations: [] },
-			{ id: 12, model: 'Wingle', generations: ['3', '5'] }
+			{ id: 1, model: '967', generations: [] },
+			{ id: 2, model: '969', generations: [] }
 		]
 	},
 	{
-		id: 130,
-		brand: 'Hafei',
+		id: 50,
+		brand: 'Москвич',
 		type: [
-			{ id: 1, model: 'Lobo', generations: [] }
+			{ id: 1, model: '2137', generations: [] },
+			{ id: 2, model: '2141', generations: [] },
+			{ id: 3, model: '403', generations: [] },
+			{ id: 4, model: '408', generations: [] },
+			{ id: 5, model: '427', generations: [] },
+			{ id: 6, model: '2140', generations: [] },
+			{ id: 7, model: '401', generations: [] },
+			{ id: 8, model: '407', generations: [] },
+			{ id: 9, model: '412', generations: [] }
 		]
 	},
 	{
-		id: 131,
-		brand: 'Haima',
+		id: 49,
+		brand: 'ТагАЗ',
 		type: [
-			{ id: 1, model: '3', generations: [] },
-			{ id: 2, model: '7X', generations: [] },
-			{ id: 3, model: '8S', generations: [] }
+			{ id: 1, model: 'RoadPartner', generations: [] },
+			{ id: 2, model: 'Tager', generations: [] }
 		]
 	},
 	{
-		id: 132,
-		brand: 'HiPhi',
+		id: 48,
+		brand: 'УАЗ',
 		type: [
-			{ id: 1, model: 'Z', generations: [] }
+			{ id: 1, model: '2206', generations: [] },
+			{ id: 2, model: '2363 Пикап', generations: [] },
+			{ id: 3, model: '31', generations: [] },
+			{ id: 4, model: '3160', generations: [] },
+			{ id: 5, model: '3909', generations: [] },
+			{ id: 6, model: '451', generations: [] },
+			{ id: 7, model: '452', generations: ['1 поколение (1965-1985)', '2 поколение (1985-2020)'] },
+			{ id: 8, model: '469', generations: [] },
+			{ id: 9, model: 'Hunter', generations: [] },
+			{ id: 10, model: 'Патриот', generations: ['1 (2005-2012)', '1 Рестайлинг (2012-2014)', '1 - 2-й Рестайлинг (2014-2016)', '1-3-й Рестайлинг (2016-2024)'] }
 		]
-	},
-	{
-		id: 133,
-		brand: 'Hongqi',
-		type: [
-			{ id: 1, model: 'E-HS9', generations: [] },
-			{ id: 2, model: 'E-QM5', generations: [] },
-			{ id: 3, model: 'H5', generations: ['II'] },
-			{ id: 4, model: 'HQ9', generations: [] },
-			{ id: 5, model: 'HS5', generations: [] }
-		]
-	},
-	{
-		id: 134,
-		brand: 'Hongxing',
-		type: [
-			{ id: 1, model: 'Noble', generations: [] }
-		]
-	},
-	{
-		id: 135,
-		brand: 'Hozon',
-		type: [
-			{ id: 1, model: 'Neta Aya', generations: [] },
-			{ id: 2, model: 'Neta GT', generations: [] },
-			{ id: 3, model: 'Neta S', generations: [] },
-			{ id: 4, model: 'Neta U', generations: [] },
-			{ id: 5, model: 'Neta U-II', generations: [] },
-			{ id: 6, model: 'Neta X', generations: [] }
-		]
-	},
-	{
-		id: 136,
-		brand: 'Hummer',
-		type: [
-			{ id: 1, model: 'H2', generations: ['I', 'I рестайлинг'] },
-			{ id: 2, model: 'H3', generations: [] }
-		]
-	},
-	{
-		id: 137,
-		brand: 'Iran Khondro',
-		type: [
-			{ id: 1, model: 'Samand', generations: [] }
-		]
-	},
-	{
-		id: 138,
-		brand: 'Isuzu',
-		type: [
-			{ id: 1, model: 'Amigo', generations: ['II'] },
-			{ id: 2, model: 'Axiom', generations: [] },
-			{ id: 3, model: 'Oasis', generations: [] },
-			{ id: 4, model: 'Rodeo', generations: ['I', 'II'] },
-			{ id: 5, model: 'Trooper', generations: ['I', 'I рестайлинг', 'II рестайлинг'] }
-		]
-	},
-	{
-		id: 139,
-		brand: 'JAC',
-		type: [
-			{ id: 1, model: 'E30X', generations: [] },
-			{ id: 2, model: 'IEVS 4', generations: [] },
-			{ id: 3, model: 'J7', generations: [] },
-			{ id: 4, model: 'JS4', generations: [] },
-			{ id: 5, model: 'JS6', generations: [] },
-			{ id: 6, model: 'Refine', generations: [] },
-			{ id: 7, model: 'Rein', generations: ['I'] },
-			{ id: 8, model: 'Ruifeng E3', generations: [] },
-			{ id: 9, model: 'S5', generations: [] },
-			{ id: 10, model: 'T6', generations: [] },
-			{ id: 11, model: 'T8 Pro', generations: [] },
-			{ id: 12, model: 'T9 Hunter', generations: [] }
-		]
-	},
-	{
-		id: 140,
-		brand: 'Jetour',
-		type: [
-			{ id: 1, model: 'Dashing', generations: [] },
-			{ id: 2, model: 'T2', generations: [] },
-			{ id: 3, model: 'X50', generations: [] },
-			{ id: 4, model: 'X70 PLUS', generations: ['I', 'I рестайлинг'] },
-			{ id: 5, model: 'X90 PLUS', generations: [] }
-		]
-	},
-	{
-		id: 141,
-		brand: 'Jetta',
-		type: [
-			{ id: 1, model: 'VS7', generations: ['I'] }
-		]
-	},
-	{
-		id: 142,
-		brand: 'Jiyue',
-		type: [
-			{ id: 1, model: '01', generations: [] }
-		]
-	},
-	{
-		id: 143,
-		brand: 'Jmev',
-		type: [
-			{ id: 1, model: 'EV3', generations: [] }
-		]
-	},
-	{
-		id: 144,
-		brand: 'Kaiyi',
-		type: [
-			{ id: 1, model: 'E5', generations: [] }
-		]
-	},
-	{
-		id: 145,
-		brand: 'Lancia',
-		type: [
-			{ id: 1, model: 'Dedra', generations: [] },
-			{ id: 2, model: 'Delta', generations: ['II', 'III', 'III рестайлинг'] },
-			{ id: 3, model: 'Kappa', generations: [] },
-			{ id: 4, model: 'Lybra', generations: [] },
-			{ id: 5, model: 'Musa', generations: ['I', 'I рестайлинг'] },
-			{ id: 6, model: 'Phedra', generations: ['I', 'I рестайлинг'] },
-			{ id: 7, model: 'Prisma', generations: [] },
-			{ id: 8, model: 'Thema', generations: ['I'] },
-			{ id: 9, model: 'Thesis', generations: [] },
-			{ id: 10, model: 'Ypsion', generations: ['I'] },
-			{ id: 11, model: 'Zeta', generations: [] }
-		]
-	},
-	{
-		id: 146,
-		brand: 'Leapmotor',
-		type: [
-		  { id: 1, model: 'C01', generations: [] },
-		  { id: 2, model: 'C11', generations: ['I', 'I рестайлинг'] },
-		  { id: 3, model: 'C16', generations: [] }
-		]
-	 },
+	}
 ]
 

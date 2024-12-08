@@ -3,6 +3,7 @@ import { DataCar } from "@/constans/CarData";
 import Link from "next/link";
 import { PrismaClient } from '@prisma/client';
 import { transliterate } from "@/transliterate/transliterate";
+import CarsBrand from "../cars/CarsBrand";
 
 const prisma = new PrismaClient();
 
@@ -45,15 +46,9 @@ export default async function CatalogMain() {
 					<h4 className='sd:block xz:hidden text-center text-5xl font-semibold uppercase text-[#12142B]'>
 						Каталог Авто
 					</h4>
-					<div className='mt-6 xz:grid sd:hidden grid-cols-3 gap-1 px-3'>
-						{DataCar.map((brand) => (
-							<div key={brand.id} className=''>
-								<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/${titleLink(brand.brand)}/`} className='sd:text-base xz:text-sm font-medium text-secondary'>
-									{brand.brand}
-								</Link>
-							</div>
-						))}
-					</div>
+					
+						<CarsBrand />
+			
 					<div className='grid sd:grid-cols-3 xz:grid-cols-1 sd:gap-8 xz:gap-4 mt-9'>
 						{data.slice(0, 3).map((car) => (
 							<article key={car.id} className="card bg-white rounded-3xl shadow-xl ">

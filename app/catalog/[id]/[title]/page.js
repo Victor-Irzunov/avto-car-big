@@ -3,7 +3,6 @@ import phoneNumbers from "@/config/config"
 import MapComp from "@/components/map/MapComp"
 import { NextResponse } from 'next/server';
 
-
 import { PrismaClient } from '@prisma/client';
 import Link from "next/link"
 import SimilarCars from "@/components/similarCars/SimilarCars"
@@ -91,6 +90,30 @@ export default async function page({ params: { id } }) {
 							<GalleryComponent images={JSON.parse(data.images)} title={data.title} />
 
 							<article className='sd:hidden xz:block mt-12'>
+								<div className="text-xs flex justify-end space-x-1.5 mb-1">
+									<div className='text-black flex space-x-1'>
+										<Image
+											src="/svg/check.svg"
+											alt="Лизинг"
+											width={15}
+											height={15}
+										/>
+										<p className=''>
+											Лизинг
+										</p>
+									</div>
+									<div className='text-black flex space-x-1'>
+										<Image
+											src="/svg/check.svg"
+											alt="Лизинг"
+											width={15}
+											height={15}
+										/>
+										<p className=''>
+											Кредит
+										</p>
+									</div>
+								</div>
 								<p className='text-3xl font-semibold text-secondary text-right'>
 									{data.priceBYN} BYN
 								</p>
@@ -150,11 +173,12 @@ export default async function page({ params: { id } }) {
 										ул. пер. С. Ковалевской, д.54 к.1 каб.303-106
 									</p>
 
-
-
 									<div className='xz:w-full sd:w-auto flex sd:flex-row xz:flex-col justify-end sd:space-x-4 xz:space-x-0 sd:space-y-0 xz:space-y-3 col-span-2'>
 										<div className="dropdown dropdown-top dropdown-end text-white">
 											<button tabIndex={0} className="btn btn-outline btn-secondary px-10 rounded-full w-full">
+												<svg className="w-6 h-6 animate-ringing" fill="currentColor" viewBox="0 0 24 24">
+													<path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.1-.23 11.36 11.36 0 003.55.57 1 1 0 011 1v3.55a1 1 0 01-1 1A19.94 19.94 0 012 4a1 1 0 011-1h3.55a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.23 1.1z"></path>
+												</svg>
 												Позвонить
 											</button>
 											<div tabIndex={0} className={`dropdown-content bg-[#2D3192] z-[1] px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl`}>
@@ -185,9 +209,10 @@ export default async function page({ params: { id } }) {
 
 										<Link
 											href={`${process.env.NEXT_PUBLIC_BASE_URL}/credit/${data.id}/${data.titleLink}`}
-											className="xz:w-full sd:w-auto btn btn-primary text-secondary rounded-full text-lg"
+											className="relative overflow-hidden xz:w-full sd:w-auto btn btn-primary text-secondary rounded-full text-lg"
 										>
 											Заявка на кредит
+											<span className="absolute inset-0 bg-gradient-to-r from-white/30 to-white/0 transform translate-x-full animate-slide"></span>
 										</Link>
 									</div>
 								</div>
@@ -197,6 +222,30 @@ export default async function page({ params: { id } }) {
 						<article className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
 							<div className=''>
 								<div className='sd:block xz:hidden'>
+									<div className="text-xs flex justify-end space-x-1.5 mb-1">
+										<div className='text-black flex space-x-1'>
+											<Image
+												src="/svg/check.svg"
+												alt="Лизинг"
+												width={15}
+												height={15}
+											/>
+											<p className=''>
+												Лизинг
+											</p>
+										</div>
+										<div className='text-black flex space-x-1'>
+											<Image
+												src="/svg/check.svg"
+												alt="Лизинг"
+												width={15}
+												height={15}
+											/>
+											<p className=''>
+												Кредит
+											</p>
+										</div>
+									</div>
 									<p className='text-4xl font-semibold text-secondary text-right'>
 										{data.priceBYN} BYN
 									</p>
@@ -207,39 +256,41 @@ export default async function page({ params: { id } }) {
 										Характеристики
 									</h2>
 
-									<ul className='text-[#333333] text-sm mt-4'>
-										<li className='flex justify-between mb-1'>
-											<span>Год</span>
-											<span className="text-secondary">{data.year} г</span>
-										</li>
-										<li className='flex justify-between mb-1'>
-											<span>Пробег</span>
-											<span className="text-secondary">{data.mileage}</span>
-										</li>
-										<li className='flex justify-between mb-1'>
-											<span>Тип двигателя</span>
-											<span className="text-secondary">{data.engine}</span>
-										</li>
-										<li className='flex justify-between mb-1'>
-											<span>Коробка передач</span>
-											<span className="text-secondary">{data.transmission}</span>
-										</li>
-										<li className='flex justify-between mb-1'>
-											<span>Объём двигателя</span>
-											<span className="text-secondary">{data.engineCapacity}</span>
-										</li>
-										<li className='flex justify-between mb-1'>
-											<span>Привод</span>
-											<span className="text-secondary">{data.drive}</span>
-										</li>
-									</ul>
+									<div className='mt-4'>
+										<ul className='text-[#333333] text-sm '>
+											<li className='flex justify-between mb-1'>
+												<span>Год</span>
+												<span className="text-secondary">{data.year} г</span>
+											</li>
+											<li className='flex justify-between mb-1'>
+												<span>Пробег</span>
+												<span className="text-secondary">{data.mileage}</span>
+											</li>
+											<li className='flex justify-between mb-1'>
+												<span>Тип двигателя</span>
+												<span className="text-secondary">{data.engine}</span>
+											</li>
+											<li className='flex justify-between mb-1'>
+												<span>Коробка передач</span>
+												<span className="text-secondary">{data.transmission}</span>
+											</li>
+											<li className='flex justify-between mb-1'>
+												<span>Объём двигателя</span>
+												<span className="text-secondary">{data.engineCapacity}</span>
+											</li>
+											<li className='flex justify-between mb-1'>
+												<span>Привод</span>
+												<span className="text-secondary">{data.drive}</span>
+											</li>
+										</ul>
+									</div>
 								</div>
 
 								<h3 className='text-xl text-secondary font-semibold text-center mt-3'>
 									Комплектация
 								</h3>
 
-								<div className='mt-4 text-sm text-[#333333]'>
+								<div className='mt-4 text-sm text-[#333333] flex flex-col justify-between'>
 									<ul>
 										<li className={`mb-2 ${data.salon ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Салон:</span>
@@ -309,6 +360,18 @@ export default async function page({ params: { id } }) {
 											</span>
 										</li>
 									</ul>
+
+									<div className='py-2 flex flex-col items-center justify-center h-full bg-gray-50 rounded-full mt-3'>
+										<div className='flex items-center space-x-1'>
+											<Image src='/svg/check-green.svg' alt='Проверенный продавец' width={20} height={20} />
+											<p className='text-[#238657] text-sm'>
+												Проверенный продавец
+											</p>
+										</div>
+										<p className='text-[9px]'>
+											автомобиль юридически чист
+										</p>
+									</div>
 								</div>
 							</div>
 

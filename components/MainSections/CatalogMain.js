@@ -46,9 +46,9 @@ export default async function CatalogMain() {
 					<h4 className='sd:block xz:hidden text-center text-5xl font-semibold uppercase text-[#12142B]'>
 						Каталог Авто
 					</h4>
-					
-						<CarsBrand />
-			
+
+					<CarsBrand />
+
 					<div className='grid sd:grid-cols-3 xz:grid-cols-1 sd:gap-8 xz:gap-4 mt-9'>
 						{data.slice(0, 3).map((car) => (
 							<article key={car.id} className="card bg-white rounded-3xl shadow-xl ">
@@ -83,16 +83,49 @@ export default async function CatalogMain() {
 											:
 											null
 									}
-									{
-										car.vip ?
-											<div className="absolute bottom-1 left-1">
-												<p className='uppercase text-[9px] text-primary bg-white py-0.5 px-1 rounded-sm'>
-													рекомендуем
-												</p>
-											</div>
-											:
-											null
-									}
+									<div className="absolute bottom-1 left-1 flex space-x-1">
+										<div className=''>
+											<p className={`${car.vip ? 'block' : 'hidden'} uppercase text-[9px] text-primary bg-white py-0.5 px-1 rounded-sm`}>
+												рекомендуем
+											</p>
+										</div>
+										<div className='flex items-center space-x-1 bg-white py-0.5 px-1 rounded-sm'>
+											<Image src='/svg/check.svg' alt='Проведена диагностика' width={12} height={12} />
+											<p className='uppercase text-[9px] text-black'>
+												диагностика
+											</p>
+										</div>
+										<div className='flex items-center space-x-1 bg-white py-0.5 px-1 rounded-sm'>
+											<Image src='/svg/check.svg' alt='Проведена диагностика' width={12} height={12} />
+											<p className='uppercase text-[9px] text-black'>
+												VIN
+											</p>
+										</div>
+									</div>
+									<div className="absolute top-3 left-1/2 -translate-x-1/2 text-xs flex space-x-1.5">
+										<div className='text-black flex space-x-1'>
+											<Image
+												src="/svg/check3.svg"
+												alt="Лизинг"
+												width={15}
+												height={15}
+											/>
+											<p className='text-white'>
+												Лизинг
+											</p>
+										</div>
+										<div className='text-black flex space-x-1'>
+											<Image
+												src="/svg/check3.svg"
+												alt="Лизинг"
+												width={15}
+												height={15}
+											/>
+											<p className='text-white'>
+												Кредит
+											</p>
+										</div>
+									</div>
 								</figure>
 								<div className="card-body sd:p-4 xz:p-2">
 									<p className="text-info sd:text-lg xz:text-sm">
@@ -131,6 +164,17 @@ export default async function CatalogMain() {
 												Подробнее
 											</button>
 										</Link>
+									</div>
+									<div className='py-2 flex flex-col items-center justify-center bg-gray-50 rounded-full'>
+										<div className='flex items-center space-x-1'>
+											<Image src='/svg/check-green.svg' alt='Проверенный продавец' width={20} height={20} />
+											<p className='text-[#238657] text-sm'>
+												Проверенный продавец
+											</p>
+										</div>
+										<p className='text-[9px]'>
+											автомобиль юридически чист
+										</p>
 									</div>
 								</div>
 							</article>

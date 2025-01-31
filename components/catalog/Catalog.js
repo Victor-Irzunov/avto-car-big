@@ -21,38 +21,52 @@ export const Catalog = ({ data, isAdmin }) => {
 
   return (
     <div className="sd:container mx-auto">
-      
+
       <div className="grid sd:grid-cols-3 xz:grid-cols-1 sd:gap-8 xz:gap-2 mt-9">
         {data.slice(0, visibleCars).map((car) => (
           <article key={car.id} className="card bg-white rounded-3xl shadow-xl">
             <figure className="relative w-full h-[250px] overflow-hidden rounded-t-3xl">
               {isAdmin ? (
-                <span className="absolute top-2 z-20 right-2 text-primary text-sm flex justify-center items-center bg-white p-1 rounded-full w-6 h-6">
+                <span className="absolute top-2 z-20 right-2 text-primary text-[10px] flex justify-center items-center bg-white p-1 rounded-full w-6 h-6">
                   {car.id}
                 </span>
-              ) : null}
+              ) : null
+              }
               {
                 car.vip ?
-                  <div className="absolute top-2 left-2">
-                    <Image
-                      src='/svg/fire.svg'
-                      alt='Горячее предложение'
-                      width={20} height={20}
-                    />
+                  <div className='absolute top-2 left-2 flex space-x-1'>
+                    <div className="">
+                      <Image
+                        src='/svg/fire.svg'
+                        alt='Горячее предложение'
+                        width={20} height={20}
+                      />
+                    </div>
                   </div>
                   :
                   null
               }
-              {
-                car.vip ?
-                  <div className="absolute bottom-1 left-1">
-                    <p className='uppercase text-[9px] text-primary bg-white py-0.5 px-1 rounded-sm'>
-                      рекомендуем
-                    </p>
-                  </div>
-                  :
-                  null
-              }
+
+              <div className="absolute bottom-1 left-1 flex space-x-1">
+                <div className=''>
+                  <p className={`${car.vip ? 'block' : 'hidden'} uppercase text-[9px] text-primary bg-white py-0.5 px-1 rounded-sm`}>
+                    рекомендуем
+                  </p>
+                </div>
+                <div className='flex items-center space-x-1 bg-white py-0.5 px-1 rounded-sm'>
+                  <Image src='/svg/check.svg' alt='Проведена диагностика' width={12} height={12} />
+                  <p className='uppercase text-[9px] text-black'>
+                    диагностика
+                  </p>
+                </div>
+                <div className='flex items-center space-x-1 bg-white py-0.5 px-1 rounded-sm'>
+                  <Image src='/svg/check.svg' alt='Проведена диагностика' width={12} height={12} />
+                  <p className='uppercase text-[9px] text-black'>
+                    VIN
+                  </p>
+                </div>
+              </div>
+
               <div className="carousel rounded-t-3xl w-full h-full">
                 {JSON.parse(car.images).map((image, index) => (
                   <div key={index} className="carousel-item w-full mx-0.5">
@@ -74,9 +88,31 @@ export const Catalog = ({ data, isAdmin }) => {
                   height={25}
                 />
               </div>
+              <div className="absolute top-3 left-1/2 -translate-x-1/2 text-xs flex space-x-1.5">
+                <div className='text-black flex space-x-1'>
+                  <Image
+                    src="/svg/check3.svg"
+                    alt="Лизинг"
+                    width={15}
+                    height={15}
+                  />
+                  <p className='text-white'>
+                    Лизинг
+                  </p>
+                </div>
+                <div className='text-black flex space-x-1'>
+                  <Image
+                    src="/svg/check3.svg"
+                    alt="Лизинг"
+                    width={15}
+                    height={15}
+                  />
+                  <p className='text-white'>
+                    Кредит
+                  </p>
+                </div>
+              </div>
             </figure>
-
-            {/* Весь card-body будет обрабатывать клик, если клик не по кнопке телефона */}
             <div
               className="card-body sd:p-4 xz:p-2 cursor-pointer"
               onClick={(e) => handleCardClick(e, car)}
@@ -119,12 +155,13 @@ export const Catalog = ({ data, isAdmin }) => {
                     }}
                     className="btn btn-circle sd:btn-lg xz:btn-sm btn-outline btn-secondar phone-button"
                   >
+   
                     <Image
                       src="/svg/phone1.svg"
                       alt="Телефон"
                       width={25}
                       height={25}
-                      className="sd:w-9 xz:w-5 sd:hover:invert"
+                      className="sd:w-9 xz:w-5 sd:hover:invert animate-ringing2"
                     />
                   </button>
                   {openDropdown === car.id && (
@@ -187,6 +224,18 @@ export const Catalog = ({ data, isAdmin }) => {
                 <button className="btn sd:btn-lg xz:btn-sm btn-primary rounded-full sd:px-7 xz:px-2 sd:text-base xz:text-xs">
                   Подробнее
                 </button>
+              </div>
+
+              <div className='py-1.5 mt-1 flex flex-col items-center justify-center bg-gray-50 rounded-full'>
+                <div className='flex items-center space-x-1'>
+                  <Image src='/svg/check-green.svg' alt='Проверенный продавец' width={15} height={15} />
+                  <p className='text-[#238657] text-xs'>
+                    Проверенный продавец
+                  </p>
+                </div>
+                <p className='text-[7px]'>
+                  автомобиль юридически чист
+                </p>
               </div>
             </div>
           </article>

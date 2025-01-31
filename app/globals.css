@@ -12,7 +12,6 @@
 body {
   font-family: 'Days One', sans-serif;
 }
-
 .fon{
 	background-image: url('../public/fon/fon.webp');
 	position: fixed;
@@ -22,7 +21,6 @@ body {
 	right: 0;
 	z-index: 0;
 }
-
 
 .fon:after{
 	content: '';
@@ -190,7 +188,6 @@ body {
 	border: 0;
 }
 
-
 /* ------upload----- */
 .sortable-item {
   border: 1px solid #ccc;
@@ -200,24 +197,63 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: grab; /* Указатель для перетаскивания */
+  cursor: grab;
   transition: background-color 0.3s;
 }
-
 .sortable-item:hover {
-  background-color: #e0e0e0; /* Подсветка при наведении */
+  background-color: #e0e0e0;
 }
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
 .blink-animation {
   animation: blink 2s infinite;
 }
-
-
 .overflow-x-scroll {
   -webkit-overflow-scrolling: touch;
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%) rotate(135deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(135deg);
+  }
+}
+.animate-slide {
+  animation: slide 3s infinite linear;
+}
+
+@keyframes ringing {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+}
+.animate-ringing {
+  animation: ringing 1s infinite;
+}
+.animate-ringing2 {
+  animation: ringing 2.5s infinite;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 100s linear infinite;
 }

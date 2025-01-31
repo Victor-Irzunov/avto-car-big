@@ -4,6 +4,9 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
 import { MyContextProvider } from "@/contexts/MyContextProvider";
 import { GoogleTagManager } from '@next/third-parties/google'
+import dynamic from 'next/dynamic';
+
+const ReplainWidget = dynamic(() => import('@/components/ReplainWidget/ReplainWidget'));
 
 // const inter = Days_One({ subsets: ["latin",], weight: ["400"] });
 
@@ -55,9 +58,16 @@ export default function RootLayout({ children }) {
         <body
         //  className={inter.className}
         >
+          {/* <div className='py-0.5 xz:text-[10px] xy:text-[11px] sd:text-sm text-primary bg-white/90 text-center fixed top-0 z-50 w-full'>
+            <p className=''>
+              Любой авто в кредит/лизинг без первоначального взноса!
+            </p>
+          </div> */}
           <Header />
           {children}
           <Footer />
+
+          <ReplainWidget />
         </body>
       </MyContextProvider>
     </html>

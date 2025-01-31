@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image';
 import { useState } from 'react';
-// import { Link as LinkScroll } from 'react-scroll';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import phoneNumbers from '@/config/config';
@@ -18,7 +17,6 @@ export default function Header() {
 	const closeDrawer = () => {
 		setDrawerOpen(false);
 	};
-
 	return (
 		<header className="z-40 relative">
 			<RunningText />
@@ -200,15 +198,7 @@ export default function Header() {
 												Пригон из ЕС
 											</Link>
 										</li>
-										{/* <li className='mb-2'>
-										<Link
-											href={`${process.env.NEXT_PUBLIC_BASE_URL}/traid-in/`}
-											className="hover:text-primary"
-											onClick={closeDrawer}
-										>
-											Traid-in
-										</Link>
-									</li> */}
+										
 									</ul>
 
 									<div className='absolute bottom-10 left-5 text-white mt-4'>

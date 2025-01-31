@@ -1,4 +1,3 @@
-"use client"
 import About from "@/components/MainSections/About";
 import Otzyvy from "@/components/MainSections/Otzyvy";
 import PodborAvto from "@/components/MainSections/PodborAvto";

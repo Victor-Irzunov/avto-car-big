@@ -58,11 +58,7 @@ export default function RootLayout({ children }) {
         <body
         //  className={inter.className}
         >
-          {/* <div className='py-0.5 xz:text-[10px] xy:text-[11px] sd:text-sm text-primary bg-white/90 text-center fixed top-0 z-50 w-full'>
-            <p className=''>
-              Любой авто в кредит/лизинг без первоначального взноса!
-            </p>
-          </div> */}
+        
           <Header />
           {children}
           <Footer />

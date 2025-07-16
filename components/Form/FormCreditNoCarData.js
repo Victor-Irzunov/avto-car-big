@@ -6,6 +6,7 @@ import { sendOrderTelegram } from "@/http/telegramAPI";
 import { dollarExchangeRate } from "@/Api-bank/api";
 import phoneNumbers from "@/config/config";
 import Image from "next/image";
+import PhoneInput from "./MaskPhone/PhoneInput";
 
 const getYearSuffix = (years) => {
 	if (years <= 1) return 'год';
@@ -38,6 +39,11 @@ const FormCreditNoCarData = ({ title = 'Кредитный калькулято�
 		jobExperience: '',
 		jobPlace: ''
 	});
+
+	const [phone, setPhone] = useState('');
+	const [alertText, setAlertText] = useState('');
+	const [alertActive, setAlertActive] = useState(false);
+
 
 	useEffect(() => {
 		dollarExchangeRate().then(data => {
@@ -112,6 +118,15 @@ const FormCreditNoCarData = ({ title = 'Кредитный калькулято�
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		const phoneDigits = phone.replace(/\D/g, '');
+		if (phoneDigits.length !== 12) {
+			setAlertText('Введите полный номер телефона в формате +375 XX XXX-XX-XX');
+			setAlertActive(true);
+			setTimeout(() => setAlertActive(false), 3000);
+			return;
+		}
+
 		const dataToSend = {
 			...formData,
 			creditTerm,
@@ -178,7 +193,21 @@ const FormCreditNoCarData = ({ title = 'Кредитный калькулято�
 								<input type="text" required name="surname" placeholder="Фамилия" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
 								<input type="text" required name="name" placeholder="Имя" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
 								<input type="text" required name="middleName" placeholder="Отчество" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
-								<input type="text" required name="phone" placeholder="Телефон" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
+
+								<div>
+									<PhoneInput
+										value={phone}
+										onChange={(val) => {
+											setPhone(val);
+											setFormData((prev) => ({ ...prev, phone: val }));
+										}}
+										setAlertText={setAlertText}
+										setAlertActive={setAlertActive}
+										bg={true}
+									/>
+								</div>
+
+
 								<input type="email" required name="email" placeholder="E-mail" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
 								<ConfigProvider locale={locale}>
 									<DatePicker onChange={handleDateChange} name="birthDate" placeholder="дд/мм/гггг" format="DD/MM/YYYY" className="input input-bordered w-full bg-white text-black rounded-full font-bold cursor-pointer" />
@@ -403,6 +432,16 @@ const FormCreditNoCarData = ({ title = 'Кредитный калькулято�
 				</div>
 
 			</div>
+
+			{alertActive && (
+				<div role="alert" className="alert alert-warning fixed max-w-80 z-50 top-[60%] left-1/2 -translate-x-1/2">
+					<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856C19.07 19 20 18.07 20 16.938V7.062C20 5.93 19.07 5 17.938 5H6.062C4.93 5 4 5.93 4 7.062v9.876C4 18.07 4.93 19 6.062 19z" />
+					</svg>
+					<span>{alertText}</span>
+				</div>
+			)}
+
 
 
 			{

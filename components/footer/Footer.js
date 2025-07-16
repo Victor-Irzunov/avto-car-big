@@ -106,7 +106,7 @@ const Footer = observer(() => {
 											className="cursor-pointer hover:text-primary"
 										>
 											<p className=''>
-											Админ панель
+												Админ панель
 											</p>
 										</Link>
 										:
@@ -161,13 +161,30 @@ const Footer = observer(() => {
 							<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='mt-2 block'>
 								{phoneNumbers.secondaryPhone} МТС
 							</a>
+							<a href={`tel:${phoneNumbers.thirdPhoneLink}`} className='mt-2 block'>
+								{phoneNumbers.thirdPhone} МТС
+							</a>
 						</div>
 					</div>
 				</aside>
 				<aside className='mt-8'>
 					<p className='sd:hidden xz:block text-xs'>
-						ООО «АнтВентГолд» УНП: 193614538. г.Минск, ул. пер. С.Ковалевской, д.54 к.1 каб.303-106
+						ООО «АВТОКАРГРУПП» УНП 193846922, г. Минск, ул. пер. С.Ковалевской, д.54 к.1 каб.303-127
 					</p>
+					<div className='text-[10px] sd:mt-0 xz:mt-4'>
+						<p className=''>
+							Банк: ЗАО «Альфа-Банк»,
+						</p>
+						<p className=''>
+							г. Минск, ул. Сурганова, 43-47
+						</p>
+						<p className=''>
+							БИК банка: ALFABY2X
+						</p>
+						<p className=''>
+							р/с: BY40 ALFA 3012 2G50 3400 1027 0000
+						</p>
+					</div>
 				</aside>
 			</div>
 			<aside className="border-t border-gray-800 pt-1 mt-6">

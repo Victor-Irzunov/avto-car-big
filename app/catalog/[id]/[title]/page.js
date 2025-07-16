@@ -7,6 +7,7 @@ import { PrismaClient } from '@prisma/client';
 import Link from "next/link"
 import SimilarCars from "@/components/similarCars/SimilarCars"
 import Image from "next/image";
+import PhoneBottom from "@/components/phoneBotton/PhoneBottom";
 
 const prisma = new PrismaClient();
 
@@ -73,7 +74,7 @@ export default async function page({ params: { id } }) {
 	}
 
 	return (
-		<main className='sd:py-20 xz:py-7 min-h-screen'>
+		<main className='sd:py-20 xz:py-7 min-h-screen sd:mt-0 xz:mt-24'>
 			<div className='w-full bg-cover fon bg-center' />
 			<section className='relative'>
 				<div className='container mx-auto'>
@@ -387,6 +388,8 @@ export default async function page({ params: { id } }) {
 					<MapComp />
 				</div>
 			</section>
+
+			<PhoneBottom />
 		</main>
 	)
 }

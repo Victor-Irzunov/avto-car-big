@@ -65,7 +65,7 @@ const GalleryComponent = ({ images, title }) => {
 						startIndex={currentIndex}
 						onClick={() => openModal(currentIndex)}
 						onSlide={(index) => setCurrentIndex(index)}
-						renderItem={renderImage} // Используем кастомную функцию рендеринга изображения
+						renderItem={renderImage}
 					/>
 				</div>
 

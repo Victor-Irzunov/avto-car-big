@@ -3,12 +3,13 @@ import Otzyvy from "@/components/MainSections/Otzyvy";
 import PodborAvto from "@/components/MainSections/PodborAvto";
 import Works from "@/components/MainSections/Works";
 import MapComp from "@/components/map/MapComp";
+import PhoneBottom from "@/components/phoneBotton/PhoneBottom";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-svh">
+    <main className="min-h-svh xz:pt-20 sd:pt-0">
       <div className='w-full bg-cover fon bg-center' />
       <section className={`relative mt-6 mb-8`}>
         <div className="sd:container mx-auto mb-10">
@@ -97,6 +98,8 @@ export default function Home() {
       <About />
       <Otzyvy />
       <MapComp />
+
+      <PhoneBottom />
     </main>
   );
 }

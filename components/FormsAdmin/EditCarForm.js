@@ -188,9 +188,6 @@ const EditCarForm = ({ carData, setProduct }) => {
 	};
 
 	const onFinish = async (values) => {
-		console.log("🚀 🚀 🚀  _ onFinish _ values:", values);
-		console.log("🚀 🚀 🚀  _ EditCarForm _ imageList:", imageList);
-
 		const formData = new FormData();
 		const titleLink = transliterate(values.title).replace(/\s+/g, '-').toLowerCase();
 		formData.append('titleLink', titleLink);

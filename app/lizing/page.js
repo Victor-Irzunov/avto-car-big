@@ -2,6 +2,7 @@ import CreditArticle from "@/components/Articles/CreditArticle"
 import LizingArticle from "@/components/Articles/LizingArticle";
 import FormCreditNoCarData from "@/components/Form/FormCreditNoCarData"
 import Partner from "@/components/Partner/Partner";
+import PhoneBottom from "@/components/phoneBotton/PhoneBottom";
 
 export const metadata = {
 	title: "Лизинг авто в Минске | Купить авто б/у в лизинг | Физ лица | Без взноса",
@@ -24,7 +25,7 @@ export const metadata = {
 
 const page = () => {
 	return (
-		<main className='pt-20 pb-20 min-h-screen relative'>
+		<main className='sd:pt-20 xz:pt-36 pb-20 min-h-screen relative '>
 			<div className='w-full bg-cover fon bg-center' />
 			<section className='relative'>
 				<div className='container mx-auto'>
@@ -49,6 +50,7 @@ const page = () => {
 					<Partner />
 				</div>
 			</section>
+			<PhoneBottom />
 		</main>
 	)
 }

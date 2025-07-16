@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { transliterate } from "@/transliterate/transliterate";
 import { useContext, useState } from "react";
+import PhoneBottom from "../phoneBotton/PhoneBottom";
 
 
 const titleLink = (brandName) => {
@@ -30,7 +31,7 @@ const PageComponent = observer(({ data }) => {
 	const displayedCars = showAll ? DataCar : filteredCars;
 
 	return (
-		<main className='sd:py-16 xz:py-8 min-h-svh'>
+		<main className='sd:py-16 xz:py-8 min-h-svh sd:mt-0 xz:mt-28'>
 			<div className='w-full bg-cover fon bg-center' />
 			<section className='relative'>
 				<div className='container mx-auto'>
@@ -106,6 +107,8 @@ const PageComponent = observer(({ data }) => {
 				</div>
 
 			</section>
+
+			<PhoneBottom />
 		</main>
 	)
 })

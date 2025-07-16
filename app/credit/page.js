@@ -1,5 +1,6 @@
 import CreditArticle from "@/components/Articles/CreditArticle"
 import FormCreditNoCarData from "@/components/Form/FormCreditNoCarData"
+import PhoneBottom from "@/components/phoneBotton/PhoneBottom";
 
 export const metadata = {
 	title: "Купить авто б/у в кредит в Минске | Выгодный автокредит на покупку | Автосалон «АвтоКар»",
@@ -22,7 +23,7 @@ export const metadata = {
 
 const page = () => {
 	return (
-		<main className='pt-20 pb-20 min-h-screen relative'>
+		<main className='sd:pt-20 xz:pt-36 pb-20 min-h-screen relative'>
 			<div className='w-full bg-cover fon bg-center' />
 			<section className='relative'>
 				<div className='container mx-auto'>
@@ -43,6 +44,8 @@ const page = () => {
 					<CreditArticle />
 				</div>
 			</section>
+
+			<PhoneBottom />
 		</main>
 	)
 }

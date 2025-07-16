@@ -6,6 +6,7 @@ import { DatePicker, ConfigProvider } from 'antd';
 import locale from 'antd/lib/locale/ru_RU';
 import { sendOrderTelegram } from "@/http/telegramAPI";
 import { dollarExchangeRate } from "@/Api-bank/api";
+import PhoneInput from "./MaskPhone/PhoneInput";
 
 const getYearSuffix = (years) => {
 	if (years <= 1) return 'год';
@@ -37,6 +38,11 @@ const FormCredit = ({ carData }) => {
 		jobExperience: '',
 		jobPlace: ''
 	});
+
+	const [phone, setPhone] = useState('');
+	const [alertText, setAlertText] = useState('');
+	const [alertActive, setAlertActive] = useState(false);
+
 
 	useEffect(() => {
 		dollarExchangeRate().then(data => {
@@ -115,6 +121,16 @@ const FormCredit = ({ carData }) => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		const phoneDigits = phone.replace(/\D/g, '');
+		if (phoneDigits.length !== 12) {
+			setAlertText('Введите полный номер телефона в формате +375 XX XXX-XX-XX');
+			setAlertActive(true);
+			setTimeout(() => setAlertActive(false), 3000);
+			return;
+		}
+
+
 		const dataToSend = {
 			...formData,
 			creditTerm,
@@ -253,7 +269,19 @@ const FormCredit = ({ carData }) => {
 						<div className="sd:col-span-2 xz:col-span-1 space-y-8">
 							<div className="grid sd:grid-cols-2 xz:grid-cols-1 gap-4">
 								<input type="text" name="surname" value={formData.surname} placeholder="Фамилия" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
-								<input type="text" name="phone" value={formData.phone} placeholder="Телефон" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
+
+								<PhoneInput
+									value={phone}
+									onChange={(val) => {
+										setPhone(val);
+										setFormData((prev) => ({ ...prev, phone: val }));
+									}}
+									setAlertText={setAlertText}
+									setAlertActive={setAlertActive}
+									bg={true}
+								/>
+
+
 								<input type="text" name="name" value={formData.name} placeholder="Имя" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
 								<input type="email" name="email" value={formData.email} placeholder="E-mail" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
 								<input type="text" name="middleName" value={formData.middleName} placeholder="Отчество" className="input input-bordered w-full bg-white text-black rounded-full" onChange={handleChange} />
@@ -514,23 +542,33 @@ const FormCredit = ({ carData }) => {
 
 			{
 				isActive ?
-						<div role="alert" className="alert alert-success fixed z-50 flex flex-col justify-center top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								className="h-6 w-6 shrink-0 stroke-current"
-								fill="none"
-								viewBox="0 0 24 24">
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth="2"
-									d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-							</svg>
-							<span>Ваша заявка успешно отправлена!</span>
-						</div>
+					<div role="alert" className="alert alert-success fixed z-50 flex flex-col justify-center top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-6 w-6 shrink-0 stroke-current"
+							fill="none"
+							viewBox="0 0 24 24">
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+						<span>Ваша заявка успешно отправлена!</span>
+					</div>
 					:
 					null
 			}
+
+			{alertActive && (
+				<div role="alert" className="alert alert-warning fixed max-w-80 z-50 top-[60%] left-1/2 -translate-x-1/2">
+					<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856C19.07 19 20 18.07 20 16.938V7.062C20 5.93 19.07 5 17.938 5H6.062C4.93 5 4 5.93 4 7.062v9.876C4 18.07 4.93 19 6.062 19z" />
+					</svg>
+					<span>{alertText}</span>
+				</div>
+			)}
+
 		</div >
 	);
 };

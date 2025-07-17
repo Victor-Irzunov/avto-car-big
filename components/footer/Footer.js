@@ -24,9 +24,10 @@ const Footer = observer(() => {
 								className=""
 							/>
 						</div>
-						<p className='sd:block xz:hidden text-xs'>
-							ООО «АнтВентГолд» УНП: 193614538. г.Минск, ул. пер. С.Ковалевской, д.54 к.1 каб.303-106
+						<p className='text-xs'>
+							ООО «АВТОКАРГРУПП» УНП 193846922, г. Минск, ул. пер. С.Ковалевской, д.54 к.1 каб.303-127
 						</p>
+						
 					</div>
 
 					<div className=''>

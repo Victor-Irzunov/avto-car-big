@@ -62,9 +62,9 @@ export default function RootLayout({ children }) {
           <Footer />
 
           {/* <ReplainWidget /> */}
-
+{/* 
           {/* Bitrix24 Script */}
-          {/* <script
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 (function(w,d,u){
@@ -73,8 +73,8 @@ export default function RootLayout({ children }) {
                 })(window,document,'https://cdn-ru.bitrix24.by/b34208610/crm/site_button/loader_1_mykez7.js');
               `
             }}
-          /> */}
-          <BitrixWidget />
+          />
+          {/* <BitrixWidget /> */}
         </body>
       </MyContextProvider>
     </html>

@@ -24,9 +24,9 @@ const Footer = observer(() => {
 								className=""
 							/>
 						</div>
-						<p className='text-xs'>
+						{/* <p className='text-xs'>
 							ООО «АВТОКАРГРУПП» УНП 193846922, г. Минск, ул. пер. С.Ковалевской, д.54 к.1 каб.303-127
-						</p>
+						</p> */}
 						
 					</div>
 
@@ -169,7 +169,7 @@ const Footer = observer(() => {
 					</div>
 				</aside>
 				<aside className='mt-8'>
-					<p className='sd:hidden xz:block text-xs'>
+					<p className='text-xs'>
 						ООО «АВТОКАРГРУПП» УНП 193846922, г. Минск, ул. пер. С.Ковалевской, д.54 к.1 каб.303-127
 					</p>
 					<div className='text-[10px] sd:mt-0 xz:mt-4'>

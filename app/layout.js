@@ -4,9 +4,9 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
 import { MyContextProvider } from "@/contexts/MyContextProvider";
 import { GoogleTagManager } from '@next/third-parties/google'
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
-const ReplainWidget = dynamic(() => import('@/components/ReplainWidget/ReplainWidget'));
+// const ReplainWidget = dynamic(() => import('@/components/ReplainWidget/ReplainWidget'));
 
 // const inter = Days_One({ subsets: ["latin",], weight: ["400"] });
 
@@ -55,15 +55,24 @@ export default function RootLayout({ children }) {
       </head>
 
       <MyContextProvider>
-        <body
-        //  className={inter.className}
-        >
-        
+        <body >
           <Header />
           {children}
           <Footer />
 
-          <ReplainWidget />
+          {/* <ReplainWidget /> */}
+
+          {/* Bitrix24 Script */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,u){
+                  var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                  var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                })(window,document,'https://cdn-ru.bitrix24.by/b34208610/crm/site_button/loader_1_mykez7.js');
+              `
+            }}
+          />
         </body>
       </MyContextProvider>
     </html>

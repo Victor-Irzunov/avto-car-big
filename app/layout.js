@@ -1,4 +1,5 @@
 // import { Days_One } from "next/font/google";
+import BitrixWidget from "@/components/ReplainWidget/BitrixWidget";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
@@ -63,7 +64,7 @@ export default function RootLayout({ children }) {
           {/* <ReplainWidget /> */}
 
           {/* Bitrix24 Script */}
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
                 (function(w,d,u){
@@ -72,7 +73,8 @@ export default function RootLayout({ children }) {
                 })(window,document,'https://cdn-ru.bitrix24.by/b34208610/crm/site_button/loader_1_mykez7.js');
               `
             }}
-          />
+          /> */}
+          <BitrixWidget />
         </body>
       </MyContextProvider>
     </html>

@@ -1,5 +1,4 @@
-// import { Days_One } from "next/font/google";
-import BitrixWidget from "@/components/ReplainWidget/BitrixWidget";
+// import BitrixWidget from "@/components/ReplainWidget/BitrixWidget";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
@@ -9,7 +8,6 @@ import { GoogleTagManager } from '@next/third-parties/google'
 
 // const ReplainWidget = dynamic(() => import('@/components/ReplainWidget/ReplainWidget'));
 
-// const inter = Days_One({ subsets: ["latin",], weight: ["400"] });
 
 export const metadata = {
   title: "Купить бу авто в Минске | Лизинг и Кредит на авто с пробегом | Покупка, продажа, обмен",
@@ -61,9 +59,6 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
 
-          {/* <ReplainWidget /> */}
-{/* 
-          {/* Bitrix24 Script */}
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -74,6 +69,7 @@ export default function RootLayout({ children }) {
               `
             }}
           />
+         
           {/* <BitrixWidget /> */}
         </body>
       </MyContextProvider>

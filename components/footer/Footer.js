@@ -162,9 +162,7 @@ const Footer = observer(() => {
 							<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='mt-2 block'>
 								{phoneNumbers.secondaryPhone} МТС
 							</a>
-							<a href={`tel:${phoneNumbers.thirdPhoneLink}`} className='mt-2 block'>
-								{phoneNumbers.thirdPhone} МТС
-							</a>
+						
 						</div>
 					</div>
 				</aside>

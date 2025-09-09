@@ -1,10 +1,11 @@
-// import BitrixWidget from "@/components/ReplainWidget/BitrixWidget";
+import BitrixWidget from "@/components/ReplainWidget/BitrixWidget";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
 import { MyContextProvider } from "@/contexts/MyContextProvider";
 import { GoogleTagManager } from '@next/third-parties/google'
 import YandexMetrika from "@/components/Analytics/YandexMetrika";
+import IOSStabilityGuard from "@/components/Guards/IOSStabilityGuard";
 // import DeduplicateThirdParty from "@/components/Guards/DeduplicateThirdParty";
 // import dynamic from 'next/dynamic';
 
@@ -41,10 +42,10 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
-          {/* Скрипты – единственный экземпляр */}
+          <IOSStabilityGuard disableGTM={true} disableBitrixOnDetail={true} />
           <YandexMetrika />
           {/* <DeduplicateThirdParty /> */}
-          {/* <BitrixWidget /> */}
+          <BitrixWidget />
         </body>
       </MyContextProvider>
     </html>

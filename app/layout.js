@@ -1,4 +1,4 @@
-import BitrixWidget from "@/components/ReplainWidget/BitrixWidget";
+// import BitrixWidget from "@/components/ReplainWidget/BitrixWidget";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
           {/* Скрипты – единственный экземпляр */}
           <YandexMetrika />
           {/* <DeduplicateThirdParty /> */}
-          <BitrixWidget />
+          {/* <BitrixWidget /> */}
         </body>
       </MyContextProvider>
     </html>

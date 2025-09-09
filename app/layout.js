@@ -5,6 +5,7 @@ import Footer from "@/components/footer/Footer";
 import { MyContextProvider } from "@/contexts/MyContextProvider";
 import { GoogleTagManager } from '@next/third-parties/google'
 import YandexMetrika from "@/components/Analytics/YandexMetrika";
+// import DeduplicateThirdParty from "@/components/Guards/DeduplicateThirdParty";
 // import dynamic from 'next/dynamic';
 
 // const ReplainWidget = dynamic(() => import('@/components/ReplainWidget/ReplainWidget'));
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
           <Footer />
           {/* Скрипты – единственный экземпляр */}
           <YandexMetrika />
+          {/* <DeduplicateThirdParty /> */}
           <BitrixWidget />
         </body>
       </MyContextProvider>

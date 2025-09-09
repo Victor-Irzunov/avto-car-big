@@ -5,7 +5,7 @@ import Footer from "@/components/footer/Footer";
 import { MyContextProvider } from "@/contexts/MyContextProvider";
 import { GoogleTagManager } from '@next/third-parties/google'
 import YandexMetrika from "@/components/Analytics/YandexMetrika";
-import IOSStabilityGuard from "@/components/Guards/IOSStabilityGuard";
+// import IOSStabilityGuard from "@/components/Guards/IOSStabilityGuard";
 // import DeduplicateThirdParty from "@/components/Guards/DeduplicateThirdParty";
 // import dynamic from 'next/dynamic';
 
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
-          <IOSStabilityGuard disableGTM={true} disableBitrixOnDetail={true} />
+          {/* <IOSStabilityGuard disableGTM={true} disableBitrixOnDetail={true} /> */}
           <YandexMetrika />
           {/* <DeduplicateThirdParty /> */}
           <BitrixWidget />

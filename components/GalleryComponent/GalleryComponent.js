@@ -1,133 +1,110 @@
-"use client"
-import ImageGallery from 'react-image-gallery'
-import React, { useRef, useState } from 'react'
-import 'react-image-gallery/styles/css/image-gallery.css'
-import Image from 'next/image'
+"use client";
+// components/GalleryComponent/GalleryComponent.js
+import ImageGallery from 'react-image-gallery';
+import React, { useRef, useState } from 'react';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import Image from 'next/image';
 
 const GalleryComponent = ({ images, title }) => {
-	const [isModalOpen, setIsModalOpen] = useState(false)
-	const [currentIndex, setCurrentIndex] = useState(0)
-	const galleryRef = useRef(null)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const galleryRef = useRef(null);
 
-	// Constructing items array for ImageGallery using the images prop
-	const galleryItems = images.map((image) => ({
-		original: `${process.env.NEXT_PUBLIC_BASE_URL}/uploads/${image.original}`,
-		thumbnail: `${process.env.NEXT_PUBLIC_BASE_URL}/uploads/${image.thumbnail}`,
-	}))
+  // используем относительные пути — nginx уже раздаёт /uploads
+  const galleryItems = images.map((image) => ({
+    original: `/uploads/${image.original}`,
+    thumbnail: `/uploads/${image.thumbnail}`,
+  }));
 
-	// Open modal
-	const openModal = (index) => {
-		setCurrentIndex(index)
-		setIsModalOpen(true)
-	}
+  const openModal = (index) => { setCurrentIndex(index); setIsModalOpen(true); };
+  const closeModal = () => setIsModalOpen(false);
 
-	// Close modal
-	const closeModal = () => setIsModalOpen(false)
+  const changeMainImage = (index) => {
+    setCurrentIndex(index);
+    galleryRef.current?.slideToIndex(index);
+  };
 
-	// Change the main image in the gallery
-	const changeMainImage = (index) => {
-		setCurrentIndex(index)
-		if (galleryRef.current) {
-			galleryRef.current.slideToIndex(index)
-		}
-	}
+  // главный кадр: грузим только нужный размер + ленивую загрузку дальше
+  const renderImage = (item) => (
+    <div className="relative w-full" style={{ paddingTop: '75%', overflow: 'hidden', borderRadius: 8 }}>
+      <Image
+        src={item.original}
+        alt={title}
+        fill
+        sizes="(max-width: 768px) 100vw, 700px"
+        priority={currentIndex === 0}
+        loading={currentIndex === 0 ? 'eager' : 'lazy'}
+        style={{ objectFit: 'cover' }}
+      />
+    </div>
+  );
 
-	// Custom render function for main image with fixed aspect ratio
-	const renderImage = (item) => (
-		<div
-			className="relative w-full"
-			style={{
-				paddingTop: '75%', // Соотношение сторон 4:3 (100 / 4 * 3)
-				overflow: 'hidden',
-				borderRadius: '8px',
-			}}
-		>
-			<Image
-				src={item.original}
-				alt={title}
-				layout="fill"
-				objectFit="cover"
-				className="absolute inset-0 w-full h-full"
-			/>
-		</div>
-	)
+  return (
+    <div className='mt-8'>
+      <div className="relative">
+        <div className="relative rounded-lg overflow-hidden">
+          <ImageGallery
+            ref={galleryRef}
+            items={galleryItems}
+            showFullscreenButton={true}
+            showPlayButton={false}
+            showThumbnails={false}
+            startIndex={currentIndex}
+            onClick={() => openModal(currentIndex)}
+            onSlide={(index) => setCurrentIndex(index)}
+            renderItem={renderImage}
+          />
+        </div>
 
-	return (
-		<div className='mt-8'>
-			<div className="relative">
-				<div className="relative rounded-lg overflow-hidden">
-					<ImageGallery
-						ref={galleryRef}
-						items={galleryItems}
-						showFullscreenButton={true}
-						showPlayButton={true}
-						showThumbnails={false}
-						startIndex={currentIndex}
-						onClick={() => openModal(currentIndex)}
-						onSlide={(index) => setCurrentIndex(index)}
-						renderItem={renderImage}
-					/>
-				</div>
+        <div className="flex overflow-x-scroll mt-4 space-x-2">
+          {galleryItems.map((item, index) => (
+            <button
+              key={index}
+              className={`min-w-28 min-h-20 cursor-pointer ${currentIndex === index ? 'border-2 border-blue-500' : ''}`}
+              onClick={() => changeMainImage(index)}
+              style={{ position: 'relative', width: 112, height: 84, overflow: 'hidden', borderRadius: 8 }}
+              aria-label={`К изображению ${index + 1}`}
+            >
+              <Image
+                src={item.thumbnail}
+                width={112}
+                height={84}
+                alt={title}
+                loading="lazy"
+                style={{ objectFit: 'cover' }}
+              />
+            </button>
+          ))}
+        </div>
+      </div>
 
-				<div className="flex overflow-x-scroll mt-4 space-x-2">
-					{galleryItems.map((item, index) => (
-						<div
-							key={index}
-							className={`min-w-28 min-h-20 cursor-pointer ${currentIndex === index ? 'border-2 border-blue-500' : ''}`}
-							onClick={() => changeMainImage(index)}
-							style={{
-								position: 'relative',
-								width: '112px',
-								height: '84px',
-								overflow: 'hidden',
-								borderRadius: '8px',
-							}}
-						>
-							<Image
-								src={item.thumbnail}
-								width={112}
-								height={84}
-								alt={title}
-								className="object-cover w-full h-full"
-							/>
-						</div>
-					))}
-				</div>
-			</div>
+      {isModalOpen && (
+        <div className="modal modal-open">
+          <div className="modal-box relative w-11/12" style={{ background: 'transparent' }}>
+            <button onClick={closeModal} className="btn btn-sm border-none text-black btn-circle bg-white absolute right-2 top-2 text-2xl">✕</button>
+            <div className="relative w-full" style={{ paddingTop: '66.66%' }}>
+              <Image
+                src={galleryItems[currentIndex].original}
+                alt={title}
+                fill
+                sizes="100vw"
+                priority
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+            <div className="flex justify-between mt-4">
+              <button onClick={() => setCurrentIndex((currentIndex - 1 + images.length) % images.length)} className="btn btn-outline">
+                &#10094; Назад
+              </button>
+              <button onClick={() => setCurrentIndex((currentIndex + 1) % images.length)} className="btn btn-outline">
+                Вперед &#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
-			{isModalOpen && (
-				<div className="modal modal-open">
-					<div className="modal-box relative w-11/12" style={{background:'transparent'}}>
-						<button
-							onClick={closeModal}
-							className="btn btn-sm border-none text-black btn-circle bg-white absolute right-2 top-2 text-2xl"
-						>
-							✕
-						</button>
-						<img
-							src={galleryItems[currentIndex].original}
-							alt={title}
-							className="rounded-lg w-full h-auto" // В модальном окне оригинальный формат
-						/>
-						<div className="flex justify-between mt-4">
-							<button
-								onClick={() => setCurrentIndex((currentIndex - 1 + images.length) % images.length)}
-								className="btn btn-outline"
-							>
-								&#10094; Назад
-							</button>
-							<button
-								onClick={() => setCurrentIndex((currentIndex + 1) % images.length)}
-								className="btn btn-outline"
-							>
-								Вперед &#10095;
-							</button>
-						</div>
-					</div>
-				</div>
-			)}
-		</div>
-	)
-}
-
-export default GalleryComponent
+export default GalleryComponent;

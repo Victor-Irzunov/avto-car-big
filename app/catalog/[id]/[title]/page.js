@@ -1,174 +1,108 @@
-import GalleryComponent from "@/components/GalleryComponent/GalleryComponent"
-import phoneNumbers from "@/config/config"
-import MapComp from "@/components/map/MapComp"
-import { NextResponse } from 'next/server';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound, redirect } from 'next/navigation';
+import phoneNumbers from '@/config/config';
+import { prisma } from '@/lib/prisma';
+import SimilarCars from '@/components/similarCars/SimilarCars';
+import PhoneBottom from '@/components/phoneBotton/PhoneBottom';
 
-import { PrismaClient } from '@prisma/client';
-import Link from "next/link"
-import SimilarCars from "@/components/similarCars/SimilarCars"
-import Image from "next/image";
-import PhoneBottom from "@/components/phoneBotton/PhoneBottom";
-
-const prisma = new PrismaClient();
+const GalleryComponent = dynamic(
+	() => import('@/components/GalleryComponent/GalleryComponent'),
+	{ ssr: false }
+);
+const MapComp = dynamic(() => import('@/components/map/MapComp'), { ssr: false });
 
 async function getData(id) {
+	const car = await prisma.car.findUnique({
+		where: { id: parseInt(id, 10) },
+		include: { brand: true, model: true, generation: true },
+	});
+	if (!car) notFound();
+	return car;
+}
+
+export async function generateMetadata({ params }) {
 	try {
-		const car = await prisma.car.findUnique({
-			where: { id: parseInt(id, 10) },
-			include: {
-				brand: true,
-				model: true,
-				generation: true,
+		const car = await getData(params.id);
+		const title = `${car.title} купить в Минске: Лизинг и Кредит | Автосалон «AvtoCar»`;
+		const description = `ᐈ ⭐ ${car.title} в прекрасном состоянии. Автосалон: Кредит и лизинг на б/у авто ➤➤➤ До 10 лет. ☎️ (33) 355-88-55 ⚡ Большой выбор автомобилей ⚡ Помощь в выборе авто ⭐ Офомление в день подачи ⭐ Без взоса ✓ Без справок и поручителей 🔥 Звоните прямо сейчас!`;
+		const canonical = new URL(`/catalog/${params.id}/${car.titleLink}`, process.env.NEXT_PUBLIC_BASE_URL).toString();
+
+		return {
+			title,
+			description,
+			alternates: { canonical },
+			openGraph: {
+				title,
+				description,
+				url: canonical,
+				type: 'website',
+				images: ['/fon/fon6.webp'],
 			},
-		});
-
-		if (!car) {
-			return new NextResponse("Автомобиль не найден", { status: 404 });
-		}
-
-		return car
-	} catch (error) {
-		console.error("Ошибка при получении данных об автомобиле:", error);
-		return new NextResponse("Ошибка при получении данных об автомобиле", { status: 500 });
+		};
+	} catch {
+		return { title: 'Автомобиль не найден', robots: { index: false } };
 	}
 }
 
-export async function generateMetadata({ params: id }) {
-	const data = await getData(id.id);
-	const id1 = id.id
+export default async function Page({ params, searchParams }) {
+	const data = await getData(params.id);
 
-	let title1
-	let description1
-
-	if (data) {
-		title1 = `${data.title} купить в Минске: Лизинг и Кредит | Автосалон «AvtoCar»`,
-			description1 = `ᐈ ⭐ ${data.title} в прекрасном состоянии. Автосалон: Кредит и лизинг на б/у авто ➤➤➤ До 10 лет. ☎️ (33) 355-88-55 ⚡ Большой выбор автомобилей ⚡ Помощь в выборе авто ⭐ Офомление в день подачи ⭐ Без взоса ✓ Без справок и поручителей 🔥 Звоните прямо сейчас!`
+	// если slug не совпал — редиректим на канонический URL
+	if (params.title && params.title !== data.titleLink) {
+		redirect(`/catalog/${params.id}/${data.titleLink}`);
 	}
-	return {
-		title: title1,
-		description: description1,
-		keywords: ``,
-		alternates: {
-			canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/catalog/${id1}/${data.titleLink}`,
-		},
-		og: {
-			title: title1,
-			description: description1,
-			type: 'website',
-			url: `${process.env.NEXT_PUBLIC_BASE_URL}/catalog/${id1}/${data.titleLink}`,
-			image: 'public/fon/fon6.webp',
-		},
-	};
-}
 
-export default async function page({ params: { id } }) {
-	const data = await getData(id);
-
-	if (!data) {
-		return (
-			<button className="btn">
-				<span className="loading loading-spinner"></span>
-				loading
-			</button>
-		)
-	}
+	const lite = 'lite' in (searchParams || {});
 
 	return (
 		<main className='sd:py-20 xz:py-7 min-h-screen sd:mt-0 xz:mt-24'>
 			<div className='w-full bg-cover fon bg-center' />
 			<section className='relative'>
 				<div className='container mx-auto'>
-
 					<div className='grid sd:grid-cols-3 xz:grid-cols-1 gap-4'>
 
 						<div className='sd:col-span-2 xz:col-span-1 bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary'>
 							<h1 className='sd:text-3xl xz:text-xl font-semibold uppercase px-2'>
 								Продажа {data.title}, {data.year}<span className="lowercase">г.</span>
 							</h1>
-							<p className='pl-2 text-gray-400 text-xs uppercase'>
-								id: {data.id}
-							</p>
+							<p className='pl-2 text-gray-400 text-xs uppercase'>id: {data.id}</p>
+
 							<GalleryComponent images={JSON.parse(data.images)} title={data.title} />
 
 							<article className='sd:hidden xz:block mt-12'>
 								<div className="text-xs flex justify-end space-x-1.5 mb-1">
 									<div className='text-black flex space-x-1'>
-										<Image
-											src="/svg/check.svg"
-											alt="Лизинг"
-											width={15}
-											height={15}
-										/>
-										<p className=''>
-											Лизинг
-										</p>
+										<Image src="/svg/check.svg" alt="Лизинг" width={15} height={15} />
+										<p>Лизинг</p>
 									</div>
 									<div className='text-black flex space-x-1'>
-										<Image
-											src="/svg/check.svg"
-											alt="Лизинг"
-											width={15}
-											height={15}
-										/>
-										<p className=''>
-											Кредит
-										</p>
+										<Image src="/svg/check.svg" alt="Кредит" width={15} height={15} />
+										<p>Кредит</p>
 									</div>
 								</div>
-								<p className='text-3xl font-semibold text-secondary text-right'>
-									{data.priceBYN} BYN
-								</p>
-								<p className='text-[#2D3192] text-right text-xl'>
-									{data.priceUSD} USD
-								</p>
-								<h2 className='text-xl text-secondary font-semibold text-center mt-5'>
-									Характеристики
-								</h2>
+								<p className='text-3xl font-semibold text-secondary text-right'>{data.priceBYN} BYN</p>
+								<p className='text-[#2D3192] text-right text-xl'>{data.priceUSD} USD</p>
 
+								<h2 className='text-xl text-secondary font-semibold text-center mt-5'>Характеристики</h2>
 								<ul className='text-[#333333] text-sm mt-4'>
-									<li className='flex justify-between mb-1'>
-										<span>Год</span>
-										<span className="text-secondary">{data.year} г</span>
-									</li>
-									<li className='flex justify-between mb-1'>
-										<span>Пробег</span>
-										<span className="text-secondary">{data.mileage}</span>
-									</li>
-									<li className='flex justify-between mb-1'>
-										<span>Тип двигателя</span>
-										<span className="text-secondary">{data.engine}</span>
-									</li>
-									<li className='flex justify-between mb-1'>
-										<span>Коробка передач</span>
-										<span className="text-secondary">{data.transmission}</span>
-									</li>
-									<li className='flex justify-between mb-1'>
-										<span>Объём двигателя</span>
-										<span className="text-secondary">{data.engineCapacity}</span>
-									</li>
-									<li className='flex justify-between mb-1'>
-										<span>Привод</span>
-										<span className="text-secondary">{data.drive}</span>
-									</li>
+									<li className='flex justify-between mb-1'><span>Год</span><span className="text-secondary">{data.year} г</span></li>
+									<li className='flex justify-between mb-1'><span>Пробег</span><span className="text-secondary">{data.mileage}</span></li>
+									<li className='flex justify-between mb-1'><span>Тип двигателя</span><span className="text-secondary">{data.engine}</span></li>
+									<li className='flex justify-between mb-1'><span>Коробка передач</span><span className="text-secondary">{data.transmission}</span></li>
+									<li className='flex justify-between mb-1'><span>Объём двигателя</span><span className="text-secondary">{data.engineCapacity}</span></li>
+									<li className='flex justify-between mb-1'><span>Привод</span><span className="text-secondary">{data.drive}</span></li>
 								</ul>
 							</article>
 
 							<article className='sd:mt-12 xz:mt-7'>
-								<h2 className='sd:text-2xl xz:text-lg font-semibold'>
-									Описание
-								</h2>
+								<h2 className='sd:text-2xl xz:text-lg font-semibold'>Описание</h2>
 								<div className='space-y-2 mt-3 sd:text-base xz:text-sm'>
-									{data.description.split('.').map((sentence, index) => (
-										sentence.trim() && (
-											<p key={index} className='leading-relaxed'>
-												{sentence.trim()}.
-											</p>
-										)
-									))}
+									{data.description.split('.').map((s, i) => s.trim() ? <p key={i} className='leading-relaxed'>{s.trim()}.</p> : null)}
 								</div>
 
 								<div className='grid sd:grid-cols-3 xz:grid-cols-1 gap-8 mt-8'>
-
 									<p className='text-[10px]'>
 										ООО «АнтВентГолд». УНП: 193614538. г. Минск,
 										ул. пер. С. Ковалевской, д.54 к.1 каб.303-106
@@ -182,28 +116,19 @@ export default async function page({ params: { id } }) {
 												</svg>
 												Позвонить
 											</button>
-											<div tabIndex={0} className={`dropdown-content bg-[#2D3192] z-[1] px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl`}>
-												<div className=''>
-													<Image src='/logo/logo2.webp' alt='Логотип - продажа авто в кредит и лизинг' width={120} height={120} className="mx-auto" />
-												</div>
-												<p className='text-xl'>
-													Мы в Минске
-												</p>
+											<div tabIndex={0} className="dropdown-content bg-[#2D3192] z-[1] px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl">
+												<div><Image src='/logo/logo2.webp' alt='Логотип - продажа авто в кредит и лизинг' width={120} height={120} className="mx-auto" /></div>
+												<p className='text-xl'>Мы в Минске</p>
 												<div className='mt-5'>
 													<Image src='/svg/location-white.svg' alt='Адрес автосалона' width={30} height={30} className="mx-auto mb-2" />
 													<a href="https://yandex.by/maps/-/CDdkfUlz" target="_blank" className="mt-2 text-sm">
-														Минск, ул. Куйбышева 40, <br />
-														Паркинг 4 этаж
+														Минск, ул. Куйбышева 40, <br />Паркинг 4 этаж
 													</a>
 												</div>
 												<div className='mt-5'>
 													<Image src='/svg/phone-white.svg' alt='Телефон автосалона' width={25} height={25} className="mx-auto mb-2" />
-													<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
-														{phoneNumbers.secondaryPhone} МТС
-													</a>
-													<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
-														{phoneNumbers.mainPhone} A1
-													</a>
+													<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>{phoneNumbers.secondaryPhone} МТС</a>
+													<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>{phoneNumbers.mainPhone} A1</a>
 												</div>
 											</div>
 										</div>
@@ -220,170 +145,104 @@ export default async function page({ params: { id } }) {
 							</article>
 						</div>
 
+						{/* Правая колонка — как в твоём рабочем варианте */}
 						<article className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
-							<div className=''>
+							<div>
 								<div className='sd:block xz:hidden'>
 									<div className="text-xs flex justify-end space-x-1.5 mb-1">
 										<div className='text-black flex space-x-1'>
-											<Image
-												src="/svg/check.svg"
-												alt="Лизинг"
-												width={15}
-												height={15}
-											/>
-											<p className=''>
-												Лизинг
-											</p>
+											<Image src="/svg/check.svg" alt="Лизинг" width={15} height={15} />
+											<p>Лизинг</p>
 										</div>
 										<div className='text-black flex space-x-1'>
-											<Image
-												src="/svg/check.svg"
-												alt="Лизинг"
-												width={15}
-												height={15}
-											/>
-											<p className=''>
-												Кредит
-											</p>
+											<Image src="/svg/check.svg" alt="Кредит" width={15} height={15} />
+											<p>Кредит</p>
 										</div>
 									</div>
-									<p className='text-4xl font-semibold text-secondary text-right'>
-										{data.priceBYN} BYN
-									</p>
-									<p className='text-[#2D3192] text-right text-xl'>
-										{data.priceUSD} USD
-									</p>
-									<h2 className='text-xl text-secondary font-semibold text-center mt-5'>
-										Характеристики
-									</h2>
+									<p className='text-4xl font-semibold text-secondary text-right'>{data.priceBYN} BYN</p>
+									<p className='text-[#2D3192] text-right text-xl'>{data.priceUSD} USD</p>
+									<h2 className='text-xl text-secondary font-semibold text-center mt-5'>Характеристики</h2>
 
 									<div className='mt-4'>
 										<ul className='text-[#333333] text-sm '>
-											<li className='flex justify-between mb-1'>
-												<span>Год</span>
-												<span className="text-secondary">{data.year} г</span>
-											</li>
-											<li className='flex justify-between mb-1'>
-												<span>Пробег</span>
-												<span className="text-secondary">{data.mileage}</span>
-											</li>
-											<li className='flex justify-between mb-1'>
-												<span>Тип двигателя</span>
-												<span className="text-secondary">{data.engine}</span>
-											</li>
-											<li className='flex justify-between mb-1'>
-												<span>Коробка передач</span>
-												<span className="text-secondary">{data.transmission}</span>
-											</li>
-											<li className='flex justify-between mb-1'>
-												<span>Объём двигателя</span>
-												<span className="text-secondary">{data.engineCapacity}</span>
-											</li>
-											<li className='flex justify-between mb-1'>
-												<span>Привод</span>
-												<span className="text-secondary">{data.drive}</span>
-											</li>
+											<li className='flex justify-between mb-1'><span>Год</span><span className="text-secondary">{data.year} г</span></li>
+											<li className='flex justify-between mb-1'><span>Пробег</span><span className="text-secondary">{data.mileage}</span></li>
+											<li className='flex justify-between mb-1'><span>Тип двигателя</span><span className="text-secondary">{data.engine}</span></li>
+											<li className='flex justify-between mb-1'><span>Коробка передач</span><span className="text-secondary">{data.transmission}</span></li>
+											<li className='flex justify-between mb-1'><span>Объём двигателя</span><span className="text-secondary">{data.engineCapacity}</span></li>
+											<li className='flex justify-between mb-1'><span>Привод</span><span className="text-secondary">{data.drive}</span></li>
 										</ul>
 									</div>
 								</div>
 
-								<h3 className='text-xl text-secondary font-semibold text-center mt-3'>
-									Комплектация
-								</h3>
+								<h3 className='text-xl text-secondary font-semibold text-center mt-3'>Комплектация</h3>
 
 								<div className='mt-4 text-sm text-[#333333] flex flex-col justify-between'>
 									<ul>
 										<li className={`mb-2 ${data.salon ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Салон:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.salon.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.salon?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.safety ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Системы безопасности:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.safety.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.safety?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.airbags ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Подушки:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.airbags.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.airbags?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.assistance ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Ассистенты:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.assistance.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.assistance?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.exterior ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Экстерьер:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.exterior.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.exterior?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.interior ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Интерьер:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.interior.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.interior?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.lights ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Фары:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.lights.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.lights?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.climate ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Климат:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-
-												{data.climate.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.climate?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.heating ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Обогрев:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.heating.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.heating?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.multimedia ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Мультимедиа:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.multimedia.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.multimedia?.split(',').join(' | ')}</span>
 										</li>
 										<li className={`mb-2 ${data.comfort ? 'block' : 'hidden'}`}>
 											<span className="font-semibold">Комфорт:</span>
-											<span className="text-xs block mt-1 text-secondary/70">
-												{data.comfort.split(',').join(' | ')}
-											</span>
+											<span className="text-xs block mt-1 text-secondary/70">{data.comfort?.split(',').join(' | ')}</span>
 										</li>
 									</ul>
 
 									<div className='py-2 flex flex-col items-center justify-center h-full bg-gray-50 rounded-full mt-3'>
 										<div className='flex items-center space-x-1'>
 											<Image src='/svg/check-green.svg' alt='Проверенный продавец' width={20} height={20} />
-											<p className='text-[#238657] text-sm'>
-												Проверенный продавец
-											</p>
+											<p className='text-[#238657] text-sm'>Проверенный продавец</p>
 										</div>
-										<p className='text-[9px]'>
-											автомобиль юридически чист
-										</p>
+										<p className='text-[9px]'>автомобиль юридически чист</p>
 									</div>
 								</div>
 							</div>
-
 						</article>
+
 					</div>
 
-
-					<div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary mt-14'>
-
-						<SimilarCars price={data.priceUSD} id={data.id} year={data.year} />
-					</div>
+					{!lite && (
+						<div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2 text-secondary mt-14'>
+							<SimilarCars price={data.priceUSD} id={data.id} year={data.year} />
+						</div>
+					)}
 
 					<MapComp />
 				</div>
@@ -391,5 +250,5 @@ export default async function page({ params: { id } }) {
 
 			<PhoneBottom />
 		</main>
-	)
+	);
 }

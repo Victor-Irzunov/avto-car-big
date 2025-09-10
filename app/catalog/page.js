@@ -1,4 +1,4 @@
-// /app/catalog/page.js
+// app/catalog/page.js
 import { PrismaClient } from '@prisma/client';
 import PageComponent from "@/components/Comp/PageComponent";
 

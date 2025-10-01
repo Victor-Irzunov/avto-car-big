@@ -36,9 +36,9 @@ const MapComp = () => {
 							<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
 								{phoneNumbers.secondaryPhone} МТС
 							</a>
-							<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
+							{/* <a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
 								{phoneNumbers.mainPhone} A1
-							</a>
+							</a> */}
 						</div>
 					</div>
 					<div style={{ position: 'relative', overflow: 'hidden' }}>

@@ -422,12 +422,12 @@ const FormCreditNoCarData = ({ title = 'Кредитный калькулято�
 						>
 							{phoneNumbers.secondaryPhone} МТС
 						</a>
-						<a
+						{/* <a
 							href={`tel:${phoneNumbers.mainPhoneLink}`}
 							className="font-light mt-2 block"
 						>
 							{phoneNumbers.mainPhone} A1
-						</a>
+						</a> */}
 					</div>
 				</div>
 

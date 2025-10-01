@@ -233,9 +233,7 @@ export default function Header() {
 													<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-semibold block'>
 														{phoneNumbers.mainPhone}
 													</a>
-													<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-semibold block mt-3'>
-														{phoneNumbers.secondaryPhone}
-													</a>
+												
 												</div>
 											</div>
 										</div>

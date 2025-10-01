@@ -45,9 +45,9 @@ const CreditArticle = () => {
 					Звоните и заказывайте автокредит в  по тел.:
 				</p>
 				<div className='flex flex-col justify-center items-center mt-6 text-primary'>
-					<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
+					{/* <a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className='font-light'>
 						{phoneNumbers.secondaryPhone}
-					</a>
+					</a> */}
 					<a href={`tel:${phoneNumbers.mainPhoneLink}`} className='font-light mt-2 block'>
 						{phoneNumbers.mainPhone}
 					</a>

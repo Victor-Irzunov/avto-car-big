@@ -1,4 +1,3 @@
-// app/catalog/[id]/page.js
 import { prisma } from '@/lib/prisma';
 import { redirect, notFound } from 'next/navigation';
 

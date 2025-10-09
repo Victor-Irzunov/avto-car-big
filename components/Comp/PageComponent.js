@@ -10,24 +10,14 @@ import { transliterate } from "@/transliterate/transliterate";
 import { useContext, useState } from "react";
 import PhoneBottom from "../phoneBotton/PhoneBottom";
 
-
-const titleLink = (brandName) => {
-	return transliterate(brandName).replace(/\s+/g, '-').toLowerCase();
-};
+const titleLink = (brandName) => transliterate(brandName).replace(/\s+/g, '-').toLowerCase();
 
 const PageComponent = observer(({ data }) => {
 	const { user } = useContext(MyContext)
 	const [showAll, setShowAll] = useState(false);
 
-	// Фильтруем марки, которые начинаются с букв A, B, C
-	const filteredCars = DataCar.filter(
-		(brand) => ['A', 'B', 'C'].includes(brand.brand[0].toUpperCase())
-	);
-
-	// Обработчик для переключения отображения всех брендов
+	const filteredCars = DataCar.filter((brand) => ['A', 'B', 'C'].includes(brand.brand[0].toUpperCase()));
 	const toggleShowAll = () => setShowAll(!showAll);
-
-	// Выбор, какие данные показывать
 	const displayedCars = showAll ? DataCar : filteredCars;
 
 	return (
@@ -36,76 +26,53 @@ const PageComponent = observer(({ data }) => {
 			<section className='relative'>
 				<div className='container mx-auto'>
 					<div className='mb-5'>
-						<h1 className='sd:text-5xl xz:text-3xl font-semibold text-center'>
-							Каталог авто
-						</h1>
+						<h1 className='sd:text-5xl xz:text-3xl font-semibold text-center'>Каталог авто</h1>
 					</div>
 				</div>
 
 				<div className='sd:container mx-auto'>
 					<div className='bg-white/85 rounded-3xl sd:py-8 xz:py-5 sd:px-10 xz:px-2'>
-						<div className=''>
-							<div className='bg-[#1B1464] rounded-3xl sd:px-7 xz:px-4 py-9'>
-								<h2 className='sd:block xz:hidden sd:text-5xl xz:text-3xl font-semibold text-white'>
-									Быстрый подбор авто
-								</h2>
-								<h2 className='sd:hidden xz:block sd:text-5xl xz:text-3xl font-semibold text-white'>
-									Подбор авто
-								</h2>
-
-								<div className='mt-6'>
-									<FormPodborAvto />
-								</div>
-							</div>
+						<div className='bg-[#1B1464] rounded-3xl sd:px-7 xz:px-4 py-9'>
+							<h2 className='sd:block xz:hidden sd:text-5xl xz:text-3xl font-semibold text-white'>Быстрый подбор авто</h2>
+							<h2 className='sd:hidden xz:block sd:text-5xl xz:text-3xl font-semibold text-white'>Подбор авто</h2>
+							<div className='mt-6'><FormPodborAvto /></div>
 						</div>
 
 						<div className='container mx-auto'>
-							<div className='mt-6 grid sd:grid-cols-5 xz:grid-cols-1 gap-1 sd:px-3 xz:px-1.5 relative'>
+							<div className='mt-6 grid sd:grid-cols-5 xz:grid-cols-3 gap-1 sd:px-3 xz:px-1.5 relative'>
 								<div className="col-span-4 grid sd:grid-cols-5 xz:grid-cols-3">
 									{displayedCars.map((brand) => (
 										<div key={brand.id}>
-											<Link
-												href={`${process.env.NEXT_PUBLIC_BASE_URL}/${titleLink(brand.brand)}/`}
-												className="sd:text-base xz:text-xs font-medium text-secondary"
-											>
+											<Link href={`/${titleLink(brand.brand)}/`} prefetch className="sd:text-base xz:text-xs font-medium text-secondary">
 												{brand.brand}
 											</Link>
 										</div>
 									))}
 									{!showAll && (
-										<button
-											onClick={toggleShowAll}
-											className="col-span-full mt-4 text-blue-500 hover:underline"
-										>
+										<button onClick={toggleShowAll} className="col-span-full mt-4 text-blue-500 hover:underline">
 											Показать все
 										</button>
 									)}
 									{showAll && (
-										<button
-											onClick={toggleShowAll}
-											className="col-span-full mt-4 text-blue-500 hover:underline"
-										>
+										<button onClick={toggleShowAll} className="col-span-full mt-4 text-blue-500 hover:underline">
 											Скрыть
 										</button>
 									)}
 								</div>
 								<div className=''>
 									<div className='sticky top-9 bg-neutral rounded-3xl py-5 px-5 max-h-32 sd:flex xz:hidden justify-center items-center'>
-										<Image src='/logo/logo.webp' alt='Логотип автосалона' width={200} height={200} className="" />
+										<Image src='/logo/logo.webp' alt='Логотип автосалона' width={200} height={200} />
 									</div>
 								</div>
 							</div>
-
 						</div>
+
 						<div className='my-7'>
-							<p className='text-right text-secondary'>
-								Количество авто в автосалоне: {data.length} шт.
-							</p>
+							<p className='text-right text-secondary'>Количество авто в автосалоне: {data.length} шт.</p>
 						</div>
 						<Catalog data={data} isAdmin={user.userData?.isAdmin} />
 					</div>
 				</div>
-
 			</section>
 
 			<PhoneBottom />

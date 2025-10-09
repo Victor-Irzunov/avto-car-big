@@ -1,16 +1,24 @@
-// /components/catalog/Catalog.jsx — делаем «Подробнее» настоящей ссылкой
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import phoneNumbers from "@/config/config";
 
 export const Catalog = ({ data, isAdmin }) => {
   const [visibleCars, setVisibleCars] = useState(6);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const router = useRouter();
 
-  const loadMoreCars = () => setVisibleCars((v) => v + 6);
+  const loadMoreCars = () => setVisibleCars((prevVisible) => prevVisible + 6);
   const toggleDropdown = (carId) => setOpenDropdown(openDropdown === carId ? null : carId);
+
+  const handleCardClick = (e, car) => {
+    // если клик не по кнопке телефона — мягкий клиентский переход
+    if (!e.target.closest(".phone-button")) {
+      router.push(`/catalog/${car.id}/${car.titleLink}`);
+    }
+  };
 
   return (
     <div className="sd:container mx-auto">
@@ -18,11 +26,12 @@ export const Catalog = ({ data, isAdmin }) => {
         {data.slice(0, visibleCars).map((car) => (
           <article key={car.id} className="card bg-white rounded-3xl shadow-xl">
             <figure className="relative w-full h-[250px] overflow-hidden rounded-t-3xl">
-              {isAdmin && (
+              {isAdmin ? (
                 <span className="absolute top-2 z-20 right-2 text-primary text-[10px] flex justify-center items-center bg-white p-1 rounded-full w-6 h-6">
                   {car.id}
                 </span>
-              )}
+              ) : null}
+
               {car.vip && (
                 <div className='absolute top-2 left-2 flex space-x-1'>
                   <Image src='/svg/fire.svg' alt='Горячее предложение' width={20} height={20} />
@@ -47,19 +56,19 @@ export const Catalog = ({ data, isAdmin }) => {
                 {JSON.parse(car.images).map((image, index) => (
                   <div key={index} className="carousel-item w-full mx-0.5">
                     <Image
-                      src={`${process.env.NEXT_PUBLIC_BASE_URL}/uploads/${image.original}`}
+                      src={`/uploads/${image.original}`}
                       alt={car.title}
                       className="w-full h-full object-cover"
                       width={250}
                       height={250}
-                      unoptimized   // карточки тоже напрямую — быстрее и без ошибок
+                      unoptimized
                     />
                   </div>
                 ))}
               </div>
 
               <div className="absolute bottom-1 right-1">
-                <Image src="/svg/left-right.svg" alt="Листайте фото" width={25} height={25} />
+                <Image src="/svg/left-right.svg" alt="Рука и палец для фото влево и вправо" width={25} height={25} />
               </div>
               <div className="absolute top-3 left-1/2 -translate-x-1/2 text-xs flex space-x-1.5">
                 <div className='text-black flex space-x-1'>
@@ -73,14 +82,12 @@ export const Catalog = ({ data, isAdmin }) => {
               </div>
             </figure>
 
-            <div className="card-body sd:p-4 xz:p-2">
+            <div className="card-body sd:p-4 xz:p-2 cursor-pointer" onClick={(e) => handleCardClick(e, car)}>
               <p className="text-info sd:text-lg xz:text-sm">
                 <span className={`${car.vip ? 'text-primary' : ''}`}> {car.priceUSD} USD</span>{" "}
                 <span className="font-semibold sd:text-xl xz:text-base">/ {car.priceBYN} BYN</span>
               </p>
-
-              <h3 className="card-title text-secondary sd:text-base xz:text-base">{car.title}</h3>
-
+              <h3 className={`card-title text-secondary sd:text-base xz:text-base`}>{car.title}</h3>
               <ul className="text-[#333333] sd:text-sm xz:text-xs">
                 <li className="flex justify-between mb-1"><span>Год</span><span>{car.year} г</span></li>
                 <li className="flex justify-between mb-1"><span>Пробег</span><span>{car.mileage}</span></li>
@@ -99,25 +106,28 @@ export const Catalog = ({ data, isAdmin }) => {
                   </button>
 
                   {openDropdown === car.id && (
-                    <div tabIndex={0} className="dropdown-content bg-[#2D3192] z-30 px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl">
-                      <div><Image src="/logo/logo2.webp" alt="Логотип" width={120} height={120} className="mx-auto" /></div>
+                    <div tabIndex={0} className={`dropdown-content bg-[#2D3192] z-30 px-6 py-8 shadow-slate-400 w-[300px] text-center rounded-xl`}>
+                      <div>
+                        <Image src="/logo/logo2.webp" alt="Логотип - продажа авто в кредит и лизинг" width={120} height={120} className="mx-auto" />
+                      </div>
                       <p className="text-xl">Мы в Минске</p>
                       <div className="mt-5">
-                        <Image src="/svg/location-white.svg" alt="Адрес" width={30} height={30} className="mx-auto mb-2" />
+                        <Image src="/svg/location-white.svg" alt="Адрес автосалона" width={30} height={30} className="mx-auto mb-2" />
                         <a href="https://yandex.by/maps/-/CDdkfUlz" target="_blank" className="mt-2 text-sm">
                           Минск, ул. Куйбышева 40, <br /> Паркинг 4 этаж
                         </a>
                       </div>
                       <div className="mt-5">
-                        <Image src="/svg/phone-white.svg" alt="Телефон" width={25} height={25} className="mx-auto mb-2" />
-                        <a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className="font-light">{phoneNumbers.secondaryPhone} МТС</a>
+                        <Image src="/svg/phone-white.svg" alt="Телефон автосалона" width={25} height={25} className="mx-auto mb-2" />
+                        <a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className="font-light">
+                          {phoneNumbers.secondaryPhone} МТС
+                        </a>
                       </div>
                     </div>
                   )}
                 </div>
 
-                {/* ⬇️ Теперь «Подробнее» всегда ссылкой на канонический URL */}
-                <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/catalog/${car.id}/${car.titleLink}`} className="btn sd:btn-lg xz:btn-sm btn-primary rounded-full sd:px-7 xz:px-2 sd:text-base xz:text-xs">
+                <Link href={`/catalog/${car.id}/${car.titleLink}`} prefetch className="btn sd:btn-lg xz:btn-sm btn-primary rounded-full sd:px-7 xz:px-2 sd:text-base xz:text-xs">
                   Подробнее
                 </Link>
               </div>
@@ -136,7 +146,9 @@ export const Catalog = ({ data, isAdmin }) => {
 
       {visibleCars < data.length && (
         <div className="flex justify-center mt-8">
-          <button onClick={loadMoreCars} className="btn btn-primary px-6 py-2 rounded-full">Ещё</button>
+          <button onClick={loadMoreCars} className="btn btn-primary px-6 py-2 rounded-full">
+            Ещё
+          </button>
         </div>
       )}
     </div>

@@ -26,9 +26,9 @@ export default function Home() {
             </div>
             <div className="relative z-10 mt-6 text-center">
               <h1 className='sd:text-7xl xz:text-3xl font-bold uppercase text-white'>
-                <span className="text-primary">
-                  Авто
-                </span>{' '}<span className="">в Лизинг </span> <span className="block sd:mt-6 xz:mt-2">и  <span className="text-[#0000FF] bg-[#D0D0D2] rounded-3xl py-1 px-2">кредит</span></span>
+                <span className="text-primary">Авто</span>{' '}
+                <span className="">в Лизинг </span>
+                <span className="block sd:mt-6 xz:mt-2">и  <span className="text-[#0000FF] bg-[#D0D0D2] rounded-3xl py-1 px-2">кредит</span></span>
               </h1>
               <h2 className="sd:text-4xl xz:text-xl mt-8 uppercase text-white text-shadow">
                 <span className="">
@@ -44,12 +44,8 @@ export default function Home() {
               </p>
 
               <div className='grid sd:grid-cols-3 xz:grid-cols-1 gap-6 mt-8'>
-
-                <div className=''>
-                  <Link
-                    href={`${process.env.NEXT_PUBLIC_BASE_URL}/catalog/`}
-                    className=""
-                  >
+                <div>
+                  <Link href={`/catalog/`} prefetch className="">
                     <button className="btn btn-primary btn-circle w-full text-white text-lg">
                       Каталог автомобилей
                     </button>
@@ -63,27 +59,20 @@ export default function Home() {
                     width={40} height={40}
                     className="absolute -top-4 right-0"
                   />
-                  <Link
-                    href={`${process.env.NEXT_PUBLIC_BASE_URL}/credit/`}
-                    className=""
-                  >
+                  <Link href={`/credit/`} prefetch className="">
                     <button className="btn bg-white border-white hover:bg-slate-100 btn-circle w-full text-black text-lg">
                       Кредитный калькулятор
                     </button>
                   </Link>
                 </div>
 
-                <div className=''>
-                  <Link
-                    href={`${process.env.NEXT_PUBLIC_BASE_URL}/lizing/`}
-                    className=""
-                  >
+                <div>
+                  <Link href={`/lizing/`} prefetch className="">
                     <button className="btn btn-primary btn-circle w-full text-white text-lg">
                       Лизинговый калькулятор
                     </button>
                   </Link>
                 </div>
-
               </div>
 
               <p className='sd:text-xl xz:text-base uppercase font-semibold text-white sd:mt-16 xz:mt-6'>
@@ -93,12 +82,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <PodborAvto />
       <Works />
       <About />
       <Otzyvy />
       <MapComp />
-
       <PhoneBottom />
     </main>
   );

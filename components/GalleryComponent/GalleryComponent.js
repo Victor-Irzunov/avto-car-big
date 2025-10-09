@@ -1,30 +1,30 @@
+// /components/GalleryComponent/GalleryComponent.js — делаем абсолютный src и отключаем оптимизатор Next
 "use client";
-// components/GalleryComponent/GalleryComponent.js
 import ImageGallery from 'react-image-gallery';
 import React, { useRef, useState } from 'react';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import Image from 'next/image';
+
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/$/, '') || '';
 
 const GalleryComponent = ({ images, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const galleryRef = useRef(null);
 
-  // используем относительные пути — nginx уже раздаёт /uploads
+  // даём абсолютные пути — без всяких _next/image
   const galleryItems = images.map((image) => ({
-    original: `/uploads/${image.original}`,
-    thumbnail: `/uploads/${image.thumbnail}`,
+    original: `${baseURL}/uploads/${image.original}`,
+    thumbnail: `${baseURL}/uploads/${image.thumbnail}`,
   }));
 
   const openModal = (index) => { setCurrentIndex(index); setIsModalOpen(true); };
   const closeModal = () => setIsModalOpen(false);
-
   const changeMainImage = (index) => {
     setCurrentIndex(index);
     galleryRef.current?.slideToIndex(index);
   };
 
-  // главный кадр: грузим только нужный размер + ленивую загрузку дальше
   const renderImage = (item) => (
     <div className="relative w-full" style={{ paddingTop: '75%', overflow: 'hidden', borderRadius: 8 }}>
       <Image
@@ -35,6 +35,7 @@ const GalleryComponent = ({ images, title }) => {
         priority={currentIndex === 0}
         loading={currentIndex === 0 ? 'eager' : 'lazy'}
         style={{ objectFit: 'cover' }}
+        unoptimized   // ⬅️ отключаем оптимизацию Next для /uploads
       />
     </div>
   );
@@ -46,7 +47,7 @@ const GalleryComponent = ({ images, title }) => {
           <ImageGallery
             ref={galleryRef}
             items={galleryItems}
-            showFullscreenButton={true}
+            showFullscreenButton
             showPlayButton={false}
             showThumbnails={false}
             startIndex={currentIndex}
@@ -72,6 +73,7 @@ const GalleryComponent = ({ images, title }) => {
                 alt={title}
                 loading="lazy"
                 style={{ objectFit: 'cover' }}
+                unoptimized   // ⬅️ и миниатюры тоже напрямую
               />
             </button>
           ))}
@@ -90,6 +92,7 @@ const GalleryComponent = ({ images, title }) => {
                 sizes="100vw"
                 priority
                 style={{ objectFit: 'contain' }}
+                unoptimized
               />
             </div>
             <div className="flex justify-between mt-4">

@@ -204,7 +204,7 @@ export default function CookiePolicyPage() {
             </div>
           </section>
 
-          <section>
+          <section className="mt-10">
             <h2>6. Как управлять cookie на сайте</h2>
             <ol>
               <li>
@@ -224,7 +224,7 @@ export default function CookiePolicyPage() {
             </ol>
           </section>
 
-          <section>
+          <section className="mt-10">
             <h2>7. Передача и раскрытие данных третьим лицам</h2>
             <p>
               Для реализации аналитики и маркетинга {ORG_NAME} использует сторонние сервисы. При использовании таких сервисов
@@ -241,7 +241,7 @@ export default function CookiePolicyPage() {
             </p>
           </section>
 
-          <section>
+          <section className="mt-10">
             <h2>9. Порядок обращения и контакты</h2>
             <p>
               Вопросы по использованию файлов cookie и обработке персональных данных направляйте на почту:
@@ -252,7 +252,7 @@ export default function CookiePolicyPage() {
             </p>
           </section>
 
-          <section>
+          <section className="mt-10">
             <h2>10. Изменения в Политике</h2>
             <p>
               Политика может обновляться. Дата последней редакции указана в начале документа. При существенных изменениях
@@ -260,7 +260,7 @@ export default function CookiePolicyPage() {
             </p>
           </section>
 
-          <section className="mt-6">
+          <section className="mt-12">
             <Link href="/" className="underline text-primary">
               На главную
             </Link>

@@ -1,10 +1,12 @@
+// /components/footer/Footer.jsx — ПОЛНОСТЬЮ (обновлён, добавлен CookiePopup)
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import phoneNumbers from "@/config/config";
 import { observer } from "mobx-react-lite";
 import { MyContext } from "@/contexts/MyContextProvider";
 import { useContext } from "react";
+import CookiePopup from "@/components/Cookie/CookiePopup"; // <- добавлено
+import phoneNumbers from "@/config/config";
 
 const Footer = observer(() => {
 	const { user } = useContext(MyContext)
@@ -24,10 +26,6 @@ const Footer = observer(() => {
 								className=""
 							/>
 						</div>
-						{/* <p className='text-xs'>
-							ООО «АВТОКАРГРУПП» УНП 193846922, г. Минск, ул. пер. С.Ковалевской, д.54 к.1 каб.303-127
-						</p> */}
-						
 					</div>
 
 					<div className=''>
@@ -91,14 +89,6 @@ const Footer = observer(() => {
 									Пригон из ЕС
 								</Link>
 							</li>
-							{/* <li className=''>
-								<Link
-									href={`${process.env.NEXT_PUBLIC_BASE_URL}/traid-in/`}
-									className="hover:text-primary"
-								>
-									Traid-in
-								</Link>
-							</li> */}
 							<li className=''>
 								{
 									user.userData?.isAdmin ?
@@ -120,6 +110,17 @@ const Footer = observer(() => {
 								}
 
 							</li>
+
+							{/* Ссылка на политику cookie */}
+							<li className=''>
+								<Link
+									href={`${process.env.NEXT_PUBLIC_BASE_URL}/cookie-policy`}
+									className="hover:text-primary"
+								>
+									Политика cookie
+								</Link>
+							</li>
+
 						</ul>
 					</div>
 
@@ -193,6 +194,9 @@ const Footer = observer(() => {
 					</p>
 				</div>
 			</aside>
+
+			{/* Cookie popup (вставлено в Footer чтобы не ломать layout) */}
+			<CookiePopup />
 		</footer>
 	)
 })

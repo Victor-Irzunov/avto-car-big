@@ -37,7 +37,7 @@ const resizeFile = (file, width, height, quality = 60) =>
 
 const engineOptions = ['Бензин', 'Дизель', 'Газ', 'Электро'];
 const transmissionOptions = ['Автомат', 'Механика'];
-const bodyTypeOptions = ['Седан', 'Универсал', 'Внедорожник', 'Минивэн', 'Хэтчбек', 'Микроавтобус', 'Купе', 'Кабриолет', 'Пикап', 'Другое'];
+const bodyTypeOptions = ['Седан', 'Универсал', 'Внедорожник', 'Минивэн', 'Хэтчбек', 'Лифтбек', 'Микроавтобус', 'Купе', 'Кабриолет', 'Пикап', 'Другое'];
 const driveOptions = ['Передний привод', 'Задний привод', 'Полный привод'];
 const engineCapacityOptions = Array.from({ length: 81 }, (_, i) => `${(i + 10) / 10}л`);
 

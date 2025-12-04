@@ -1,13 +1,18 @@
 export const DataCar = [
+	// фрагмент массива с брендами — с добавленными моделями 2025 года
+
 	{
 		id: 1,
 		brand: 'Abarth',
 		type: [
 			{ id: 1, model: '500', generations: ['II • Рестайлинг, 2015…'] },
 			{ id: 2, model: 'ABARTH', generations: ['I, 2007…2015'] },
-			{ id: 3, model: '500c', generations: ['2010–2013'] }
+			{ id: 3, model: '500c', generations: ['2010–2013'] },
+			// --- Новая модель 2025 года ---
+			{ id: 4, model: '600e', generations: ['I. 2025-'] }
 		]
 	},
+
 	{
 		id: 2,
 		brand: 'Acura',
@@ -20,17 +25,23 @@ export const DataCar = [
 			{ id: 6, model: 'RL', generations: ['II.2005-2009', 'I.Рестайлинг. 1998-2004'] },
 			{ id: 7, model: 'TL', generations: ['IV'] },
 			{ id: 8, model: 'TLX', generations: ['I.2014-2017', 'I. Рестайлинг. 2017-2020', 'II.2020-'] },
-			{ id: 9, model: 'ZDX', generations: ['I.2011-2013'] }
+			{ id: 9, model: 'ZDX', generations: ['I.2011-2013'] },
+			// --- Новая модель 2025 года ---
+			{ id: 10, model: 'ADX', generations: ['I.2025-'] }
 		]
 	},
+
 	{
 		id: 3,
 		brand: 'Aito',
 		type: [
 			{ id: 1, model: 'M5', generations: [] },
-			{ id: 2, model: 'M7', generations: [] }
+			{ id: 2, model: 'M7', generations: [] },
+			// --- Новая модель 2025 года ---
+			{ id: 3, model: 'M8', generations: ['I. 2025-'] }
 		]
 	},
+
 	{
 		id: 4,
 		brand: 'Alfa Romeo',
@@ -48,9 +59,12 @@ export const DataCar = [
 			{ id: 11, model: 'Giulietta', generations: ['940', '940 Рестайлинг'] },
 			{ id: 12, model: 'Gt', generations: [] },
 			{ id: 13, model: 'MiTo', generations: ['955'] },
-			{ id: 14, model: 'Stelvio', generations: ['I', 'I Рестайлинг'] }
+			{ id: 14, model: 'Stelvio', generations: ['I', 'I Рестайлинг'] },
+			// --- Новая модель 2025 года ---
+			{ id: 15, model: 'Junior', generations: ['I. 2025-'] }
 		]
 	},
+
 	{
 		id: 5,
 		brand: 'Audi',
@@ -106,21 +120,35 @@ export const DataCar = [
 			{ id: 49, model: 'SQ8', generations: [] },
 			{ id: 50, model: 'TT', generations: ['8S', '8J', '8N'] },
 			{ id: 51, model: 'TTS', generations: ['Typ 8S Рестайлинг', 'Тур 8S', 'Typ 8J'] },
-			{ id: 52, model: 'V8', generations: [] }
+			{ id: 52, model: 'V8', generations: [] },
+			// --- Новые модели 2025 года ---
+			{ id: 53, model: 'Q6 e-tron', generations: ['2025-'] },
+			{ id: 54, model: 'Q6 e-tron Sportback', generations: ['2025-'] }
 		]
 	},
+
+
+
+
 	{
 		id: 6,
 		brand: 'Ambertruck',
 		type: [
-			{ id: 1, model: 'Work', generations: [] }
+			{ id: 1, model: 'Work', generations: [] },
+			// актуальные модели бренда
+			{ id: 2, model: 'JM', generations: [] },
+			{ id: 3, model: 'SM', generations: [] }
 		]
 	},
 	{
 		id: 7,
 		brand: 'Aston Martin',
 		type: [
-			{ id: 1, model: 'V8 Vantage', generations: [] }
+			// 2025 рестайл Vantage
+			{ id: 1, model: 'V8 Vantage', generations: ['2025…'] },
+			// новые модели 2025 MY
+			{ id: 2, model: 'Vanquish', generations: ['I. 2025-'] },
+			{ id: 3, model: 'Valhalla', generations: ['I. 2025-'] }
 		]
 	},
 	{
@@ -129,23 +157,109 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'B30', generations: ['G20'] },
 			{ id: 2, model: 'B7', generations: ['F01', 'F02'] },
-			{ id: 3, model: 'XD3', generations: ['G01'] }
+			{ id: 3, model: 'XD3', generations: ['G01'] },
+			// новые для твоего списка актуальные модели
+			{ id: 4, model: 'B4', generations: ['G26'] },
+			{ id: 5, model: 'XB7', generations: ['G07'] }
 		]
 	},
 	{
 		id: 8,
 		brand: 'Bmw',
 		type: [
-			{ id: 1, model: '1 серия', generations: ['F40', 'F20,F21 2-й Рестайлинг', 'F20,F21', 'E81, E82, E88, E87 Рестайлинг', 'E81, E82, E88, E87'] },
+			{
+				id: 1,
+				model: '1 серия',
+				generations: [
+					'F70', // новое поколение 2025 MY
+					'F40',
+					'F20,F21 2-й Рестайлинг',
+					'F20,F21',
+					'E81, E82, E88, E87 Рестайлинг',
+					'E81, E82, E88, E87'
+				]
+			},
 			{ id: 2, model: '2 серия', generations: ['G42', 'F44', 'F22 Рестайлинг'] },
 			{ id: 3, model: '2 серия Active Tourer', generations: ['U06', 'F45 Рестайлинг', 'F45'] },
 			{ id: 4, model: '2 серия Gran Tourer', generations: ['F46 Рестайлинг', 'F46'] },
-			{ id: 5, model: '3 серия', generations: ['G20 Рестайлинг', 'G20', 'F34 (GT)', 'F30,F31 Рестайлинг', 'F30, F31', 'E90, E91, E92, E93 Рестайлинг', 'E90, E91, E92, E93', 'E46 Рестайлинг', 'E46', 'E36', 'E30', 'E21'] },
+			{
+				id: 5,
+				model: '3 серия',
+				generations: [
+					'G20 Рестайлинг',
+					'G20',
+					'F34 (GT)',
+					'F30,F31 Рестайлинг',
+					'F30, F31',
+					'E90, E91, E92, E93 Рестайлинг',
+					'E90, E91, E92, E93',
+					'E46 Рестайлинг',
+					'E46',
+					'E36',
+					'E30',
+					'E21'
+				]
+			},
 			{ id: 6, model: '4 серия', generations: ['G20,G23,G26', 'G32,F33,F36 (Рестайлинг)', 'F32,F33,F36'] },
-			{ id: 7, model: '5 серия', generations: ['G60', 'G30,G31 Рестайлинг', 'G30,G31', 'F07 (GT) Рестайлинг', 'F10,F11 Рестайлинг', 'F10,F11', 'F07 (GT)', 'E60,E61 Рестайлинг', 'E60,E61', 'E39 Рестайлинг', 'E39', 'E34', 'E28', 'E21'] },
-			{ id: 8, model: '6 серия', generations: ['G32 Рестайлинг', 'G32', 'F12,F13,F06 Рестайлинг', 'F12,F13,F06', 'E63,E64 Рестайлинг', 'E63,E64', 'E24'] },
-			{ id: 9, model: '7 серия', generations: ['G70', 'G11 Рестайлинг', 'G12 Long Рестайлинг', 'G11', 'G12 Long', 'F01,F04 Рестайлинг', 'F02 Long Рестайлинг', 'F01,F04', 'F02 Long', 'E65,E66 Рестайлинг', 'E65', 'E66 Long', 'E38 Рестайлинг', 'E38', 'E32'] },
-			{ id: 10, model: '8 серия', generations: ['G14,G15,G16 Рестайлинг', 'G14, G15, G16'] },
+			{
+				id: 7,
+				model: '5 серия',
+				generations: [
+					'G60',
+					'G30,G31 Рестайлинг',
+					'G30,G31',
+					'F07 (GT) Рестайлинг',
+					'F10,F11 Рестайлинг',
+					'F10,F11',
+					'F07 (GT)',
+					'E60,E61 Рестайлинг',
+					'E60,E61',
+					'E39 Рестайлинг',
+					'E39',
+					'E34',
+					'E28',
+					'E21'
+				]
+			},
+			{
+				id: 8,
+				model: '6 серия',
+				generations: [
+					'G32 Рестайлинг',
+					'G32',
+					'F12,F13,F06 Рестайлинг',
+					'F12,F13,F06',
+					'E63,E64 Рестайлинг',
+					'E63,E64',
+					'E24'
+				]
+			},
+			{
+				id: 9,
+				model: '7 серия',
+				generations: [
+					'G70',
+					'G11 Рестайлинг',
+					'G12 Long Рестайлинг',
+					'G11',
+					'G12 Long',
+					'F01,F04 Рестайлинг',
+					'F02 Long Рестайлинг',
+					'F01,F04',
+					'F02 Long',
+					'E65,E66 Рестайлинг',
+					'E65',
+					'E66 Long',
+					'E38 Рестайлинг',
+					'E38',
+					'E32'
+				]
+			},
+			{
+				id: 10,
+				model: '8 серия',
+				generations: ['G14,G15,G16 Рестайлинг', 'G14, G15, G16']
+			},
 			{ id: 11, model: 'i3', generations: ['G28', 'I01 Рестайлинг', 'I01'] },
 			{ id: 12, model: 'i4', generations: [] },
 			{ id: 13, model: 'i5', generations: [] },
@@ -160,50 +274,91 @@ export const DataCar = [
 			{ id: 22, model: 'M5', generations: [] },
 			{ id: 23, model: 'M6', generations: [] },
 			{ id: 24, model: 'M8', generations: [] },
-			{ id: 25, model: 'X1', generations: ['U11', 'F48 Рестайлинг', 'F48', 'F84 Рестайлинг', 'F84'] },
+			{
+				id: 25,
+				model: 'X1',
+				generations: ['U11', 'F48 Рестайлинг', 'F48', 'F84 Рестайлинг', 'F84']
+			},
 			{ id: 26, model: 'X2', generations: [] },
-			{ id: 27, model: 'X3', generations: ['G01 Рестайлинг', 'G01', 'F25 Рестайлинг', 'F25', 'F83 Рестайлинг', 'F83'] },
+			{
+				id: 27,
+				model: 'X3',
+				generations: ['G01 Рестайлинг', 'G01', 'F25 Рестайлинг', 'F25', 'F83 Рестайлинг', 'F83']
+			},
 			{ id: 28, model: 'X3M', generations: [] },
 			{ id: 29, model: 'X4', generations: ['G02 Рестайлинг', 'G02', 'F26'] },
 			{ id: 30, model: 'X4M', generations: [] },
-			{ id: 31, model: 'X5', generations: ['G05 Рестайлинг', 'G05', 'F15', 'E70 Рестайлинг', 'E70', 'E53 Рестайлинг', 'E53'] },
+			{
+				id: 31,
+				model: 'X5',
+				generations: ['G05 Рестайлинг', 'G05', 'F15', 'E70 Рестайлинг', 'E70', 'E53 Рестайлинг', 'E53']
+			},
 			{ id: 32, model: 'X5M', generations: [] },
-			{ id: 33, model: 'X6', generations: ['G06 Рестайлинг', 'G06', 'F16', 'E71 Рестайлинг', 'E71'] },
+			{
+				id: 33,
+				model: 'X6',
+				generations: ['G06 Рестайлинг', 'G06', 'F16', 'E71 Рестайлинг', 'E71']
+			},
 			{ id: 34, model: 'X6M', generations: [] },
 			{ id: 35, model: 'X7', generations: ['I Рестайлинг', 'I'] },
 			{ id: 36, model: 'XM', generations: [] },
-			{ id: 37, model: 'Z4', generations: ['G29', 'E89 Рестайлинг', 'E85'] }
+			{ id: 37, model: 'Z4', generations: ['G29', 'E89 Рестайлинг', 'E85'] },
+			// новые модели / кузова, актуальные с 2024–2025 гг.
+			{ id: 38, model: 'i5 Touring', generations: ['G61'] },
+			{ id: 39, model: 'IX2', generations: ['U10'] }
 		]
 	},
 	{
 		id: 9,
 		brand: 'Buick',
 		type: [
-			{ id: 1, model: 'Encore', generations: ['2012–2020', '2020–2023'] }
+			{ id: 1, model: 'Encore', generations: ['2012–2020', '2020–2023'] },
+			// модели линейки 2025 MY
+			{ id: 2, model: 'Encore GX', generations: ['2025-'] },
+			{ id: 3, model: 'Envista', generations: ['2025-'] },
+			{ id: 4, model: 'Envision', generations: ['2025-'] },
+			{ id: 5, model: 'Enclave', generations: ['2025-'] },
+			{ id: 6, model: 'Electra E4', generations: ['I. 2025-'] },
+			{ id: 7, model: 'Electra E5', generations: ['I. 2025-'] },
+			{ id: 8, model: 'Electra E6', generations: ['I. 2025-'] }
 		],
 	},
 	{
 		id: 10,
 		brand: 'BAIC',
 		type: [
-			{ id: 1, model: 'BJ40', generations: [] },
+			// BJ40 идёт как новое поколение для Европы/PL с 2025
+			{ id: 1, model: 'BJ40', generations: ['I. 2025-'] },
 			{ id: 2, model: 'U5 Plus', generations: [] },
 			{ id: 3, model: 'X35', generations: [] },
 			{ id: 4, model: 'X55', generations: [] }
 		]
 	},
+
+
+
+
+
+
+
 	{
 		id: 101,
 		brand: 'Baojun',
 		type: [
-			{ id: 1, model: 'Yep', generations: [] }
+			{ id: 1, model: 'Yep', generations: [] },
+			// новая пятиместная версия
+			{ id: 2, model: 'Yep Plus', generations: [] },
+			// электрический минивэн / компактный MPV
+			{ id: 3, model: 'Yunduo', generations: [] }
 		]
 	},
 	{
 		id: 102,
 		brand: 'BAW',
 		type: [
-			{ id: 1, model: 'Ace M7', generations: [] }
+			{ id: 1, model: 'Ace M7', generations: [] },
+			// электрическая версия M7 EV (выпуск 2025 г.)
+			{ id: 2, model: 'M7 EV', generations: [] }
 		]
 	},
 	{
@@ -211,7 +366,12 @@ export const DataCar = [
 		brand: 'Belgee',
 		type: [
 			{ id: 1, model: 'X50', generations: [] },
-			{ id: 2, model: 'X70', generations: [] }
+			// обновлённый X70 (рестайлинг 2025)
+			{ id: 2, model: 'X70', generations: ['Рестайлинг 2025-'] },
+			// новый седан S50
+			{ id: 3, model: 'S50', generations: ['2024-'] },
+			// новый кроссовер с гибридной установкой
+			{ id: 4, model: 'X80 PHEV', generations: [] }
 		]
 	},
 	{
@@ -221,7 +381,11 @@ export const DataCar = [
 			{ id: 1, model: 'Bentayga', generations: [] },
 			{ id: 2, model: 'Continental Flying', generations: [] },
 			{ id: 3, model: 'Continental GT', generations: [] },
-			{ id: 4, model: 'Flying Spur', generations: [] }
+			{ id: 4, model: 'Flying Spur', generations: [] },
+			// четвёртое поколение GT Speed (MY 2025)
+			{ id: 5, model: 'Continental GT Speed', generations: ['IV. 2025-'] },
+			// гибридный высокопроизводительный Flying Spur Speed (линейка 2025)
+			{ id: 6, model: 'Flying Spur Speed', generations: ['2025-'] }
 		]
 	},
 	{
@@ -229,9 +393,26 @@ export const DataCar = [
 		brand: 'Brilliance',
 		type: [
 			{ id: 1, model: 'H230', generations: [] },
-			{ id: 2, model: 'V3', generations: [] }
+			{ id: 2, model: 'V3', generations: [] },
+			// актуальные кроссоверы Brilliance, присутствующие в линейке к 2025 г.
+			{ id: 3, model: 'V5', generations: [] },
+			{ id: 4, model: 'V6', generations: [] },
+			{ id: 5, model: 'V7', generations: [] }
 		]
 	},
+
+
+
+
+
+
+
+
+
+
+
+
+
 	{
 		id: 107,
 		brand: 'Buick',
@@ -246,7 +427,16 @@ export const DataCar = [
 			{ id: 8, model: 'Locerne', generations: [] },
 			{ id: 9, model: 'Regal', generations: ['VI', 'V Рестайлинг', 'V'] },
 			{ id: 10, model: 'RendezVous', generations: [] },
-			{ id: 11, model: 'Velite 6', generations: ['I Рестайлинг', 'I'] }
+			{ id: 11, model: 'Velite 6', generations: ['I Рестайлинг', 'I'] },
+
+			// === добавленные модели 2025-го / актуальные в 2025 году ===
+			// компактный кроссовер Envista (MY 2025):contentReference[oaicite:0]{index=0}
+			{ id: 12, model: 'Envista', generations: ['2024–'] },
+
+			// линейка электромобилей Electra для китайского рынка (актуальна в 2025):contentReference[oaicite:1]{index=1}
+			{ id: 13, model: 'Electra E4', generations: ['2023–2025'] },
+			{ id: 14, model: 'Electra E5', generations: ['2022–'] },
+			{ id: 15, model: 'Electra E6', generations: ['2025–'] }
 		]
 	},
 	{
@@ -275,7 +465,14 @@ export const DataCar = [
 			{ id: 20, model: 'Yuan', generations: [] },
 			{ id: 21, model: 'Yuan Plus', generations: [] },
 			{ id: 22, model: 'Yang Pro', generations: [] },
-			{ id: 23, model: 'Yang Up', generations: [] }
+			{ id: 23, model: 'Yang Up', generations: [] },
+
+			// Новый субкомпактный кроссовер Yuan Up (Atto 2 / 2025 MY):contentReference[oaicite:2]{index=2}
+			{ id: 24, model: 'Yuan Up', generations: ['2025–'] },
+
+			// Модели с новой сверхбыстрой платформой зарядки: Han L и Tang L:contentReference[oaicite:3]{index=3}
+			{ id: 25, model: 'Han L', generations: ['2025–'] },
+			{ id: 26, model: 'Tang L', generations: ['2025–'] }
 		]
 	},
 	{
@@ -306,7 +503,10 @@ export const DataCar = [
 			{ id: 22, model: 'Tiggo 8', generations: [] },
 			{ id: 23, model: 'Tiggo 8 Pro', generations: [] },
 			{ id: 24, model: 'Tiggo 9', generations: [] },
-			{ id: 25, model: 'Very', generations: [] }
+			{ id: 25, model: 'Very', generations: [] },
+
+			// Флагманский 7-местный гибридный Tiggo 9 PHEV (линейка 2024/2025):contentReference[oaicite:4]{index=4}
+			{ id: 26, model: 'Tiggo 9 PHEV', generations: ['2024–'] }
 		]
 	},
 	{
@@ -359,7 +559,16 @@ export const DataCar = [
 			{ id: 44, model: 'Trax', generations: [] },
 			{ id: 45, model: 'Venture', generations: [] },
 			{ id: 46, model: 'Vivo', generations: [] },
-			{ id: 47, model: 'Volt', generations: [] }
+			{ id: 47, model: 'Volt', generations: [] },
+
+			// Электрический компактный кроссовер Equinox EV (MY 2025):contentReference[oaicite:5]{index=5}
+			{ id: 48, model: 'Equinox EV', generations: ['2025–'] },
+
+			// Полностью электрический кроссовер Blazer EV (2024–, актуален в 2025):contentReference[oaicite:6]{index=6}
+			{ id: 49, model: 'Blazer EV', generations: ['2024–'] },
+
+			// Электрический пикап Silverado EV (модельные годы 2024+, включая 2025):contentReference[oaicite:7]{index=7}
+			{ id: 50, model: 'Silverado EV', generations: ['2024–'] }
 		]
 	},
 	{
@@ -377,9 +586,29 @@ export const DataCar = [
 			{ id: 9, model: 'Grand C4 Spacetour', generations: ['2013–2018', 'Рестайлинг, 2018…2022'] },
 			{ id: 10, model: 'Xsara', generations: ['1997–2004', 'Рестайлинг, 2004–2006'] },
 			{ id: 11, model: 'Xsara Picasso', generations: ['1999–2006', 'Рестайлинг, 2006…2012'] },
-			{ id: 12, model: 'Nemo', generations: ['2008–2017'] }
-		],
+			{ id: 12, model: 'Nemo', generations: ['2008–2017'] },
+
+			// Новое поколение C3 Aircross (семейный кроссовер, премьера 2024/2025):contentReference[oaicite:8]{index=8}
+			{ id: 13, model: 'C3 Aircross', generations: ['2025–'] },
+
+			// Новый e/ë-C3 (электрическая версия C3, запущена в 2024, финалист Car of the Year 2025):contentReference[oaicite:9]{index=9}
+			{ id: 14, model: 'e-C3', generations: ['2024–'] }
+		]
 	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	{
 		id: 112,
 		brand: 'Cadillac',
@@ -399,7 +628,15 @@ export const DataCar = [
 			{ id: 13, model: 'STS', generations: [] },
 			{ id: 14, model: 'XT4', generations: [] },
 			{ id: 15, model: 'XT5', generations: [] },
-			{ id: 16, model: 'XT6', generations: [] }
+			{ id: 16, model: 'XT6', generations: [] },
+
+			// === новые / актуальные EV для 2025 года ===
+			// линейка: LYRIQ, OPTIQ, VISTIQ, ESCALADE IQ/ IQL:contentReference[oaicite:0]{index=0}
+			{ id: 17, model: 'Lyriq', generations: ['I. 2023–'] },
+			{ id: 18, model: 'Optiq', generations: ['I. 2024–'] },
+			{ id: 19, model: 'Vistiq', generations: ['I. 2026–'] },
+			{ id: 20, model: 'Escalade IQ', generations: ['I. 2025–'] },
+			{ id: 21, model: 'Escalade IQL', generations: ['I. 2025–'] }
 		]
 	},
 	{
@@ -416,15 +653,22 @@ export const DataCar = [
 			{ id: 8, model: 'Qiyuan A05', generations: [] },
 			{ id: 9, model: 'Qiyuan Q05', generations: [] },
 			{ id: 10, model: 'Uni-K', generations: [] },
-			{ id: 11, model: 'Uni-T', generations: [] }
+			{ id: 11, model: 'Uni-T', generations: [] },
+
+			// семейство Qiyuan / NEVO — свежие модели 2024–2025:contentReference[oaicite:1]{index=1}
+			{ id: 12, model: 'Qiyuan A07', generations: ['2025–'] },
+			{ id: 13, model: 'Qiyuan E07', generations: ['2025–'] }
 		]
 	},
 	{
 		id: 14,
 		brand: 'Dacia',
 		type: [
-			{ id: 1, model: 'Logan MCV', generations: ['2006–2012', '2013–2020'] }
-		],
+			{ id: 1, model: 'Logan MCV', generations: ['2006–2012', '2013–2020'] },
+
+			// новый Bigster — компактный кроссовер C-SUV, производство с конца 2024, продажи 2025:contentReference[oaicite:2]{index=2}
+			{ id: 2, model: 'Bigster', generations: ['2025–'] }
+		]
 	},
 	{
 		id: 15,
@@ -446,7 +690,11 @@ export const DataCar = [
 			{ id: 14, model: 'Nitro', generations: [] },
 			{ id: 15, model: 'RAM', generations: ['II', 'III', 'IV'] },
 			{ id: 16, model: 'Ram van', generations: ['III'] },
-			{ id: 17, model: 'Stratus', generations: ['I', 'II', 'II рестайлинг'] }
+			{ id: 17, model: 'Stratus', generations: ['I', 'II', 'II рестайлинг'] },
+
+			// новое поколение Charger (EV / Sixpack) c модельным годом 2025:contentReference[oaicite:3]{index=3}
+			{ id: 18, model: 'Charger Daytona', generations: ['2025–'] },
+			{ id: 19, model: 'Charger Sixpack', generations: ['2025–'] }
 		]
 	},
 	{
@@ -467,6 +715,7 @@ export const DataCar = [
 			{ id: 12, model: 'Rezzo', generations: [] },
 			{ id: 13, model: 'Tacuma', generations: ['I'] },
 			{ id: 14, model: 'Winstorm', generations: [] }
+			// бренд исторический, новых моделей 2025 года нет
 		]
 	},
 	{
@@ -481,7 +730,10 @@ export const DataCar = [
 			{ id: 6, model: 'Sirion', generations: ['II рестайлинг', 'II', 'I'] },
 			{ id: 7, model: 'Taft', generations: [] },
 			{ id: 8, model: 'Terios', generations: ['II'] },
-			{ id: 9, model: 'YRV', generations: ['I'] }
+			{ id: 9, model: 'YRV', generations: ['I'] },
+
+			// компактный SUV Rocky, гибридное обновление 2025:contentReference[oaicite:4]{index=4}
+			{ id: 10, model: 'Rocky', generations: ['Hybrid 2025–'] }
 		]
 	},
 	{
@@ -490,15 +742,35 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'Mi-DO', generations: ['I'] },
 			{ id: 2, model: 'On-DO', generations: ['I рестайлинг', 'I'] }
+			// бренд тоже закрыт, новых моделей 2025 нет
 		]
 	},
 	{
 		id: 124,
 		brand: 'Denza',
 		type: [
-			{ id: 1, model: 'N7', generations: [] }
+			{ id: 1, model: 'N7', generations: [] },
+
+			// D9 — MPV (2022–, актуален в 2025):contentReference[oaicite:5]{index=5}
+			{ id: 2, model: 'D9', generations: ['2022–'] },
+
+			// N8 — крупный SUV (2023–):contentReference[oaicite:6]{index=6}
+			{ id: 3, model: 'N8', generations: ['2023–'] },
+
+			// Z9 GT — флагманский спортивный лифтбек, первый модель 2025 для Европы:contentReference[oaicite:7]{index=7}
+			{ id: 4, model: 'Z9 GT', generations: ['2025–'] }
 		]
 	},
+
+
+
+
+
+
+
+
+
+
 	{
 		id: 125,
 		brand: 'Dongfeng',
@@ -515,7 +787,11 @@ export const DataCar = [
 			{ id: 10, model: 'Forthing T5 EVO', generations: [] },
 			{ id: 11, model: 'H30', generations: [] },
 			{ id: 12, model: 'Mage', generations: [] },
-			{ id: 13, model: 'S30', generations: [] }
+			{ id: 13, model: 'S30', generations: [] },
+
+			// модели 2024–2025
+			{ id: 14, model: 'Eπ 008', generations: ['I. 2024–'] },
+			{ id: 15, model: 'Forthing T5 HEV', generations: ['I. 2025–'] }
 		]
 	},
 	{
@@ -555,7 +831,13 @@ export const DataCar = [
 			{ id: 31, model: 'Tempra', generations: [] },
 			{ id: 32, model: 'Tipo', generations: ['I', 'II'] },
 			{ id: 33, model: 'Ulysse', generations: ['I', 'I Рестайлинг', 'II'] },
-			{ id: 34, model: 'Uno', generations: ['I Рестайлинг'] }
+			{ id: 34, model: 'Uno', generations: ['I Рестайлинг'] },
+
+			// новые / актуальные модели 2024–2025
+			{ id: 35, model: '600e', generations: ['I. 2023–'] },
+			{ id: 36, model: '600 Hybrid', generations: ['I. 2024–'] },
+			{ id: 37, model: 'Grande Panda', generations: ['I. 2025–'] },
+			{ id: 38, model: 'Topolino', generations: ['I. 2023–'] }
 		]
 	},
 	{
@@ -619,16 +901,49 @@ export const DataCar = [
 			{ id: 55, model: 'Transit Courier', generations: ['I рестайлинг'] },
 			{ id: 56, model: 'Transit Custom', generations: ['I', 'I рестайлинг'] },
 			{ id: 57, model: 'V8', generations: [] },
-			{ id: 58, model: 'Windstar', generations: ['I', 'II'] }
+			{ id: 58, model: 'Windstar', generations: ['I', 'II'] },
+
+			// новые электромодели и гибриды 2024–2025
+			{ id: 59, model: 'Explorer Electric', generations: ['I. 2024–'] },
+			{ id: 60, model: 'Capri Electric', generations: ['I. 2024–'] },
+			{ id: 61, model: 'Puma Gen-E', generations: ['I. 2025–'] },
+			{ id: 62, model: 'E-Tourneo Courier', generations: ['I. 2024–'] },
+			{ id: 63, model: 'E-Transit Courier', generations: ['I. 2024–'] }
 		]
 	},
 	{
 		id: 126,
 		brand: 'Ferrari',
 		type: [
-			{ id: 1, model: '360', generations: [] }
+			{ id: 1, model: '360', generations: [] },
+
+			// актуальная линейка Ferrari 2024–2025
+			{ id: 2, model: '12Cilindri', generations: ['F167. 2024–'] },
+			{ id: 3, model: '12Cilindri Spider', generations: ['F167 Spider. 2025–'] },
+			{ id: 4, model: '296 GTB', generations: ['2021–'] },
+			{ id: 5, model: '296 GTS', generations: ['2022–'] },
+			{ id: 6, model: 'SF90 Stradale', generations: ['2019–'] },
+			{ id: 7, model: 'SF90 Spider', generations: ['2020–'] },
+			{ id: 8, model: 'SF90 XX Stradale', generations: ['2023–'] },
+			{ id: 9, model: 'SF90 XX Spider', generations: ['2023–'] },
+			{ id: 10, model: 'Purosangue', generations: ['2022–'] },
+			{ id: 11, model: 'Roma', generations: ['2020–'] },
+			{ id: 12, model: 'Roma Spider', generations: ['2023–'] },
+			{ id: 13, model: 'Daytona SP3', generations: ['2021–'] },
+			{ id: 14, model: '849 Testarossa', generations: ['2025–'] }
 		]
 	},
+
+
+
+
+
+
+
+
+
+
+
 	{
 		id: 18,
 		brand: 'Geely',
@@ -664,7 +979,12 @@ export const DataCar = [
 			{ id: 29, model: 'Panda Mini', generations: [] },
 			{ id: 30, model: 'SC7', generations: [] },
 			{ id: 31, model: 'Tugella', generations: ['I', 'I рестайлинг'] },
-			{ id: 32, model: 'Xingyue L', generations: ['I'] }
+			{ id: 32, model: 'Xingyue L', generations: ['I'] },
+
+			// === Новые/актуальные модели к 2025 ===
+			{ id: 33, model: 'EX5', generations: ['I, 2024–', 'I рестайлинг, 2025–'] },      // экспортное имя Galaxy E5 :contentReference[oaicite:0]{index=0}
+			{ id: 34, model: 'Galaxy L6', generations: ['I, 2023–', 'EM-i, 2025–'] },       // гибрид L6 EM-i :contentReference[oaicite:1]{index=1}
+			{ id: 35, model: 'Starray EM-i', generations: ['I, 2024–'] }                    // супер-гибрид Starray EM-i :contentReference[oaicite:2]{index=2}
 		]
 	},
 	{
@@ -676,7 +996,15 @@ export const DataCar = [
 			{ id: 3, model: 'Safari', generations: ['I', 'II'] },
 			{ id: 4, model: 'Sierra', generations: ['IV'] },
 			{ id: 5, model: 'Terrain', generations: ['I', 'II', 'II рестайлинг'] },
-			{ id: 6, model: 'Vandura', generations: [] }
+			{ id: 6, model: 'Vandura', generations: [] },
+
+			// === Модели из актуальной линейки 2025 ===
+			{ id: 7, model: 'Hummer EV Pickup', generations: ['I, 2022–'] },  // электрический пикап :contentReference[oaicite:3]{index=3}
+			{ id: 8, model: 'Hummer EV SUV', generations: ['I, 2023–'] },
+			{ id: 9, model: 'Sierra EV', generations: ['I, 2024–'] },         // Sierra EV расширена в 2025 :contentReference[oaicite:4]{index=4}
+			{ id: 10, model: 'Canyon', generations: ['III, 2023–'] },
+			{ id: 11, model: 'Yukon', generations: ['V, 2021–'] },
+			{ id: 12, model: 'Yukon XL', generations: ['V, 2021–'] }
 		]
 	},
 	{
@@ -689,7 +1017,13 @@ export const DataCar = [
 			{ id: 4, model: 'Trumpchi Emkoo', generations: [] },
 			{ id: 5, model: 'Trumpchi GE3', generations: [] },
 			{ id: 6, model: 'Trumpchi GS8', generations: ['II'] },
-			{ id: 7, model: 'Trumpchi M8', generations: ['II'] }
+			{ id: 7, model: 'Trumpchi M8', generations: ['II'] },
+
+			// === Новые/премиальные EV-линейки Hyptec/Hyper и ES9 ===
+			{ id: 8, model: 'Aion Hyper GT', generations: ['I, 2023–'] },   // Hyptec/Hyper GT :contentReference[oaicite:5]{index=5}
+			{ id: 9, model: 'Aion Hyper SSR', generations: ['I, 2023–'] },  // Hyptec/Hyper SSR суперкар :contentReference[oaicite:6]{index=6}
+			{ id: 10, model: 'Aion Hyper HT', generations: ['I, 2023–'] },  // Hyptec HT / Hyper HT кроссовер :contentReference[oaicite:7]{index=7}
+			{ id: 11, model: 'Trumpchi ES9 PHEV', generations: ['I, 2024–'] } // ES9 PHEV 2024/25 :contentReference[oaicite:8]{index=8}
 		]
 	},
 
@@ -701,7 +1035,12 @@ export const DataCar = [
 			{ id: 2, model: 'G80', generations: ['I', 'I рестайлинг'] },
 			{ id: 3, model: 'G90', generations: ['I', 'I рестайлинг'] },
 			{ id: 4, model: 'GV 70', generations: [] },
-			{ id: 5, model: 'GV80', generations: [] }
+			{ id: 5, model: 'GV80', generations: [] },
+
+			// === Добавляем новые позиции модельного ряда ===
+			{ id: 6, model: 'GV80 Coupe', generations: ['I, 2024–'] },       // купе-кроссовер на базе GV80 :contentReference[oaicite:9]{index=9}
+			{ id: 7, model: 'GV60', generations: ['I, 2022–'] },             // компактный EV-кроссовер
+			{ id: 8, model: 'Electrified G80', generations: ['I, 2021–2025'] } // электроверсия G80 (снят с продажи в США в 2025) :contentReference[oaicite:10]{index=10}
 		]
 	},
 	{
@@ -719,7 +1058,11 @@ export const DataCar = [
 			{ id: 9, model: 'Peri', generations: [] },
 			{ id: 10, model: 'Safe', generations: [] },
 			{ id: 11, model: 'Sing', generations: [] },
-			{ id: 12, model: 'Wingle', generations: ['3', '5'] }
+			{ id: 12, model: 'Wingle', generations: ['3', '5'] },
+
+			// === Новые пикапы Great Wall / Poer к 2025 ===
+			{ id: 13, model: 'Shanhai Cannon', generations: ['Hi4T PHEV, 2024–'] }, // Shanhai Cannon / Cannon Alpha :contentReference[oaicite:11]{index=11}
+			{ id: 14, model: 'Poer Sahar', generations: ['I, 2024–'] }              // Poer Sahar для рынков Австралии/Европы :contentReference[oaicite:12]{index=12}
 		]
 	},
 	{
@@ -736,9 +1079,23 @@ export const DataCar = [
 			{ id: 8, model: 'H6', generations: ['I'] },
 			{ id: 9, model: 'H9', generations: ['I рестайлинг'] },
 			{ id: 10, model: 'Jolion', generations: ['I', 'I рестайлинг'] },
-			{ id: 11, model: 'M6', generations: [] }
+			{ id: 11, model: 'M6', generations: [] },
+
+			// === Актуальные новинки/версии Haval 2024–2025 ===
+			{ id: 12, model: 'Jolion Pro', generations: ['Hybrid, 2024–'] }, // Jolion Pro Hybrid :contentReference[oaicite:13]{index=13}
+			{ id: 13, model: 'H6 HEV', generations: ['II, 2023–'] },         // гибридная H6 2025MY :contentReference[oaicite:14]{index=14}
+			{ id: 14, model: 'Raptor', generations: ['PHEV, 2023–'] }        // Haval Raptor PHEV/ICE :contentReference[oaicite:15]{index=15}
 		]
 	},
+
+
+
+
+
+
+
+
+
 	{
 		id: 21,
 		brand: 'Honda',
@@ -855,7 +1212,7 @@ export const DataCar = [
 			{
 				id: 26,
 				model: 'Prelude',
-				generations: ['II', 'III рестайлинг', 'IV', 'V']
+				generations: ['II', 'III рестайлинг', 'IV', 'V', 'VI (Hybrid, 2025–)']
 			},
 			{
 				id: 27,
@@ -867,6 +1224,12 @@ export const DataCar = [
 				id: 29,
 				model: 'Stream',
 				generations: ['I', 'I рестайлинг']
+			},
+			// новые модели к 2025
+			{
+				id: 30,
+				model: 'Prologue',
+				generations: ['I (EV, 2024–)']
 			}
 		]
 	},
@@ -1128,6 +1491,17 @@ export const DataCar = [
 				id: 53,
 				model: 'XG',
 				generations: []
+			},
+			// новые модели/EV к 2025
+			{
+				id: 54,
+				model: 'Ioniq 6',
+				generations: ['I']
+			},
+			{
+				id: 55,
+				model: 'Inster',
+				generations: ['I']
 			}
 		]
 	},
@@ -1151,7 +1525,10 @@ export const DataCar = [
 		id: 132,
 		brand: 'HiPhi',
 		type: [
-			{ id: 1, model: 'Z', generations: [] }
+			{ id: 1, model: 'Z', generations: [] },
+			// добавляем остальные модели линейки
+			{ id: 2, model: 'X', generations: ['I'] },
+			{ id: 3, model: 'Y', generations: ['I'] }
 		]
 	},
 	{
@@ -1162,7 +1539,11 @@ export const DataCar = [
 			{ id: 2, model: 'E-QM5', generations: [] },
 			{ id: 3, model: 'H5', generations: ['II'] },
 			{ id: 4, model: 'HQ9', generations: [] },
-			{ id: 5, model: 'HS5', generations: [] }
+			{ id: 5, model: 'HS5', generations: [] },
+			// новые модели/флагманы
+			{ id: 6, model: 'H9', generations: ['I рестайлинг'] },
+			{ id: 7, model: 'HS3', generations: ['I'] },
+			{ id: 8, model: 'LS7', generations: ['I'] }
 		]
 	},
 	{
@@ -1181,7 +1562,9 @@ export const DataCar = [
 			{ id: 3, model: 'Neta S', generations: [] },
 			{ id: 4, model: 'Neta U', generations: [] },
 			{ id: 5, model: 'Neta U-II', generations: [] },
-			{ id: 6, model: 'Neta X', generations: [] }
+			{ id: 6, model: 'Neta X', generations: [] },
+			// новый большой SUV 2024/25
+			{ id: 7, model: 'Neta L', generations: ['I, 2024–'] }
 		]
 	},
 	{
@@ -1212,16 +1595,28 @@ export const DataCar = [
 			{ id: 14, model: 'QX56', generations: ['I', 'I рестайлинг', 'II'] },
 			{ id: 15, model: 'QX60', generations: ['L50', 'L50 рестайлинг'] },
 			{ id: 16, model: 'QX70', generations: [] },
-			{ id: 17, model: 'QX80', generations: ['Z62', 'Z62 2-й рестайлинг', 'Z62 3-й рестайлинг', 'Z63'] }
+			{ id: 17, model: 'QX80', generations: ['Z62', 'Z62 2-й рестайлинг', 'Z62 3-й рестайлинг', 'Z63'] },
+			// купе-кроссовер к 2025
+			{ id: 18, model: 'QX65', generations: ['I'] }
 		]
 	},
 	{
 		id: 137,
 		brand: 'Iran Khondro',
 		type: [
-			{ id: 1, model: 'Samand', generations: [] }
+			{ id: 1, model: 'Samand', generations: [] },
+			// актуальный седан на платформе Peugeot 301
+			{ id: 2, model: 'Tara', generations: ['I, 2021–'] }
 		]
 	},
+
+
+
+
+
+
+
+
 	{
 		id: 138,
 		brand: 'Isuzu',
@@ -1230,7 +1625,11 @@ export const DataCar = [
 			{ id: 2, model: 'Axiom', generations: [] },
 			{ id: 3, model: 'Oasis', generations: [] },
 			{ id: 4, model: 'Rodeo', generations: ['I', 'II'] },
-			{ id: 5, model: 'Trooper', generations: ['I', 'I рестайлинг', 'II рестайлинг'] }
+			{ id: 5, model: 'Trooper', generations: ['I', 'I рестайлинг', 'II рестайлинг'] },
+
+			// новые актуальные модели
+			{ id: 6, model: 'D-Max', generations: ['III, 2019–', 'III рестайлинг, 2025–'] },
+			{ id: 7, model: 'MU-X', generations: ['II, 2021–', 'II рестайлинг, 2025–'] }
 		]
 	},
 	{
@@ -1264,7 +1663,11 @@ export const DataCar = [
 			{ id: 7, model: 'Patriot', generations: ['I', 'I рестайлинг'] },
 			{ id: 8, model: 'Renegade', generations: ['I', 'I рестайлинг'] },
 			{ id: 9, model: 'Wagoneer', generations: ['WS'] },
-			{ id: 10, model: 'Wrangler', generations: ['YJ', 'TJ', 'JK', 'JL'] }
+			{ id: 10, model: 'Wrangler', generations: ['YJ', 'TJ', 'JK', 'JL'] },
+
+			// новые модели в линейке
+			{ id: 11, model: 'Avenger', generations: ['I, 2023–'] },
+			{ id: 12, model: 'Wagoneer S', generations: ['I, 2025–'] }
 		]
 	},
 	{
@@ -1282,7 +1685,10 @@ export const DataCar = [
 			{ id: 9, model: 'S5', generations: [] },
 			{ id: 10, model: 'T6', generations: [] },
 			{ id: 11, model: 'T8 Pro', generations: [] },
-			{ id: 12, model: 'T9 Hunter', generations: [] }
+			{ id: 12, model: 'T9 Hunter', generations: [] },
+
+			// добавлено
+			{ id: 13, model: 'JS8 Pro', generations: ['I, 2023–'] }
 		]
 	},
 	{
@@ -1293,28 +1699,42 @@ export const DataCar = [
 			{ id: 2, model: 'T2', generations: [] },
 			{ id: 3, model: 'X50', generations: [] },
 			{ id: 4, model: 'X70 PLUS', generations: ['I', 'I рестайлинг'] },
-			{ id: 5, model: 'X90 PLUS', generations: [] }
+			{ id: 5, model: 'X90 PLUS', generations: [] },
+
+			// новые внедорожники
+			{ id: 6, model: 'T2 i-DM', generations: ['I, 2024–'] },
+			{ id: 7, model: 'G700', generations: ['I, 2024–'] }
 		]
 	},
 	{
 		id: 141,
 		brand: 'Jetta',
 		type: [
-			{ id: 1, model: 'VS7', generations: ['I'] }
+			{ id: 1, model: 'VS7', generations: ['I'] },
+
+			// актуальные модели Jetta (FAW-VW)
+			{ id: 2, model: 'VS5', generations: ['I, 2019–'] },
+			{ id: 3, model: 'VA3', generations: ['I, 2019–'] }
 		]
 	},
 	{
 		id: 142,
 		brand: 'Jiyue',
 		type: [
-			{ id: 1, model: '01', generations: [] }
+			{ id: 1, model: '01', generations: [] },
+
+			// новое купе-кроссовер
+			{ id: 2, model: '02', generations: ['I, 2024–'] }
 		]
 	},
 	{
 		id: 143,
 		brand: 'Jmev',
 		type: [
-			{ id: 1, model: 'EV3', generations: [] }
+			{ id: 1, model: 'EV3', generations: [] },
+
+			// компактный городской EV2
+			{ id: 2, model: 'EV2', generations: ['I, 2022–'] }
 		]
 	},
 	{
@@ -1358,16 +1778,31 @@ export const DataCar = [
 			{ id: 35, model: 'Stinger', generations: ['I'] },
 			{ id: 36, model: 'Stonic', generations: [] },
 			{ id: 37, model: 'Venga', generations: ['I', 'I рестайлинг'] },
-			{ id: 38, model: 'XCeed', generations: [] }
+			{ id: 38, model: 'XCeed', generations: [] },
+
+			// новые электрокроссоверы
+			{ id: 39, model: 'EV9', generations: ['I, 2023–'] },
+			{ id: 40, model: 'EV3', generations: ['I, 2025–'] }
 		]
 	},
 	{
 		id: 144,
 		brand: 'Kaiyi',
 		type: [
-			{ id: 1, model: 'E5', generations: [] }
+			{ id: 1, model: 'E5', generations: [] },
+
+			// новые модели Kaiyi
+			{ id: 2, model: 'X3 Pro', generations: ['I, 2022–'] },
+			{ id: 3, model: 'X3 Pro EV', generations: ['I, 2024–'] }
 		]
 	},
+
+
+
+
+
+
+
 	{
 		id: 27,
 		brand: 'Lada',
@@ -1403,7 +1838,13 @@ export const DataCar = [
 			{ id: 29, model: 'Vesta Sport (Sportline)', generations: ['I'] },
 			{ id: 30, model: 'XRAY', generations: [] },
 			{ id: 31, model: 'XRAY Cross', generations: [] },
-			{ id: 32, model: 'Нива ВИС', generations: [] }
+			{ id: 32, model: 'Нива ВИС', generations: [] },
+
+			// Новые/актуальные модели
+			{ id: 33, model: 'Aura', generations: ['I, 2024–'] },
+			{ id: 34, model: 'Iskra', generations: ['I, 2025–'] },
+			{ id: 35, model: 'e-Largus', generations: ['I, 2024–'] },
+			{ id: 36, model: 'X-Cross 5', generations: ['I, 2023–'] }
 		]
 	},
 	{
@@ -1417,7 +1858,10 @@ export const DataCar = [
 			{ id: 5, model: 'Range Rover', generations: ['I', 'II', 'III', 'III рестайлинг', 'III 2-й рестайлинг', 'IV', 'IV рестайлинг', 'V'] },
 			{ id: 6, model: 'Range Rover Evoque', generations: ['I', 'I рестайлинг', 'II'] },
 			{ id: 7, model: 'Range Rover Sport', generations: ['I', 'I рестайлинг', 'II', 'II рестайлинг', 'III'] },
-			{ id: 8, model: 'Range Rover Velar', generations: [] }
+			{ id: 8, model: 'Range Rover Velar', generations: [] },
+
+			// Новый мощный вариант 2025 MY
+			{ id: 9, model: 'Defender OCTA', generations: ['I, 2025–'] }
 		]
 	},
 	{
@@ -1438,7 +1882,11 @@ export const DataCar = [
 			{ id: 12, model: 'RZ', generations: [] },
 			{ id: 13, model: 'SC', generations: ['1 поколение', '2 рестайлинг'] },
 			{ id: 14, model: 'TX', generations: [] },
-			{ id: 15, model: 'UX', generations: [] }
+			{ id: 15, model: 'UX', generations: [] },
+
+			// Новые модели
+			{ id: 16, model: 'LBX', generations: ['1 поколение, 2023–'] },
+			{ id: 17, model: 'LM', generations: ['2 поколение, 2023–'] }
 		]
 	},
 	{
@@ -1453,6 +1901,7 @@ export const DataCar = [
 			{ id: 6, model: 'X50', generations: [] },
 			{ id: 7, model: 'X60', generations: ['1 поколение', '1 рестайлинг', '1•2й рестайлинг'] },
 			{ id: 8, model: 'X70', generations: [] }
+			// На 2025 год новых широкоизвестных моделей Lifan нет
 		]
 	},
 	{
@@ -1468,7 +1917,13 @@ export const DataCar = [
 			{ id: 7, model: 'MKC', generations: ['1 поколение', '1 рестайлинг'] },
 			{ id: 8, model: 'MKX', generations: [] },
 			{ id: 9, model: 'MKZ', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
-			{ id: 10, model: 'Nautilus', generations: [] },
+			{
+				id: 10,
+				model: 'Nautilus',
+				generations: [
+					'2 поколение, 2024–'
+				]
+			},
 			{ id: 11, model: 'Navigator', generations: ['1 поколение', '2 поколение', '3 поколение', '4 поколение'] },
 			{ id: 12, model: 'Town Car', generations: ['2 поколение', '3 поколение'] }
 		]
@@ -1480,14 +1935,34 @@ export const DataCar = [
 			{ id: 1, model: '02', generations: [] },
 			{ id: 2, model: '03', generations: [] },
 			{ id: 3, model: '06', generations: [] },
-			{ id: 4, model: '08', generations: [] }
+			{ id: 4, model: '08', generations: [] },
+
+			// Добавляем остальные актуальные модели марки
+			{ id: 5, model: '01', generations: ['I, 2017–'] },
+			{ id: 6, model: '05', generations: ['I, 2020–'] },
+			{ id: 7, model: '07', generations: ['I, 2024–'] },
+			{ id: 8, model: '09', generations: ['I, 2021–'] }
 		]
 	},
+
+
+
+
+
+
+
+
+
+
+
+
 	{
 		id: 118,
 		brand: 'Lotus',
 		type: [
-			{ id: 1, model: 'Eletre', generations: [] }
+			{ id: 1, model: 'Eletre', generations: [] },
+			// новое электрическое купе-седан 2024– (есть в продаже и в 2025)
+			{ id: 2, model: 'Emeya', generations: ['I, 2024–'] }
 		]
 	},
 	{
@@ -1499,7 +1974,10 @@ export const DataCar = [
 			{ id: 3, model: 'L8', generations: [] },
 			{ id: 4, model: 'L9', generations: [] },
 			{ id: 5, model: 'Mega', generations: [] },
-			{ id: 6, model: 'One', generations: [] }
+			{ id: 6, model: 'One', generations: [] },
+			// новые полностью электрические SUV линейки i, старт продаж с 2025 года
+			{ id: 7, model: 'i6', generations: ['I, 2025–'] },
+			{ id: 8, model: 'i8', generations: ['I, 2025–'] }
 		]
 	},
 	{
@@ -1507,7 +1985,9 @@ export const DataCar = [
 		brand: 'Livan',
 		type: [
 			{ id: 1, model: 'Ruilan 7', generations: [] },
-			{ id: 2, model: 'Ruilan 9', generations: [] }
+			{ id: 2, model: 'Ruilan 9', generations: [] },
+			// новая электрическая MPV на базе Geely Jiaji L (Livan 8), актуальна для 2024–2025
+			{ id: 3, model: 'Ruilan 8', generations: ['I, 2024–'] }
 		]
 	},
 
@@ -1524,7 +2004,8 @@ export const DataCar = [
 			{ id: 7, model: 'Prisma', generations: [] },
 			{ id: 8, model: 'Thema', generations: ['I'] },
 			{ id: 9, model: 'Thesis', generations: [] },
-			{ id: 10, model: 'Ypsion', generations: ['I'] },
+			// обновлённая Ypsilon 2024–, новое поколение (EV/mild-hybrid)
+			{ id: 10, model: 'Ypsion', generations: ['I', 'II, 2024–'] },
 			{ id: 11, model: 'Zeta', generations: [] }
 		]
 	},
@@ -1534,7 +2015,11 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'C01', generations: [] },
 			{ id: 2, model: 'C11', generations: ['I', 'I рестайлинг'] },
-			{ id: 3, model: 'C16', generations: [] }
+			{ id: 3, model: 'C16', generations: [] },
+			// глобальный кроссовер C10 (Европа/Китай), в продаже с 2024, актуален на 2025
+			{ id: 4, model: 'C10', generations: ['I, 2024–'] },
+			// новый хэтчбек B-сегмента, премьера 2025, поставки в Европу с 2026
+			{ id: 5, model: 'B05', generations: ['I, 2025–'] }
 		]
 	},
 	{
@@ -1574,9 +2059,17 @@ export const DataCar = [
 			{ id: 31, model: 'RX-8', generations: ['1 поколение', '2 поколение'] },
 			{ id: 32, model: 'Tribute', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
 			{ id: 33, model: 'Xedos 6', generations: [] },
-			{ id: 34, model: 'Xedos 9', generations: ['1 поколение', '1 рестайлинг'] }
+			{ id: 34, model: 'Xedos 9', generations: ['1 поколение', '1 рестайлинг'] },
+			// новый двухрядный кроссовер CX-70 (дебют модельного года 2025)
+			{ id: 35, model: 'CX-70', generations: ['1 поколение, 2025–'] }
 		]
 	},
+
+
+
+
+
+
 	{
 		id: 33,
 		brand: 'Mercedes',
@@ -1642,7 +2135,12 @@ export const DataCar = [
 			{ id: 59, model: 'V-класс', generations: ['W638 поколение', 'W447 поколение'] },
 			{ id: 60, model: 'Vaneo', generations: [] },
 			{ id: 61, model: 'Viano', generations: ['W639 поколение', 'W639 рестайлинг'] },
-			{ id: 62, model: 'Vito', generations: ['W638 поколение', 'W639 поколение', 'W639 рестайлинг', 'W447 поколение'] }
+			{ id: 62, model: 'Vito', generations: ['W638 поколение', 'W639 поколение', 'W639 рестайлинг', 'W447 поколение'] },
+
+			// новые модели 2024–2025
+			{ id: 63, model: 'CLE-класс', generations: ['1 поколение'] },
+			{ id: 64, model: 'CLE AMG', generations: ['1 поколение'] },
+			{ id: 65, model: 'G-класс Electric', generations: ['G 580 (1 поколение)'] }
 		]
 	},
 	{
@@ -1654,7 +2152,10 @@ export const DataCar = [
 			{ id: 3, model: 'Cooper', generations: ['2001…'] },
 			{ id: 4, model: 'Clubman', generations: ['2007–2015', '2015…'] },
 			{ id: 5, model: 'Cabrio', generations: ['2004–2008', '2008–2015', '2016…'] },
-			{ id: 6, model: 'Coupe', generations: ['2011–2015'] }
+			{ id: 6, model: 'Coupe', generations: ['2011–2015'] },
+
+			// новая модель 2024–2025
+			{ id: 7, model: 'Aceman', generations: ['2024…'] }
 		],
 	},
 	{
@@ -1692,7 +2193,10 @@ export const DataCar = [
 			{ id: 29, model: 'Space Runner', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
 			{ id: 30, model: 'Space Star', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг'] },
 			{ id: 31, model: 'Space Wagon', generations: ['Typ N30, N40 поколение', 'Typ N50'] },
-			{ id: 32, model: 'Xpander', generations: [] }
+			{ id: 32, model: 'Xpander', generations: [] },
+
+			// новая модель 2025
+			{ id: 33, model: 'Xforce', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -1704,7 +2208,10 @@ export const DataCar = [
 			{ id: 3, model: 'Cooper', generations: ['R50 поколение', 'R50/R53 рестайлинг', 'R56 поколение', 'R56 рестайлинг', 'F55/F56 поколение', 'F55/F56 рестайлинг', 'F55/F56 • 2й рестайлинг'] },
 			{ id: 4, model: 'Cooper SE', generations: [] },
 			{ id: 5, model: 'Countryman', generations: ['R60 поколение', 'F60 поколение', 'F60 рестайлинг', 'U25'] },
-			{ id: 6, model: 'Paceman', generations: [] }
+			{ id: 6, model: 'Paceman', generations: [] },
+
+			// новая электрическая модель 2024–2025
+			{ id: 7, model: 'Aceman', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -1718,7 +2225,10 @@ export const DataCar = [
 			{ id: 5, model: 'Cyberster', generations: [] },
 			{ id: 6, model: 'One', generations: [] },
 			{ id: 7, model: 'ZS', generations: ['1 поколение', '2 поколение', '2 рестайлинг'] },
-			{ id: 8, model: 'ZT', generations: [] }
+			{ id: 8, model: 'ZT', generations: [] },
+
+			// новая популярная EV-модель 2025
+			{ id: 9, model: '4 Electric', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -1732,26 +2242,43 @@ export const DataCar = [
 	},
 
 
+
+
+
+
+
 	{
 		id: 114,
 		brand: 'Maserati',
 		type: [
 			{ id: 1, model: 'Ghibli', generations: [] },
-			{ id: 2, model: 'Levante', generations: [] }
+			{ id: 2, model: 'Levante', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'Grecale', generations: ['2025…'] },
+			{ id: 4, model: 'GranTurismo Folgore', generations: ['2025…'] },
+			{ id: 5, model: 'GranCabrio Folgore', generations: ['2025…'] }
 		]
 	},
 	{
 		id: 115,
 		brand: 'Maple',
 		type: [
-			{ id: 1, model: 'X3 Pro', generations: [] }
+			{ id: 1, model: 'X3 Pro', generations: [] },
+
+			// 2025 (актуальные модели в продаже)
+			{ id: 2, model: '30X', generations: ['2020…'] },
+			{ id: 3, model: '60S', generations: ['2023…'] }
 		]
 	},
 	{
 		id: 116,
 		brand: 'M-hero',
 		type: [
-			{ id: 1, model: '917', generations: [] }
+			{ id: 1, model: '917', generations: [] },
+
+			// 2025 спец-версия
+			{ id: 2, model: '917 Dragon Armour Edition', generations: ['2025…'] }
 		]
 	},
 	{
@@ -1819,7 +2346,13 @@ export const DataCar = [
 					'D40 поколение',
 					'D40 рестайлинг'
 				]
-			}
+			},
+
+			// новые модели / версии 2025
+			{ id: 53, model: 'Armada', generations: ['2025…'] },
+			{ id: 54, model: 'Kicks Play', generations: ['2025…'] },
+			{ id: 55, model: 'X-Trail Nismo', generations: ['2025…'] },
+			{ id: 56, model: 'Micra EV', generations: ['6 поколение, 2025…'] }
 		],
 	},
 	{
@@ -1827,9 +2360,27 @@ export const DataCar = [
 		brand: 'Nio',
 		type: [
 			{ id: 1, model: 'ES8', generations: [] },
-			{ id: 2, model: 'ET7', generations: [] }
+			{ id: 2, model: 'ET7', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'ET5 Touring', generations: ['2023…2025'] },
+			{ id: 4, model: 'ET9', generations: ['2025…'] }
 		]
 	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	{
 		id: 37,
 		brand: 'Opel',
@@ -1866,21 +2417,32 @@ export const DataCar = [
 			{ id: 30, model: 'Vectra OPC', generations: [] },
 			{ id: 31, model: 'Vivaro', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '3 поколение'] },
 			{ id: 32, model: 'Zafira', generations: ['A поколение', 'A рестайлинг', 'B поколение', 'B рестайлинг', 'C поколение', 'C рестайлинг'] },
-			{ id: 33, model: 'Zafira Life', generations: [] }
+			{ id: 33, model: 'Zafira Life', generations: [] },
+
+			// === 2025 ===
+			{ id: 34, model: 'Astra Electric', generations: ['2025–'] },           // 2025
+			{ id: 35, model: 'Grandland Electric', generations: ['2025–'] },       // 2025
+			{ id: 36, model: 'Mokka-e 2025', generations: ['2025 модельный год'] } // 2025
 		]
 	},
 	{
 		id: 83,
 		brand: 'Oting',
 		type: [
-			{ id: 1, model: 'Paladin', generations: [] }
+			{ id: 1, model: 'Paladin', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'Paladin EV 2025', generations: ['2025–'] }
 		]
 	},
 	{
 		id: 84,
 		brand: 'Ora',
 		type: [
-			{ id: 1, model: 'Good Cat', generations: [] }
+			{ id: 1, model: 'Good Cat', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'Good Cat GT 2025', generations: ['2025–'] }
 		]
 	},
 	{
@@ -1922,7 +2484,12 @@ export const DataCar = [
 			{ id: 33, model: 'Partner', generations: ['1 поколение', 'Origin', '2 поколение', '2 рестайлинг', '2-2-й рестайлинг'] },
 			{ id: 34, model: 'RCZ', generations: [] },
 			{ id: 35, model: 'Rifter', generations: [] },
-			{ id: 36, model: 'Traveller', generations: [] }
+			{ id: 36, model: 'Traveller', generations: [] },
+
+			// 2025
+			{ id: 37, model: 'E-3008', generations: ['2025–'] },
+			{ id: 38, model: 'E-308', generations: ['2025–'] },
+			{ id: 39, model: 'E-5008', generations: ['2025–'] }
 		]
 	},
 	{
@@ -1937,7 +2504,11 @@ export const DataCar = [
 			{ id: 6, model: 'Cayenne Coupe', generations: [] },
 			{ id: 7, model: 'Macan', generations: ['1 поколение', '1 рестайлинг', '1•2-й рестайлинг'] },
 			{ id: 8, model: 'Panamera', generations: ['970', '970 рестайлинг', '971', '971 рестайлинг', '972'] },
-			{ id: 9, model: 'Taycan', generations: [] }
+			{ id: 9, model: 'Taycan', generations: [] },
+
+			// 2025
+			{ id: 10, model: 'Macan Electric', generations: ['2025–'] },
+			{ id: 11, model: '718 EV', generations: ['2025–'] }
 		]
 	},
 	{
@@ -1947,7 +2518,10 @@ export const DataCar = [
 			{ id: 1, model: 'Persona', generations: [] },
 			{ id: 2, model: 'Putra', generations: [] },
 			{ id: 3, model: 'Satria', generations: [] },
-			{ id: 4, model: 'Wira', generations: [] }
+			{ id: 4, model: 'Wira', generations: [] },
+
+			// 2025
+			{ id: 5, model: 'X50 2025', generations: ['2025–'] }
 		]
 	},
 	{
@@ -1961,13 +2535,19 @@ export const DataCar = [
 			{ id: 5, model: 'Solstice', generations: [] },
 			{ id: 6, model: 'Trans Sport', generations: ['1 поколение', '2 поколение'] },
 			{ id: 7, model: 'Vibe', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] }
+			// бренд исторический — новых 2025-х не добавляем
 		]
 	},
 	{
 		id: 80,
 		brand: 'Polestar',
 		type: [
-			{ id: 1, model: '2', generations: [] }
+			{ id: 1, model: '2', generations: [] },
+
+			// 2025
+			{ id: 2, model: '3', generations: ['2025–'] },
+			{ id: 3, model: '4', generations: ['2025–'] },
+			{ id: 4, model: '5', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2032,7 +2612,12 @@ export const DataCar = [
 			{ id: 40, model: 'Trafic', generations: ['1 поколение', '1-2-й рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг'] },
 			{ id: 41, model: 'Twingo', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг', '2 поколение', '3 поколение', '3 рестайлинг'] },
 			{ id: 42, model: 'Vel Satis', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 43, model: 'ZOE', generations: ['1 поколение', '1 рестайлинг'] }
+			{ id: 43, model: 'ZOE', generations: ['1 поколение', '1 рестайлинг'] },
+
+			// 2025
+			{ id: 44, model: 'Austral', generations: ['2025–'] },
+			{ id: 45, model: 'Rafale', generations: ['2025–'] },
+			{ id: 46, model: 'Megane E-Tech', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2053,21 +2638,33 @@ export const DataCar = [
 		brand: 'Rolls-Royce',
 		type: [
 			{ id: 1, model: 'Phantom', generations: [] },
-			{ id: 2, model: 'Silver Spirit', generations: [] }
+			{ id: 2, model: 'Silver Spirit', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'Spectre', generations: ['2025–'] },
+			{ id: 4, model: 'Cullinan 2025', generations: ['2025 модельный год'] }
 		]
 	},
 	{
 		id: 73,
 		brand: 'Roewe',
 		type: [
-			{ id: 1, model: '750', generations: [] }
+			{ id: 1, model: '750', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'D7 EV', generations: ['2025–'] }
 		]
 	},
 	{
 		id: 74,
 		brand: 'Rivian',
 		type: [
-			{ id: 1, model: 'R1T', generations: [] }
+			{ id: 1, model: 'R1T', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'R1S', generations: ['2025–'] },
+			{ id: 3, model: 'R2', generations: ['2025–'] },
+			{ id: 4, model: 'R3', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2076,9 +2673,27 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'QM3', generations: [] },
 			{ id: 2, model: 'QM6', generations: [] },
-			{ id: 3, model: 'SM3', generations: [] }
+			{ id: 3, model: 'SM3', generations: [] },
+
+			// 2025
+			{ id: 4, model: 'XM3 2025', generations: ['2025–'] }
 		]
 	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	{
 		id: 76,
@@ -2086,14 +2701,22 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'Nexia R3', generations: [] },
 			{ id: 2, model: 'R2', generations: [] },
-			{ id: 3, model: 'R4', generations: [] }
+			{ id: 3, model: 'R4', generations: [] },
+
+			// 2025
+			{ id: 4, model: 'Nexia EV', generations: ['2025–'] },
+			{ id: 5, model: 'R4 CNG 2025', generations: ['2025 модельный год'] }
 		]
 	},
 	{
 		id: 77,
 		brand: 'RAM',
 		type: [
-			{ id: 1, model: '1500', generations: [] }
+			{ id: 1, model: '1500', generations: [] },
+
+			// 2025
+			{ id: 2, model: '1500 REV', generations: ['2025–'] },
+			{ id: 3, model: 'Ramcharger', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2105,6 +2728,7 @@ export const DataCar = [
 			{ id: 3, model: '9-7X', generations: [] },
 			{ id: 4, model: '900', generations: [] },
 			{ id: 5, model: '9000', generations: [] }
+			// исторический бренд — без новых моделей 2025
 		]
 	},
 	{
@@ -2129,7 +2753,11 @@ export const DataCar = [
 			{ id: 16, model: 'Wagon R+', generations: ['1 поколение', '2 поколение'] },
 			{ id: 17, model: 'XL-7', generations: ['1 поколение', '2 поколение'] },
 			{ id: 18, model: 'Ignis', generations: ['1 поколение', '2 поколение'] },
-			{ id: 19, model: 'Kizashi', generations: [] }
+			{ id: 19, model: 'Kizashi', generations: [] },
+
+			// 2025
+			{ id: 20, model: 'Fronx', generations: ['2025–'] },
+			{ id: 21, model: 'Swift Hybrid 2025', generations: ['2025 модельный год'] }
 		]
 	},
 	{
@@ -2139,13 +2767,17 @@ export const DataCar = [
 			{ id: 1, model: 'SC', generations: [] },
 			{ id: 2, model: 'SL', generations: [] },
 			{ id: 3, model: 'VUE', generations: [] }
+			// бренд закрыт — без новых моделей 2025
 		]
 	},
 	{
 		id: 69,
 		brand: 'Santana',
 		type: [
-			{ id: 1, model: 'PS-10', generations: [] }
+			{ id: 1, model: 'PS-10', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'PS-10 EV', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2153,14 +2785,21 @@ export const DataCar = [
 		brand: 'Saipa',
 		type: [
 			{ id: 1, model: 'Quick', generations: [] },
-			{ id: 2, model: 'Shahin', generations: [] }
+			{ id: 2, model: 'Shahin', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'Atlas', generations: ['2025–'] },
+			{ id: 4, model: 'Quick EV', generations: ['2025 модельный год'] }
 		]
 	},
 	{
 		id: 90,
 		brand: 'SWM',
 		type: [
-			{ id: 1, model: 'G01F', generations: [] }
+			{ id: 1, model: 'G01F', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'G05', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2181,7 +2820,11 @@ export const DataCar = [
 			{ id: 12, model: 'Ascent', generations: ['1 поколение', '1 рестайлинг'] },
 			{ id: 13, model: 'Crosstrek', generations: ['2 поколение', '2 рестайлинг'] },
 			{ id: 14, model: 'Trezia', generations: [] },
-			{ id: 15, model: 'WRX', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] }
+			{ id: 15, model: 'WRX', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
+
+			// 2025
+			{ id: 16, model: 'Solterra', generations: ['1 поколение'] },
+			{ id: 17, model: 'Levorg', generations: ['2 поколение'] }
 		]
 	},
 	{
@@ -2195,14 +2838,21 @@ export const DataCar = [
 			{ id: 5, model: 'Kyron', generations: ['1 поколение', '1 рестайлинг'] },
 			{ id: 6, model: 'Musso', generations: ['1 поколение', '1 рестайлинг'] },
 			{ id: 7, model: 'Rexton', generations: ['1 поколение', '2 поколение', '3 поколение', '4 поколение'] },
-			{ id: 8, model: 'Rodius', generations: ['1 поколение', '1 рестайлинг'] }
+			{ id: 8, model: 'Rodius', generations: ['1 поколение', '1 рестайлинг'] },
+
+			// 2025 (уже под брендом KG Mobility, но добавляем сюда)
+			{ id: 9, model: 'Torres', generations: ['1 поколение'] },
+			{ id: 10, model: 'Torres EVX', generations: ['1 поколение'] }
 		]
 	},
 	{
 		id: 93,
 		brand: 'Skywell',
 		type: [
-			{ id: 1, model: 'ET5', generations: [] }
+			{ id: 1, model: 'ET5', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'ET5 II', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2211,7 +2861,11 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'Forfour', generations: [] },
 			{ id: 2, model: 'Fortwo', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 3, model: 'Roadster', generations: [] }
+			{ id: 3, model: 'Roadster', generations: [] },
+
+			// 2025
+			{ id: 4, model: '#1', generations: ['1 поколение'] },
+			{ id: 5, model: '#3', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2228,7 +2882,12 @@ export const DataCar = [
 			{ id: 8, model: 'Rapid', generations: ['1 поколение', '1 рестайлинг', '2 поколение'] },
 			{ id: 9, model: 'Roomster', generations: ['1 поколение', '1 рестайлинг'] },
 			{ id: 10, model: 'Superb', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг'] },
-			{ id: 11, model: 'Yeti', generations: ['1 поколение', '1 рестайлинг'] }
+			{ id: 11, model: 'Yeti', generations: ['1 поколение', '1 рестайлинг'] },
+
+			// 2025
+			{ id: 12, model: 'Enyaq iV', generations: ['1 поколение', '1 рестайлинг'] },
+			{ id: 13, model: 'Enyaq Coupe iV', generations: ['1 поколение'] },
+			{ id: 14, model: 'Elroq', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2236,7 +2895,10 @@ export const DataCar = [
 		brand: 'Shineray',
 		type: [
 			{ id: 1, model: 'M7', generations: [] },
-			{ id: 2, model: 'X30LEV', generations: [] }
+			{ id: 2, model: 'X30LEV', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'X30LEV Pro', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2245,7 +2907,10 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'G318', generations: [] },
 			{ id: 2, model: 'S7', generations: [] },
-			{ id: 3, model: 'SL03', generations: [] }
+			{ id: 3, model: 'SL03', generations: [] },
+
+			// 2025
+			{ id: 4, model: 'SL03 Pro', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2254,7 +2919,10 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: '5', generations: [] },
 			{ id: 2, model: '7', generations: [] },
-			{ id: 3, model: 'SF5', generations: [] }
+			{ id: 3, model: 'SF5', generations: [] },
+
+			// 2025
+			{ id: 4, model: '5 EV 2025', generations: ['2025 модельный год'] }
 		]
 	},
 	{
@@ -2274,7 +2942,10 @@ export const DataCar = [
 			{ id: 11, model: 'Malaga', generations: [] },
 			{ id: 12, model: 'Mii', generations: [] },
 			{ id: 13, model: 'Tarraco', generations: [] },
-			{ id: 14, model: 'Toledo', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '3 поколение', '4 поколение'] }
+			{ id: 14, model: 'Toledo', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '3 поколение', '4 поколение'] },
+
+			// 2025
+			{ id: 15, model: 'Arona Electric', generations: ['2025–'] }
 		]
 	},
 	{
@@ -2285,6 +2956,7 @@ export const DataCar = [
 			{ id: 2, model: 'tC', generations: [] },
 			{ id: 3, model: 'xA', generations: [] },
 			{ id: 4, model: 'xB', generations: [] }
+			// бренд закрыт — без моделей 2025
 		]
 	},
 	{
@@ -2294,7 +2966,11 @@ export const DataCar = [
 			{ id: 1, model: 'Model 3', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
 			{ id: 2, model: 'Model S', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
 			{ id: 3, model: 'Model X', generations: ['1 поколение', '1 рестайлинг'] },
-			{ id: 4, model: 'Model Y', generations: [] }
+			{ id: 4, model: 'Model Y', generations: [] },
+
+			// 2025
+			{ id: 5, model: 'Cybertruck', generations: ['1 поколение'] },
+			{ id: 6, model: 'Roadster', generations: ['2 поколение'] }
 		]
 	},
 	{
@@ -2358,14 +3034,24 @@ export const DataCar = [
 			{ id: 55, model: 'Verso-s', generations: [] },
 			{ id: 56, model: 'Yaris', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение', '3 рестайлинг', 'IA', 'DJ|DL', '3-2-й рестайлинг', '4 поколение'] },
 			{ id: 57, model: 'Yaris Cross', generations: [] },
-			{ id: 58, model: 'Yaris Verso', generations: ['1 поколение', '1 рестайлинг'] }
+			{ id: 58, model: 'Yaris Verso', generations: ['1 поколение', '1 рестайлинг'] },
+
+			// 2025
+			{ id: 59, model: 'Grand Highlander', generations: ['2025–'] },
+			{ id: 60, model: 'Crown Sport', generations: ['2025–'] },
+			{ id: 61, model: 'bZ3X', generations: ['2025–'] },
+			{ id: 62, model: 'Land Cruiser 250', generations: ['2025–'] }
 		]
 	},
+
+
+
 	{
 		id: 86,
 		brand: 'Trabant',
 		type: [
 			{ id: 1, model: 'P601', generations: [] }
+			// исторический бренд — без моделей 2025 года
 		]
 	},
 	{
@@ -2373,6 +3059,7 @@ export const DataCar = [
 		brand: 'Think',
 		type: [
 			{ id: 1, model: 'City', generations: [] }
+			// бренд не актуален — без моделей 2025 года
 		]
 	},
 	{
@@ -2380,14 +3067,23 @@ export const DataCar = [
 		brand: 'Tata',
 		type: [
 			{ id: 1, model: 'Safari', generations: [] },
-			{ id: 2, model: 'Telcoline', generations: [] }
+			{ id: 2, model: 'Telcoline', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'Nexon EV', generations: ['2025–'] },
+			{ id: 4, model: 'Punch EV', generations: ['2025 модельный год'] }
 		]
 	},
 	{
 		id: 89,
 		brand: 'Tank',
 		type: [
-			{ id: 1, model: '500', generations: [] }
+			{ id: 1, model: '500', generations: [] },
+
+			// 2025
+			{ id: 2, model: '300', generations: ['1 поколение'] },
+			{ id: 3, model: '400 Hi4-T', generations: ['1 поколение'] },
+			{ id: 4, model: '700', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2450,7 +3146,12 @@ export const DataCar = [
 			{ id: 54, model: 'Touran', generations: ['1 поколение', '1-й рестайлинг', '1-2-й рестайлинг', '2 поколение'] },
 			{ id: 55, model: 'Transporter', generations: ['Т3', 'Т4', 'Т5', 'Т5 рестайлинг', 'Т6', 'Т6 рестайлинг'] },
 			{ id: 56, model: 'Up!', generations: ['1 поколение', '1-й рестайлинг'] },
-			{ id: 57, model: 'Vento', generations: [] }
+			{ id: 57, model: 'Vento', generations: [] },
+
+			// 2025
+			{ id: 58, model: 'ID.7', generations: ['1 поколение'] },
+			{ id: 59, model: 'ID.7 Tourer', generations: ['1 поколение'] },
+			{ id: 60, model: 'ID. Buzz', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2485,7 +3186,12 @@ export const DataCar = [
 			{ id: 26, model: 'XC40', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
 			{ id: 27, model: 'XC60', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
 			{ id: 28, model: 'XC70', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
-			{ id: 29, model: 'XC90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] }
+			{ id: 29, model: 'XC90', generations: ['1 поколение', '1 рестайлинг', '2 поколение', '2 рестайлинг', '3 поколение'] },
+
+			// 2025
+			{ id: 30, model: 'EX30', generations: ['1 поколение'] },
+			{ id: 31, model: 'EX90', generations: ['1 поколение'] },
+			{ id: 32, model: 'EM90', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2494,7 +3200,10 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'Granta', generations: ['2011…'] },
 			{ id: 2, model: 'Niva Travel', generations: ['2020…'] },
-			{ id: 3, model: 'Vesta Cross', generations: ['2015…'] }
+			{ id: 3, model: 'Vesta Cross', generations: ['2015…'] },
+
+			// 2025
+			{ id: 4, model: 'Vesta NG 2025', generations: ['2025 модельный год'] }
 		]
 	},
 	{
@@ -2503,7 +3212,10 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'Dream', generations: [] },
 			{ id: 2, model: 'Free', generations: ['1 поколение', '1 рестайлинг', '1-2-й рестайлинг'] },
-			{ id: 3, model: 'Passion', generations: [] }
+			{ id: 3, model: 'Passion', generations: [] },
+
+			// 2025
+			{ id: 4, model: 'Zhiguang', generations: ['1 поколение (2025–)'] }
 		]
 	},
 	{
@@ -2511,13 +3223,17 @@ export const DataCar = [
 		brand: 'Vortex',
 		type: [
 			{ id: 1, model: 'Tingo', generations: [] }
+			// бренд не выпускает новых моделей 2025
 		]
 	},
 	{
 		id: 85,
 		brand: 'VGV',
 		type: [
-			{ id: 1, model: 'U75 Plus', generations: [] }
+			{ id: 1, model: 'U75 Plus', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'U70 Pro', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2525,14 +3241,21 @@ export const DataCar = [
 		brand: 'Wuling',
 		type: [
 			{ id: 1, model: 'Binguo', generations: [] },
-			{ id: 2, model: 'Hongguang S', generations: [] }
+			{ id: 2, model: 'Hongguang S', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'Mini EV', generations: ['1 поколение'] },
+			{ id: 4, model: 'Binguo Plus', generations: ['2025–'] }
 		]
 	},
 	{
 		id: 62,
 		brand: 'Wey',
 		type: [
-			{ id: 1, model: 'Coffee 01', generations: [] }
+			{ id: 1, model: 'Coffee 01', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'Blue Mountain', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2540,7 +3263,10 @@ export const DataCar = [
 		brand: 'Weltmeister',
 		type: [
 			{ id: 1, model: 'EX5', generations: [] },
-			{ id: 2, model: 'W6', generations: [] }
+			{ id: 2, model: 'W6', generations: [] },
+
+			// 2025
+			{ id: 3, model: 'M7', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2548,27 +3274,40 @@ export const DataCar = [
 		brand: 'Wartburg',
 		type: [
 			{ id: 1, model: '353', generations: [] }
+			// исторический бренд — без моделей 2025 года
 		]
 	},
 	{
 		id: 59,
 		brand: 'Xpeng',
 		type: [
-			{ id: 1, model: 'G3', generations: [] }
+			{ id: 1, model: 'G3', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'P7', generations: ['1 поколение'] },
+			{ id: 3, model: 'G9', generations: ['1 поколение'] },
+			{ id: 4, model: 'X9', generations: ['1 поколение (2025–)'] }
 		]
 	},
 	{
 		id: 60,
 		brand: 'Xiaomi',
 		type: [
-			{ id: 1, model: 'SU7', generations: [] }
+			{ id: 1, model: 'SU7', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'SU7 Pro', generations: ['2025 модельный год'] },
+			{ id: 3, model: 'SU7 Ultra', generations: ['1 поколение'] }
 		]
 	},
 	{
 		id: 56,
 		brand: 'ZX',
 		type: [
-			{ id: 1, model: 'Grand Tiger', generations: [] }
+			{ id: 1, model: 'Grand Tiger', generations: [] },
+
+			// 2025
+			{ id: 2, model: 'Terralord', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2578,7 +3317,10 @@ export const DataCar = [
 			{ id: 1, model: 'Coupa', generations: [] },
 			{ id: 2, model: 'E200', generations: [] },
 			{ id: 3, model: 'T600', generations: [] },
-			{ id: 4, model: 'Z300', generations: [] }
+			{ id: 4, model: 'Z300', generations: [] },
+
+			// 2025
+			{ id: 5, model: 'T800', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2591,7 +3333,10 @@ export const DataCar = [
 			{ id: 4, model: '009', generations: [] },
 			{ id: 5, model: 'X', generations: [] },
 			{ id: 6, model: 'Young', generations: [] },
-			{ id: 7, model: 'Guang Xiaoxin', generations: [] }
+			{ id: 7, model: 'Guang Xiaoxin', generations: [] },
+
+			// 2025
+			{ id: 8, model: 'M-Vision', generations: ['1 поколение (2025–)'] }
 		]
 	},
 	{
@@ -2599,6 +3344,7 @@ export const DataCar = [
 		brand: 'Богдан',
 		type: [
 			{ id: 1, model: '2310', generations: [] }
+			// без актуальных легковых моделей 2025
 		]
 	},
 	{
@@ -2620,7 +3366,10 @@ export const DataCar = [
 			{ id: 13, model: '69', generations: [] },
 			{ id: 14, model: 'М-20 Победа', generations: [] },
 			{ id: 15, model: 'Volga Siber', generations: [] },
-			{ id: 16, model: 'Тигр', generations: [] }
+			{ id: 16, model: 'Тигр', generations: [] },
+
+			// 2025
+			{ id: 17, model: 'ГАЗель NEXT EV', generations: ['1 поколение (2025–)'] }
 		]
 	},
 	{
@@ -2638,6 +3387,7 @@ export const DataCar = [
 			{ id: 9, model: 'Pick-up', generations: [] },
 			{ id: 10, model: 'Send', generations: [] },
 			{ id: 11, model: 'Vida', generations: [] }
+			// новых легковых моделей 2025 нет
 		]
 	},
 	{
@@ -2647,6 +3397,7 @@ export const DataCar = [
 			{ id: 1, model: '2125', generations: ['1 поколение (1973-1982)', '1 рестайлинг (1982-1997)'] },
 			{ id: 2, model: '2126', generations: [] },
 			{ id: 3, model: '2117', generations: [] }
+			// бренд неактивен — без моделей 2025
 		]
 	},
 	{
@@ -2655,6 +3406,7 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: '967', generations: [] },
 			{ id: 2, model: '969', generations: [] }
+			// без новых моделей 2025
 		]
 	},
 	{
@@ -2669,7 +3421,11 @@ export const DataCar = [
 			{ id: 6, model: '2140', generations: [] },
 			{ id: 7, model: '401', generations: [] },
 			{ id: 8, model: '407', generations: [] },
-			{ id: 9, model: '412', generations: [] }
+			{ id: 9, model: '412', generations: [] },
+
+			// 2025 — современная линейка
+			{ id: 10, model: 'Москвич 3', generations: ['1 поколение'] },
+			{ id: 11, model: 'Москвич 6', generations: ['1 поколение'] }
 		]
 	},
 	{
@@ -2678,6 +3434,7 @@ export const DataCar = [
 		type: [
 			{ id: 1, model: 'RoadPartner', generations: [] },
 			{ id: 2, model: 'Tager', generations: [] }
+			// завод не выпускает новые модели 2025
 		]
 	},
 	{
@@ -2693,8 +3450,11 @@ export const DataCar = [
 			{ id: 7, model: '452', generations: ['1 поколение (1965-1985)', '2 поколение (1985-2020)'] },
 			{ id: 8, model: '469', generations: [] },
 			{ id: 9, model: 'Hunter', generations: [] },
-			{ id: 10, model: 'Патриот', generations: ['1 (2005-2012)', '1 Рестайлинг (2012-2014)', '1 - 2-й Рестайлинг (2014-2016)', '1-3-й Рестайлинг (2016-2024)'] }
+			{ id: 10, model: 'Патриот', generations: ['1 (2005-2012)', '1 Рестайлинг (2012-2014)', '1 - 2-й Рестайлинг (2014-2016)', '1-3-й Рестайлинг (2016-2024)'] },
+
+			// 2025
+			{ id: 11, model: 'Profi', generations: ['1 поколение'] },
+			{ id: 12, model: 'Патриот 2025', generations: ['2 поколение (2025–)'] }
 		]
 	}
 ]
-

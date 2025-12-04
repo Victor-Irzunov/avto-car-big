@@ -8,7 +8,7 @@ import { transliterate } from '@/transliterate/transliterate';
 
 const engineOptions = ['Бензин', 'Дизель', 'Газ', 'Электро'];
 const transmissionOptions = ['Автомат', 'Механика'];
-const bodyTypeOptions = ['Седан', 'Универсал', 'Внедорожник', 'Минивэн', 'Хэтчбек', 'Микроавтобус', 'Купе', 'Кабриолет', 'Пикап', 'Другое'];
+const bodyTypeOptions = ['Седан', 'Универсал', 'Внедорожник', 'Минивэн', 'Хэтчбек', 'Лифтбек', 'Микроавтобус', 'Купе', 'Кабриолет', 'Пикап', 'Другое'];
 const driveOptions = ['Передний привод', 'Задний привод', 'Полный привод'];
 
 const FormPodborAvto = () => {
@@ -26,7 +26,7 @@ const FormPodborAvto = () => {
   const [selectedBodyType, setSelectedBodyType] = useState('');
   const [selectedDrive, setSelectedDrive] = useState('');
 
-  const years = Array.from({ length: 2024 - 1990 + 1 }, (_, i) => 2024 - i);
+  const years = Array.from({ length: 2025 - 1990 + 1 }, (_, i) => 2025 - i);
   const prices = Array.from({ length: 200000 / 1000 }, (_, i) => (i + 1) * 1000);
 
   const handleBrandChange = (e) => {
@@ -150,8 +150,6 @@ const FormPodborAvto = () => {
           </select>
         </div>
       </div>
-
-
 
       {/* Тип двигателя */}
       <div>
